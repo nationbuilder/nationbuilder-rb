@@ -64,7 +64,7 @@ client.call(:people, :create, params)
 ### Destroying a person
 
 ```ruby
-client.call(:people, :delete, id: 15)
+client.call(:people, :destroy, id: 15)
 ```
 
 ## Documentation
