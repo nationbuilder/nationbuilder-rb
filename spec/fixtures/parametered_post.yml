@@ -1,0 +1,68 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://dh.nationbuilder.com/api/v1/people
+    body:
+      encoding: UTF-8
+      string: '{"person":{"email":"bob@example.com","last_name":"Smith","first_name":"Bob"},"access_token":"6e516b5d9a3d21b3cc079bc303c01aae3d59c8d4a7e9e6d2acfc11dada0e054e"}'
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.4.0, ruby 2.0.0 (2013-11-22))
+      Accept:
+      - application/json
+      Date:
+      - Wed, 25 Jun 2014 22:35:22 GMT
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Wed, 25 Jun 2014 22:35:22 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d184a711d4f638864b5e1fa438601ebdc1403735721919; expires=Mon, 23-Dec-2019
+        23:50:00 GMT; path=/; domain=.nationbuilder.com; HttpOnly
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Nation-Ratelimit-Limit:
+      - '10000'
+      Nation-Ratelimit-Remaining:
+      - '9972'
+      Nation-Ratelimit-Reset:
+      - '1403740800'
+      X-Request-Id:
+      - 34e7f148285faf579d2885dee6cb5571
+      X-Runtime:
+      - '0.715257'
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Powered-By:
+      - Phusion Passenger 4.0.23
+      Status:
+      - 201 Created
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 nationbuilder.com
+      Cf-Ray:
+      - 1404a345f7b20d67-LAX
+    body:
+      encoding: UTF-8
+      string: '{"person":{"birthdate":null,"city_district":null,"civicrm_id":null,"county_district":null,"county_file_id":null,"created_at":"2014-06-25T15:35:22-07:00","do_not_call":false,"do_not_contact":false,"dw_id":null,"email":"bob@example.com","email_opt_in":true,"employer":null,"external_id":null,"federal_district":null,"fire_district":null,"first_name":"Bob","has_facebook":false,"id":15,"is_twitter_follower":false,"is_volunteer":false,"judicial_district":null,"labour_region":null,"last_name":"Smith","linkedin_id":null,"mobile":null,"mobile_opt_in":true,"nbec_guid":null,"ngp_id":null,"note":null,"occupation":null,"party":null,"pf_strat_id":null,"phone":null,"precinct_id":null,"primary_address":null,"recruiter_id":null,"rnc_id":null,"rnc_regid":null,"salesforce_id":null,"school_district":null,"school_sub_district":null,"sex":null,"state_file_id":null,"state_lower_district":null,"state_upper_district":null,"support_level":null,"supranational_district":null,"tags":[],"twitter_id":null,"twitter_name":null,"updated_at":"2014-06-25T15:35:22-07:00","van_id":null,"village_district":null,"active_customer_expires_at":null,"active_customer_started_at":null,"author":null,"author_id":null,"auto_import_id":null,"availability":null,"banned_at":null,"billing_address":null,"bio":null,"call_status_id":null,"call_status_name":null,"capital_amount_in_cents":0,"children_count":0,"church":null,"city_sub_district":null,"closed_invoices_amount_in_cents":null,"closed_invoices_count":null,"contact_status_id":null,"contact_status_name":null,"could_vote_status":null,"demo":null,"donations_amount_in_cents":0,"donations_amount_this_cycle_in_cents":0,"donations_count":0,"donations_count_this_cycle":0,"donations_pledged_amount_in_cents":0,"donations_raised_amount_in_cents":0,"donations_raised_amount_this_cycle_in_cents":0,"donations_raised_count":0,"donations_raised_count_this_cycle":0,"donations_to_raise_amount_in_cents":0,"email1":"bob@example.com","email1_is_bad":false,"email2":null,"email2_is_bad":false,"email3":null,"email3_is_bad":false,"email4":null,"email4_is_bad":false,"ethnicity":null,"facebook_address":null,"facebook_profile_url":null,"facebook_updated_at":null,"facebook_username":null,"fax_number":null,"federal_donotcall":false,"first_donated_at":null,"first_fundraised_at":null,"first_invoice_at":null,"first_prospect_at":null,"first_recruited_at":null,"first_supporter_at":"2014-06-25T15:35:22-07:00","first_volunteer_at":null,"full_name":"Bob
+        Smith","home_address":null,"import_id":null,"inferred_party":null,"inferred_support_level":null,"invoice_payments_amount_in_cents":0,"invoice_payments_referred_amount_in_cents":0,"invoices_amount_in_cents":null,"invoices_count":null,"is_deceased":false,"is_donor":false,"is_fundraiser":false,"is_ignore_donation_limits":false,"is_leaderboardable":true,"is_mobile_bad":false,"is_possible_duplicate":false,"is_profile_private":false,"is_profile_searchable":true,"is_prospect":false,"is_supporter":true,"is_survey_question_private":false,"language":null,"last_call_id":null,"last_contacted_at":null,"last_contacted_by":null,"last_donated_at":null,"last_fundraised_at":null,"last_invoice_at":null,"last_rule_violation_at":null,"legal_name":null,"locale":null,"mailing_address":null,"marital_status":null,"media_market_name":null,"meetup_address":null,"membership_expires_at":null,"membership_level_name":null,"membership_started_at":null,"middle_name":null,"mobile_normalized":null,"nbec_precinct_code":null,"note_updated_at":null,"outstanding_invoices_amount_in_cents":null,"outstanding_invoices_count":null,"overdue_invoices_count":0,"page_slug":null,"parent":null,"parent_id":null,"party_member":false,"phone_normalized":null,"phone_time":null,"precinct_code":null,"precinct_name":null,"prefix":null,"previous_party":null,"primary_email_id":1,"priority_level":null,"priority_level_changed_at":null,"profile_content":null,"profile_content_html":null,"profile_headline":null,"received_capital_amount_in_cents":0,"recruiter":null,"recruits_count":0,"registered_address":null,"registered_at":null,"religion":null,"rule_violations_count":0,"spent_capital_amount_in_cents":0,"submitted_address":null,"subnations":[],"suffix":null,"support_level_changed_at":null,"support_probability_score":null,"turnout_probability_score":null,"twitter_address":null,"twitter_description":null,"twitter_followers_count":null,"twitter_friends_count":null,"twitter_location":null,"twitter_login":null,"twitter_updated_at":null,"twitter_website":null,"unsubscribed_at":null,"user_submitted_address":null,"username":null,"warnings_count":0,"website":null,"work_address":null,"work_phone_number":null},"precinct":null}'
+    http_version: 
+  recorded_at: Wed, 25 Jun 2014 22:35:23 GMT
+recorded_with: VCR 2.9.2
