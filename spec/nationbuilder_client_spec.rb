@@ -38,16 +38,16 @@ describe NationBuilder::Client do
     end
 
     it 'should handle a parametered POST' do
-      person = {
-        "person" => {
-          "email" => "bob@example.com",
-          "last_name" => "Smith",
-          "first_name" => "Bob"
+      params = {
+        person: {
+          email: "bob@example.com",
+          last_name: "Smith",
+          first_name: "Bob"
         }
       }
 
       response = VCR.use_cassette('parametered_post') do
-        client.call(:people, :create, person)
+        client.call(:people, :create, params)
       end
 
       response

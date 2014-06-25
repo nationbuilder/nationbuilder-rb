@@ -1,4 +1,4 @@
-Copyright (c) 2014 David Huie
+Copyright (c) 2014 NationBuilder.
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
