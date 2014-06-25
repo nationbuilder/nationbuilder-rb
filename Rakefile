@@ -28,3 +28,9 @@ task :simplecov do
 end
 
 task default: :spec
+
+desc 'Display all known NationBuilder API endpoints, methods, and parameters'
+task :describe_nb_api do
+  require 'nationbuilder'
+  NationBuilder.print_description
+end

@@ -15,6 +15,27 @@ module NationBuilder
     url
   end
 
+  def self.print_description
+    client = NationBuilder::Client.new('test-nation', 'test-key')
+    client.endpoints.each do |endpoint_name|
+      endpoint_str = "Endpoint: #{endpoint_name}"
+      puts "=" * endpoint_str.length
+      puts endpoint_str
+      puts "=" * endpoint_str.length
+
+      client[endpoint_name].methods.each do |method_name|
+        puts
+        method = client[endpoint_name][method_name]
+        puts "  Method: #{method_name.inspect}"
+        puts "  Description: #{method.description}"
+        required_params = method.parameters.map { |p| p.inspect }
+        if required_params.any?
+          puts "  Required parameters: #{required_params.join(', ')}"
+        end
+      end
+      puts
+    end
+  end
 end
 
 require 'nationbuilder/client'

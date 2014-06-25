@@ -7,13 +7,12 @@ class NationBuilder::SpecParser
     spec['endpoints'].each do |endpoint|
       nb_endpoint = NationBuilder::Endpoint.new(endpoint['name'])
       endpoints << nb_endpoint
-
       endpoint['methods'].each do |method|
         nb_method = NationBuilder::Method.new(method['MethodName'],
                                               method['HTTPMethod'],
-                                              method['URI'])
+                                              method['URI'],
+                                              method['Synopsis'])
         nb_endpoint.register_method(nb_method)
-
         method['parameters'].each do |parameter|
           if (parameter['Required'] == 'Y') && (parameter['Name'] != 'body')
             nb_parameter = NationBuilder::Parameter.new(parameter['Name'])

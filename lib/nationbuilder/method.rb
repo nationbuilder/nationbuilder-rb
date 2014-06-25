@@ -1,11 +1,12 @@
 class NationBuilder::Method
 
-  attr_reader :uri, :http_method
+  attr_reader :uri, :http_method, :description
 
-  def initialize(name, http_method, uri)
+  def initialize(name, http_method, uri, description)
     @name = name
     @http_method = http_method.downcase.to_sym
     @uri = uri
+    @description = description
     @name_to_parameter = {}
   end
 
@@ -14,7 +15,7 @@ class NationBuilder::Method
   end
 
   def parameters
-    @parameters ||= @name_to_parameter.keys
+    @name_to_parameter.keys
   end
 
   def name
