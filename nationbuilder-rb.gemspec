@@ -10,10 +10,10 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["David Huie"]
-  s.date = "2014-06-25"
+  s.date = "2014-06-26"
   s.description = "A Ruby client to the NationBuilder API"
   s.email = "david@nationbuilder.com"
-  s.executables = ["nationbuilder"]
+  s.executables = ["nbdoc"]
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.md"
@@ -28,7 +28,7 @@ Gem::Specification.new do |s|
     "README.md",
     "Rakefile",
     "VERSION",
-    "bin/nationbuilder",
+    "bin/nbdoc",
     "lib/nationbuilder.rb",
     "lib/nationbuilder/api_spec.json",
     "lib/nationbuilder/client.rb",
@@ -36,6 +36,7 @@ Gem::Specification.new do |s|
     "lib/nationbuilder/method.rb",
     "lib/nationbuilder/parameter.rb",
     "lib/nationbuilder/spec_parser.rb",
+    "nationbuilder-rb.gemspec",
     "spec/fixtures/delete.yml",
     "spec/fixtures/parametered_get.yml",
     "spec/fixtures/parametered_post.yml",
