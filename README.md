@@ -72,10 +72,16 @@ client.call(:people, :destroy, id: 15)
 This gem includes a command line utility that prints out
 all covered endpoints, methods, and parameters:
 
-To see this output, run:
+To see documentation for a single endpoint, run:
 
 ```shell
-$ nationbuilder
+$ nbdoc ENDPOINT_NAME
+```
+
+To see all documentation, don't provide a endpoint name:
+
+```shell
+$ nbdoc
 ```
 
 An example of the output:

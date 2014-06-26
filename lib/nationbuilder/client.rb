@@ -82,7 +82,7 @@ class NationBuilder::Client
     puts endpoint_str
     puts "=" * endpoint_str.length
 
-    self[endpoint_name].methods.each do |method_name|
+    self[endpoint_name.to_sym].methods.each do |method_name|
       puts
       method = self[endpoint_name][method_name]
       puts "  Method: #{method_name.inspect}"
