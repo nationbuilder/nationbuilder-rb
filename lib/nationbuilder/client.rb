@@ -77,12 +77,24 @@ class NationBuilder::Client
   end
 
   def print_description(endpoint_name)
+    endpoint_name = endpoint_name.to_sym
+
+    unless self.endpoints.include?(endpoint_name)
+      puts "Invalid endpoint name: #{endpoint_name}"
+      puts
+      puts "Valid endpoint names:"
+      self.endpoints.each do |endpoint|
+        puts "  #{endpoint}"
+      end
+      return
+    end
+
     endpoint_str = "Endpoint: #{endpoint_name}"
     puts "=" * endpoint_str.length
     puts endpoint_str
     puts "=" * endpoint_str.length
 
-    self[endpoint_name.to_sym].methods.each do |method_name|
+    self[endpoint_name].methods.each do |method_name|
       puts
       method = self[endpoint_name][method_name]
       puts "  Method: #{method_name.inspect}"
