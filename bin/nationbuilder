@@ -1,6 +1,0 @@
-#!/usr/bin/env ruby
-
-# Prints out a description of all NationBuilder API endpoints.
-
-require 'nationbuilder'
-NationBuilder.print_description
