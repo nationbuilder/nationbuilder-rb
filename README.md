@@ -70,9 +70,8 @@ client.call(:people, :destroy, id: 15)
 ## Documentation
 
 This gem includes a command line utility that prints out
-all covered endpoints, methods, and parameters:
-
-To see documentation for a single endpoint, run:
+all covered endpoints, methods, and parameters. To see
+documentation for a single endpoint, run:
 
 ```shell
 $ nbdoc ENDPOINT_NAME
@@ -84,9 +83,11 @@ To see all documentation, don't provide a endpoint name:
 $ nbdoc
 ```
 
-An example of the output:
+### Example
 
 ```
+$ nbdoc basic_pages
+
 =====================
 Endpoint: basic_pages
 =====================
@@ -98,6 +99,5 @@ Endpoint: basic_pages
   Method: :create
   Description: Creates a basic page for a site
   Required parameters: :site_slug
-
 ...
 ```
