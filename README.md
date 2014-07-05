@@ -94,12 +94,13 @@ $ nbdoc basic_pages
 Endpoint: basic_pages
 =====================
 
-  Method: :index
+  Method: index
   Description: Shows a list of the basic pages in the system
-  Required parameters: :site_slug
+  Required parameters: site_slug
 
-  Method: :create
+  Method: create
   Description: Creates a basic page for a site
-  Required parameters: :site_slug
+  Required parameters: site_slug
+
 ...
 ```
