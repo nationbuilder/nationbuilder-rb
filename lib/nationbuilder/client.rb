@@ -101,9 +101,9 @@ class NationBuilder::Client
     self[endpoint_name].methods.each do |method_name|
       puts
       method = self[endpoint_name][method_name]
-      puts "  Method: #{method_name.inspect}"
+      puts "  Method: #{method_name}"
       puts "  Description: #{method.description}"
-      required_params = method.parameters.map { |p| p.inspect }
+      required_params = method.parameters.map { |p| p }
       if required_params.any?
         puts "  Required parameters: #{required_params.join(', ')}"
       end
