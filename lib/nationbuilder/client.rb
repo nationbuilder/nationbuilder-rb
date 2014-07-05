@@ -14,8 +14,12 @@ class NationBuilder::Client
       .parse(File.join(File.dirname(__FILE__), 'api_spec.json'))
   end
 
+  class InvalidEndpoint < ArgumentError; end
+
   def [](endpoint)
-    @name_to_endpoint[endpoint]
+    e = @name_to_endpoint[endpoint]
+    raise InvalidEndpoint.new(endpoint) if e.nil?
+    e
   end
 
   def endpoints

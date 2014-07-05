@@ -17,8 +17,12 @@ class NationBuilder::Endpoint
     @methods ||= @name_to_method.keys
   end
 
+  class InvalidMethod < ArgumentError; end
+
   def [](method_name)
-    @name_to_method[method_name]
+    m = @name_to_method[method_name]
+    raise InvalidMethod.new(method_name) if m.nil?
+    m
   end
 
 end
