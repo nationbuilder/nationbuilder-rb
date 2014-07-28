@@ -1286,6 +1286,20 @@
               "Default": null,
               "Type": "int",
               "Description": "The person's ID"
+            },
+            {
+              "Name": "page",
+              "Required": "N",
+              "Default": "1",
+              "Type": "int",
+              "Description": "Which page to return"
+            },
+            {
+              "Name": "per_page",
+              "Required": "N",
+              "Default": "10",
+              "Type": "int",
+              "Description": "The number of listings to return per page"
             }
           ]
         },
