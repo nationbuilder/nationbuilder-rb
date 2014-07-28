@@ -108,135 +108,6 @@
       ]
     },
     {
-      "name": "Blogs",
-      "methods": [
-        {
-          "MethodName": "Index",
-          "Synopsis": "Shows a list of all blogs",
-          "HTTPMethod": "GET",
-          "URI": "/sites/:site_slug/pages/blogs",
-          "parameters": [
-            {
-              "Name": "site_slug",
-              "Required": "Y",
-              "Default": null,
-              "Type": "string",
-              "Description": "the site holding the blog"
-            },
-            {
-              "Name": "page",
-              "Required": "N",
-              "Default": "1",
-              "Type": "int",
-              "Description": "result page number"
-            },
-            {
-              "Name": "per_page",
-              "Required": "N",
-              "Default": "10",
-              "Type": "int",
-              "Description": "number of results to return"
-            }
-          ]
-        },
-        {
-          "MethodName": "Show",
-          "Synopsis": "Show the details of a blog",
-          "HTTPMethod": "GET",
-          "URI": "/sites/:site_slug/pages/blogs/:id",
-          "parameters": [
-            {
-              "Name": "site_slug",
-              "Required": "Y",
-              "Default": null,
-              "Type": "string",
-              "Description": "the site holding the blog"
-            },
-            {
-              "Name": "id",
-              "Required": "Y",
-              "Default": null,
-              "Type": "int",
-              "Description": "the ID of the blog"
-            }
-          ]
-        },
-        {
-          "MethodName": "Create",
-          "Synopsis": "Creates a new blog",
-          "HTTPMethod": "POST",
-          "URI": "/sites/:site_slug/pages/blogs",
-          "parameters": [
-            {
-              "Name": "site_slug",
-              "Required": "Y",
-              "Default": null,
-              "Type": "string",
-              "Description": "the site holding the blog"
-            },
-            {
-              "Name": "body",
-              "Required": "Y",
-              "Default": "1",
-              "Type": "json",
-              "Description": "a JSON representation of the new blog"
-            }
-          ]
-        },
-        {
-          "MethodName": "Update",
-          "Synopsis": "Updates the attributes of a blog",
-          "HTTPMethod": "PUT",
-          "URI": "/sites/:site_slug/pages/blogs/:id",
-          "parameters": [
-            {
-              "Name": "site_slug",
-              "Required": "Y",
-              "Default": null,
-              "Type": "string",
-              "Description": "the site holding the blog"
-            },
-            {
-              "Name": "id",
-              "Required": "Y",
-              "Default": null,
-              "Type": "int",
-              "Description": "the ID of the blog"
-            },
-            {
-              "Name": "body",
-              "Required": "Y",
-              "Default": "1",
-              "Type": "json",
-              "Description": "JSON containing updates"
-            }
-          ]
-        },
-        {
-          "MethodName": "Destroy",
-          "Synopsis": "Removes a blog",
-          "HTTPMethod": "DELETE",
-          "URI": "/sites/:site_slug/pages/blogs/:id",
-          "parameters": [
-            {
-              "Name": "site_slug",
-              "Required": "Y",
-              "Default": null,
-              "Type": "string",
-              "Description": "the site holding the blog"
-            },
-            {
-              "Name": "id",
-              "Required": "Y",
-              "Default": null,
-              "Type": "int",
-              "Description": "the ID of the blog"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "Blog Posts",
       "methods": [
         {
@@ -391,6 +262,135 @@
             },
             {
               "Name": "blog_post_id",
+              "Required": "Y",
+              "Default": null,
+              "Type": "int",
+              "Description": "the ID of the blog"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Blogs",
+      "methods": [
+        {
+          "MethodName": "Index",
+          "Synopsis": "Shows a list of all blogs",
+          "HTTPMethod": "GET",
+          "URI": "/sites/:site_slug/pages/blogs",
+          "parameters": [
+            {
+              "Name": "site_slug",
+              "Required": "Y",
+              "Default": null,
+              "Type": "string",
+              "Description": "the site holding the blog"
+            },
+            {
+              "Name": "page",
+              "Required": "N",
+              "Default": "1",
+              "Type": "int",
+              "Description": "result page number"
+            },
+            {
+              "Name": "per_page",
+              "Required": "N",
+              "Default": "10",
+              "Type": "int",
+              "Description": "number of results to return"
+            }
+          ]
+        },
+        {
+          "MethodName": "Show",
+          "Synopsis": "Show the details of a blog",
+          "HTTPMethod": "GET",
+          "URI": "/sites/:site_slug/pages/blogs/:id",
+          "parameters": [
+            {
+              "Name": "site_slug",
+              "Required": "Y",
+              "Default": null,
+              "Type": "string",
+              "Description": "the site holding the blog"
+            },
+            {
+              "Name": "id",
+              "Required": "Y",
+              "Default": null,
+              "Type": "int",
+              "Description": "the ID of the blog"
+            }
+          ]
+        },
+        {
+          "MethodName": "Create",
+          "Synopsis": "Creates a new blog",
+          "HTTPMethod": "POST",
+          "URI": "/sites/:site_slug/pages/blogs",
+          "parameters": [
+            {
+              "Name": "site_slug",
+              "Required": "Y",
+              "Default": null,
+              "Type": "string",
+              "Description": "the site holding the blog"
+            },
+            {
+              "Name": "body",
+              "Required": "Y",
+              "Default": "1",
+              "Type": "json",
+              "Description": "a JSON representation of the new blog"
+            }
+          ]
+        },
+        {
+          "MethodName": "Update",
+          "Synopsis": "Updates the attributes of a blog",
+          "HTTPMethod": "PUT",
+          "URI": "/sites/:site_slug/pages/blogs/:id",
+          "parameters": [
+            {
+              "Name": "site_slug",
+              "Required": "Y",
+              "Default": null,
+              "Type": "string",
+              "Description": "the site holding the blog"
+            },
+            {
+              "Name": "id",
+              "Required": "Y",
+              "Default": null,
+              "Type": "int",
+              "Description": "the ID of the blog"
+            },
+            {
+              "Name": "body",
+              "Required": "Y",
+              "Default": "1",
+              "Type": "json",
+              "Description": "JSON containing updates"
+            }
+          ]
+        },
+        {
+          "MethodName": "Destroy",
+          "Synopsis": "Removes a blog",
+          "HTTPMethod": "DELETE",
+          "URI": "/sites/:site_slug/pages/blogs/:id",
+          "parameters": [
+            {
+              "Name": "site_slug",
+              "Required": "Y",
+              "Default": null,
+              "Type": "string",
+              "Description": "the site holding the blog"
+            },
+            {
+              "Name": "id",
               "Required": "Y",
               "Default": null,
               "Type": "int",
@@ -1272,6 +1272,92 @@
       ]
     },
     {
+      "name": "Memberships",
+      "methods": [
+        {
+          "MethodName": "Index",
+          "Synopsis": "Lists all memberships for a person",
+          "HTTPMethod": "GET",
+          "URI": "/people/:person_id/memberships",
+          "parameters": [
+            {
+              "Name": "person_id",
+              "Required": "Y",
+              "Default": null,
+              "Type": "int",
+              "Description": "The person's ID"
+            }
+          ]
+        },
+        {
+          "MethodName": "Create",
+          "Synopsis": "Creates a membership",
+          "HTTPMethod": "POST",
+          "URI": "/people/:person_id/memberships",
+          "parameters": [
+            {
+              "Name": "person_id",
+              "Required": "Y",
+              "Default": null,
+              "Type": "int",
+              "Description": "The person's ID"
+            },
+            {
+              "Name": "body",
+              "Required": "Y",
+              "Default": "{}",
+              "Type": "json",
+              "Description": "JSON attributes for the new membership"
+            }
+          ]
+        },
+        {
+          "MethodName": "Update",
+          "Synopsis": "Updates a membership",
+          "HTTPMethod": "PUT",
+          "URI": "/people/:person_id/memberships",
+          "parameters": [
+            {
+              "Name": "person_id",
+              "Required": "Y",
+              "Default": null,
+              "Type": "int",
+              "Description": "The person's ID"
+            },
+            {
+              "Name": "body",
+              "Required": "Y",
+              "Default": "{}",
+              "Type": "json",
+              "Description": "JSON attributes for updating a membership"
+            }
+          ]
+        },
+        {
+          "MethodName": "Destroy",
+          "Synopsis": "Removes a membership from the person",
+          "HTTPMethod": "DELETE",
+          "URI": "/people/:person_id/memberships/:name",
+          "parameters": [
+            {
+              "Name": "person_id",
+              "Required": "Y",
+              "Default": null,
+              "Type": "int",
+              "Description": "The person's ID"
+            },
+            {
+              "Name": "name",
+              "Required": "Y",
+              "Default": null,
+              "Type": "string",
+              "Description": "The name of the membership"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "Page Attachments",
       "methods": [
         {
@@ -1912,6 +1998,69 @@
       ]
     },
     {
+      "name": "Survey Responses",
+      "methods": [
+        {
+          "MethodName": "Index",
+          "Synopsis": "Lists all survey responses",
+          "HTTPMethod": "GET",
+          "URI": "/survey_responses",
+          "parameters": [
+            {
+              "Name": "start_time",
+              "Required": "N",
+              "Default": null,
+              "Type": "string",
+              "Description": "the starting time for results"
+            },
+            {
+              "Name": "end_time",
+              "Required": "N",
+              "Default": null,
+              "Type": "string",
+              "Description": "the ending time for results"
+            },
+            {
+              "Name": "survey_id",
+              "Required": "N",
+              "Default": null,
+              "Type": "int",
+              "Description": "the id for a parent survey"
+            },
+            {
+              "Name": "page",
+              "Required": "N",
+              "Default": "1",
+              "Type": "int",
+              "Description": "result page number"
+            },
+            {
+              "Name": "per_page",
+              "Required": "N",
+              "Default": "10",
+              "Type": "int",
+              "Description": "number of results to return"
+            }
+          ]
+        },
+        {
+          "MethodName": "Create",
+          "Synopsis": "Creates responses for a survey",
+          "HTTPMethod": "POST",
+          "URI": "/survey_responses",
+          "parameters": [
+            {
+              "Name": "body",
+              "Required": "Y",
+              "Default": null,
+              "Type": "json",
+              "Description": "a JSON representation of the survey responses"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "Surveys",
       "methods": [
         {
@@ -2013,69 +2162,6 @@
               "Default": null,
               "Type": "int",
               "Description": "the ID of the survey"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Survey Responses",
-      "methods": [
-        {
-          "MethodName": "Index",
-          "Synopsis": "Lists all survey responses",
-          "HTTPMethod": "GET",
-          "URI": "/survey_responses",
-          "parameters": [
-            {
-              "Name": "start_time",
-              "Required": "N",
-              "Default": null,
-              "Type": "string",
-              "Description": "the starting time for results"
-            },
-            {
-              "Name": "end_time",
-              "Required": "N",
-              "Default": null,
-              "Type": "string",
-              "Description": "the ending time for results"
-            },
-            {
-              "Name": "survey_id",
-              "Required": "N",
-              "Default": null,
-              "Type": "int",
-              "Description": "the id for a parent survey"
-            },
-            {
-              "Name": "page",
-              "Required": "N",
-              "Default": "1",
-              "Type": "int",
-              "Description": "result page number"
-            },
-            {
-              "Name": "per_page",
-              "Required": "N",
-              "Default": "10",
-              "Type": "int",
-              "Description": "number of results to return"
-            }
-          ]
-        },
-        {
-          "MethodName": "Create",
-          "Synopsis": "Creates responses for a survey",
-          "HTTPMethod": "POST",
-          "URI": "/survey_responses",
-          "parameters": [
-            {
-              "Name": "body",
-              "Required": "Y",
-              "Default": null,
-              "Type": "json",
-              "Description": "a JSON representation of the survey responses"
             }
           ]
         }
