@@ -1058,18 +1058,11 @@
           "URI": "/imports",
           "parameters": [
             {
-              "Name": "type",
+              "Name": "body",
               "Required": "Y",
               "Default": null,
-              "Type": "string",
-              "Description": "either \"voter_file\" or \"voting_history\""
-            },
-            {
-              "Name": "file",
-              "Required": "Y",
-              "Default": null,
-              "Type": "string",
-              "Description": "Base 64 (RFC 4648) encoded version of a CSV"
+              "Type": "json",
+              "Description": "JSON representation of the import"
             }
           ]
         }
