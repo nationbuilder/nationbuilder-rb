@@ -1175,7 +1175,51 @@
           ]
         },
         {
-          "MethodName": "Listing Create",
+          "MethodName": "Add people",
+          "Synopsis": "Adds people to a list",
+          "HTTPMethod": "POST",
+          "URI": "/lists/:list_id/people",
+          "parameters": [
+            {
+              "Name": "list_id",
+              "Required": "Y",
+              "Default": null,
+              "Type": "int",
+              "Description": "The ID of the list"
+            },
+            {
+              "Name": "body",
+              "Required": "Y",
+              "Default": null,
+              "Type": "json",
+              "Description": "A JSON hash containing the people to add to the list"
+            }
+          ]
+        },
+        {
+          "MethodName": "Destroy people",
+          "Synopsis": "Removes people from a list",
+          "HTTPMethod": "DELETE",
+          "URI": "/lists/:list_id/people",
+          "parameters": [
+            {
+              "Name": "list_id",
+              "Required": "Y",
+              "Default": null,
+              "Type": "int",
+              "Description": "The ID of the list"
+            },
+            {
+              "Name": "body",
+              "Required": "Y",
+              "Default": null,
+              "Type": "json",
+              "Description": "A JSON hash containing the people to remove from the list"
+            }
+          ]
+        },
+        {
+          "MethodName": "Listing Create (deprecated)",
           "Synopsis": "Adds a person to a list",
           "HTTPMethod": "POST",
           "URI": "/lists/:list_id/listings",
@@ -1197,7 +1241,7 @@
           ]
         },
         {
-          "MethodName": "Listing Deletion",
+          "MethodName": "Listing Deletion (deprecated)",
           "Synopsis": "Drops a person from a list",
           "HTTPMethod": "DELETE",
           "URI": "/lists/:list_id/listings/:person_id",
