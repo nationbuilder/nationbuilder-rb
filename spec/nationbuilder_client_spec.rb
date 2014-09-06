@@ -12,12 +12,28 @@ describe NationBuilder::Client do
   describe '#endpoints' do
 
     it 'should contain all defined endpoints' do
-      client.endpoints.should eq([:basic_pages, :blog_posts, :blogs,
-                                   :calendars, :campaign_data, :contacts,
-                                   :contact_types, :donations, :events,
-                                   :imports, :lists, :memberships, :page_attachments,
-                                   :people, :people_tags, :sites,
-                                   :survey_responses, :surveys, :webhooks])
+      client.endpoints.sort.should eq([
+        :basic_pages,
+        :blog_posts,
+        :blogs,
+        :calendars,
+        :campaign_data,
+        :contact_types,
+        :contacts,
+        :donations,
+        :events,
+        :exports,
+        :imports,
+        :lists,
+        :memberships,
+        :page_attachments,
+        :people,
+        :people_tags,
+        :sites,
+        :survey_responses,
+        :surveys,
+        :webhooks
+      ])
     end
 
   end
