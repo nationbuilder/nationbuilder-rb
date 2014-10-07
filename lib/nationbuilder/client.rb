@@ -43,12 +43,14 @@ class NationBuilder::Client
       header: {
         'Accept' => 'application/json',
         'Content-Type' => 'application/json'
+      },
+      query: {
+        access_token: @api_key
       }
     }
 
     if method.http_method == :get
-      request_args[:query] = nonmethod_args
-      request_args[:query][:access_token] = @api_key
+      request_args[:query].merge!(nonmethod_args)
     else
       nonmethod_args[:access_token] = @api_key
       request_args[:body] = JSON(nonmethod_args)
