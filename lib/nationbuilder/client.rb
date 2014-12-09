@@ -56,8 +56,16 @@ class NationBuilder::Client
       request_args[:body] = JSON(nonmethod_args)
     end
 
-    response = HTTPClient.send(method.http_method, url, request_args)
+    set_response(HTTPClient.send(method.http_method, url, request_args))
     return parse_response_body(response)
+  end
+
+  def set_response(value)
+    Thread.current[:nationbuilder_rb_response] = value
+  end
+
+  def response
+    Thread.current[:nationbuilder_rb_response]
   end
 
   class ServerResponseError < StandardError; end
