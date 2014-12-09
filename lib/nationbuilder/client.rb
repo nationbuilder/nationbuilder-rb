@@ -1,8 +1,9 @@
 class NationBuilder::Client
 
-  def initialize(nation_name, api_key)
+  def initialize(nation_name, api_key, base_url = 'https://:nation_name.nationbuilder.com')
     @nation_name = nation_name
     @api_key = api_key
+    @base_url = base_url
     @name_to_endpoint = {}
     parsed_endpoints.each do |endpoint|
       @name_to_endpoint[endpoint.name] = endpoint
@@ -27,8 +28,7 @@ class NationBuilder::Client
   end
 
   def base_url
-    @base_url ||=
-      NationBuilder::URL_TEMPLATE.gsub(':nation_name', @nation_name)
+    @base_url.gsub(':nation_name', @nation_name)
   end
 
   def call(endpoint_name, method_name, args={})
@@ -37,7 +37,7 @@ class NationBuilder::Client
     nonmethod_args = method.nonmethod_args(args)
     method_args = method.method_args(args)
     method.validate_args(method_args)
-    url = NationBuilder.generate_url(base_url, method.uri, method_args)
+    url = NationBuilder::URL.new(base_url).generate_url(method.uri, method_args)
 
     request_args = {
       header: {
