@@ -2,17 +2,17 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://dh.nationbuilder.com/api/v1/people/24?access_token=6ed3ab9395daf0e3e39098761e85e8e703aa84921c5c1e32637f6984944cf1f2
+    uri: https://organizeralexandreschmitt.nationbuilder.com/api/v1/people/275446?access_token=07c3200badad9727d29fd2bcde566a211b05e05b92680ca0439504084452db9a
     body:
       encoding: UTF-8
-      string: '{"access_token":"6ed3ab9395daf0e3e39098761e85e8e703aa84921c5c1e32637f6984944cf1f2"}'
+      string: "{\"access_token\":\"07c3200badad9727d29fd2bcde566a211b05e05b92680ca0439504084452db9a\"}"
     headers:
       User-Agent:
-      - HTTPClient/1.0 (2.4.0, ruby 2.0.0 (2013-11-22))
+      - HTTPClient/1.0 (2.4.0, ruby 2.1.0 (2013-12-25))
       Accept:
       - application/json
       Date:
-      - Tue, 07 Oct 2014 17:43:46 GMT
+      - Sat, 31 Jan 2015 07:42:09 GMT
       Content-Type:
       - application/json
   response:
@@ -23,49 +23,49 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Date:
-      - Tue, 07 Oct 2014 17:43:50 GMT
-      Content-Type:
-      - application/octet-stream
+      - Sat, 31 Jan 2015 07:42:18 GMT
       Content-Length:
       - '0'
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d1d7ffdf9caac3883c7d2a972e0cf26f11412703826586; expires=Mon, 23-Dec-2019
-        23:50:00 GMT; path=/; domain=.nationbuilder.com; HttpOnly
+      - __cfduid=d1efb55e9cbabff16a32fe484cf9ddcee1422690129; expires=Sun, 31-Jan-16
+        07:42:09 GMT; path=/; domain=.nationbuilder.com; HttpOnly
       Cache-Control:
       - no-cache
       Nation-Ratelimit-Limit:
-      - '-1'
+      - '125000'
       Nation-Ratelimit-Remaining:
-      - '0'
+      - '124960'
       Nation-Ratelimit-Reset:
-      - '1412726400'
+      - '1422748800'
       Status:
       - 204 No Content
       X-Powered-By:
-      - Phusion Passenger 4.0.48
+      - Phusion Passenger 4.0.53
+      X-Pulse-Approved:
+      - 'true'
       X-Rack-Cache:
       - invalidate, pass
       X-Ratelimit-Limit:
-      - 33s
+      - 10s
       X-Ratelimit-Remaining:
-      - '49997'
+      - '99'
       X-Ratelimit-Reset:
-      - '32.038486321'
+      - '1422690139'
       X-Request-Id:
-      - d5ab16fa2e0ac355cecdab2324422be0
+      - bd836c5a02f2be085be1e3bac1a6a2a5
       X-Runtime:
-      - '3.853476'
+      - '8.577632'
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Via:
       - 1.1 nationbuilder.com
       Cf-Ray:
-      - 175be7242f0d0679-LAX
+      - 1b14455cc5c30d4f-LAX
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Tue, 07 Oct 2014 17:43:50 GMT
+  recorded_at: Sat, 31 Jan 2015 07:42:18 GMT
 recorded_with: VCR 2.9.2
