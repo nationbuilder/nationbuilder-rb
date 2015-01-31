@@ -3,8 +3,8 @@ require 'spec_helper'
 describe NationBuilder::Client do
 
   let(:client) do
-    NationBuilder::Client.new('dh',
-                              '6ed3ab9395daf0e3e39098761e85e8e703aa84921c5c1e32637f6984944cf1f2')
+    NationBuilder::Client.new('organizeralexandreschmitt',
+                              '07c3200badad9727d29fd2bcde566a211b05e05b92680ca0439504084452db9a')
   end
 
   describe '#endpoints' do
@@ -33,24 +33,22 @@ describe NationBuilder::Client do
         :webhooks
       ])
     end
-
   end
 
   describe '#base_url' do
 
     it 'should contain the nation slug' do
-      client.base_url.should eq('https://dh.nationbuilder.com')
+      client.base_url.should eq('https://organizeralexandreschmitt.nationbuilder.com')
     end
-
   end
 
   describe '#call' do
 
     it 'should handle a parametered GET' do
       VCR.use_cassette('parametered_get') do
-        response = client.call(:basic_pages, :index, site_slug: 'dh')
+        response = client.call(:basic_pages, :index, site_slug: 'organizeralexandreschmitt')
         response['results'].each do |result|
-          result['site_slug'].should eq('dh')
+          result['site_slug'].should eq('organizeralexandreschmitt')
         end
       end
     end
@@ -73,7 +71,7 @@ describe NationBuilder::Client do
 
     it 'should handle a DELETE' do
       params = {
-        id: 24,
+        id: 275446,
       }
 
       response = VCR.use_cassette('delete') do
@@ -82,7 +80,29 @@ describe NationBuilder::Client do
 
       response.should eq({})
     end
-
   end
 
+  describe '#pagination' do
+
+    before do
+      VCR.use_cassette('parametered_get') do
+        client.call(:basic_pages, :index, site_slug: 'organizeralexandreschmitt')
+      end
+    end
+
+    it 'should check for next and prev page link' do
+      client.next?.should eq(true)
+      client.prev?.should eq(false)
+    end
+
+    it 'should return next page' do
+      response = VCR.use_cassette('next') { client.next }
+      response.should include('results')
+    end
+
+    it 'should return nil if no prev page' do
+      client.prev.should be_nil
+    end
+
+  end
 end
