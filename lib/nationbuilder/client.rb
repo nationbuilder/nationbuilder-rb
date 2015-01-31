@@ -39,7 +39,7 @@ class NationBuilder::Client
     method.validate_args(method_args)
     url = NationBuilder::URL.new(base_url).generate_url(method.uri, method_args)
 
-    request_args = {
+    @request_args = {
       header: {
         'Accept' => 'application/json',
         'Content-Type' => 'application/json'
@@ -50,13 +50,13 @@ class NationBuilder::Client
     }
 
     if method.http_method == :get
-      request_args[:query].merge!(nonmethod_args)
+      @request_args[:query].merge!(nonmethod_args)
     else
       nonmethod_args[:access_token] = @api_key
-      request_args[:body] = JSON(nonmethod_args)
+      @request_args[:body] = JSON(nonmethod_args)
     end
 
-    set_response(HTTPClient.send(method.http_method, url, request_args))
+    set_response(HTTPClient.send(method.http_method, url, @request_args))
     return parse_response_body(response)
   end
 
@@ -66,6 +66,26 @@ class NationBuilder::Client
 
   def response
     Thread.current[:nationbuilder_rb_response]
+  end
+
+  def next?
+    @next ? true : false
+  end
+
+  def next
+    return unless @next
+    request = HTTPClient.get(base_url + @next, @request_args)
+    return parse_response_body(request)
+  end
+
+  def prev?
+    @prev ? true : false
+  end
+
+  def prev
+    return unless @prev
+    request = HTTPClient.get(base_url + @prev, @request_args)
+    return parse_response_body(request)
   end
 
   class ServerResponseError < StandardError; end
@@ -80,6 +100,8 @@ class NationBuilder::Client
 
     body = response.body.strip
     return {} if body.length == 0
+    @next = JSON.parse(body)['next']
+    @prev = JSON.parse(body)['prev']
     return JSON.parse(body)
   end
 
