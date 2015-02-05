@@ -4,7 +4,7 @@ describe NationBuilder::Client do
 
   let(:client) do
     NationBuilder::Client.new('organizeralexandreschmitt',
-                              '07c3200badad9727d29fd2bcde566a211b05e05b92680ca0439504084452db9a')
+                              '53920a524356034a065515a37650df2bd295971975d5742b9daa50eb8c7404d5')
   end
 
   describe '#endpoints' do
@@ -56,9 +56,9 @@ describe NationBuilder::Client do
     it 'should handle a parametered POST' do
       params = {
         person: {
-          email: "bob@example.com",
-          last_name: "Smith",
-          first_name: "Bob"
+          email: 'bob@example.com',
+          last_name: 'Smith',
+          first_name: 'Bob'
         }
       }
 
@@ -71,7 +71,7 @@ describe NationBuilder::Client do
 
     it 'should handle a DELETE' do
       params = {
-        id: 275446,
+        id: 21234
       }
 
       response = VCR.use_cassette('delete') do
@@ -80,29 +80,5 @@ describe NationBuilder::Client do
 
       response.should eq({})
     end
-  end
-
-  describe '#pagination' do
-
-    before do
-      VCR.use_cassette('parametered_get') do
-        client.call(:basic_pages, :index, site_slug: 'organizeralexandreschmitt')
-      end
-    end
-
-    it 'should check for next and prev page link' do
-      client.next?.should eq(true)
-      client.prev?.should eq(false)
-    end
-
-    it 'should return next page' do
-      response = VCR.use_cassette('next') { client.next }
-      response.should include('results')
-    end
-
-    it 'should return nil if no prev page' do
-      client.prev.should be_nil
-    end
-
   end
 end

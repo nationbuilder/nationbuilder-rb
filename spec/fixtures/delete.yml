@@ -2,17 +2,17 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://organizeralexandreschmitt.nationbuilder.com/api/v1/people/275446?access_token=07c3200badad9727d29fd2bcde566a211b05e05b92680ca0439504084452db9a
+    uri: https://organizeralexandreschmitt.nationbuilder.com/api/v1/people/21234?access_token=53920a524356034a065515a37650df2bd295971975d5742b9daa50eb8c7404d5
     body:
       encoding: UTF-8
-      string: "{\"access_token\":\"07c3200badad9727d29fd2bcde566a211b05e05b92680ca0439504084452db9a\"}"
+      string: "{\"access_token\":\"53920a524356034a065515a37650df2bd295971975d5742b9daa50eb8c7404d5\"}"
     headers:
       User-Agent:
       - HTTPClient/1.0 (2.4.0, ruby 2.1.0 (2013-12-25))
       Accept:
       - application/json
       Date:
-      - Sat, 31 Jan 2015 07:42:09 GMT
+      - Thu, 05 Feb 2015 05:47:08 GMT
       Content-Type:
       - application/json
   response:
@@ -23,22 +23,22 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Date:
-      - Sat, 31 Jan 2015 07:42:18 GMT
+      - Thu, 05 Feb 2015 05:47:11 GMT
       Content-Length:
       - '0'
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d1efb55e9cbabff16a32fe484cf9ddcee1422690129; expires=Sun, 31-Jan-16
-        07:42:09 GMT; path=/; domain=.nationbuilder.com; HttpOnly
+      - __cfduid=d1d4e79a31d9574d13e2cafc0d75e217b1423115228; expires=Fri, 05-Feb-16
+        05:47:08 GMT; path=/; domain=.nationbuilder.com; HttpOnly
       Cache-Control:
       - no-cache
       Nation-Ratelimit-Limit:
       - '125000'
       Nation-Ratelimit-Remaining:
-      - '124960'
+      - '124962'
       Nation-Ratelimit-Reset:
-      - '1422748800'
+      - '1423180800'
       Status:
       - 204 No Content
       X-Powered-By:
@@ -50,22 +50,22 @@ http_interactions:
       X-Ratelimit-Limit:
       - 10s
       X-Ratelimit-Remaining:
-      - '99'
+      - '97'
       X-Ratelimit-Reset:
-      - '1422690139'
+      - '1423115237'
       X-Request-Id:
-      - bd836c5a02f2be085be1e3bac1a6a2a5
+      - 8548ed69e5b179a369dbf2c82598e911
       X-Runtime:
-      - '8.577632'
+      - '2.128177'
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Via:
       - 1.1 nationbuilder.com
       Cf-Ray:
-      - 1b14455cc5c30d4f-LAX
+      - 1b3ccfc3fff3068b-LAX
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Sat, 31 Jan 2015 07:42:18 GMT
+  recorded_at: Thu, 05 Feb 2015 05:47:11 GMT
 recorded_with: VCR 2.9.2
