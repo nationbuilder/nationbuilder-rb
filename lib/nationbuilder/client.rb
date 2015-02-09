@@ -31,13 +31,8 @@ class NationBuilder::Client
     @base_url.gsub(':nation_name', @nation_name)
   end
 
-  def call(endpoint_name, method_name, args={})
-    endpoint = self[endpoint_name]
-    method = endpoint[method_name]
-    nonmethod_args = method.nonmethod_args(args)
-    method_args = method.method_args(args)
-    method.validate_args(method_args)
-    url = NationBuilder::URL.new(base_url).generate_url(method.uri, method_args)
+  def raw_call(path, method, body = {}, args = {})
+    url = NationBuilder::URL.new(base_url).generate_url(path, args)
 
     request_args = {
       header: {
@@ -49,15 +44,24 @@ class NationBuilder::Client
       }
     }
 
-    if method.http_method == :get
-      request_args[:query].merge!(nonmethod_args)
+    if method == :get
+      request_args[:query].merge!(body)
     else
-      nonmethod_args[:access_token] = @api_key
-      request_args[:body] = JSON(nonmethod_args)
+      body[:access_token] = @api_key
+      request_args[:body] = JSON(body)
     end
 
-    set_response(HTTPClient.send(method.http_method, url, request_args))
+    set_response(HTTPClient.send(method, url, request_args))
     return parse_response_body(response)
+  end
+
+  def call(endpoint_name, method_name, args={})
+    endpoint = self[endpoint_name]
+    method = endpoint[method_name]
+    nonmethod_args = method.nonmethod_args(args)
+    method_args = method.method_args(args)
+    method.validate_args(method_args)
+    return raw_call(method.uri, method.http_method, nonmethod_args, args)
   end
 
   def set_response(value)
