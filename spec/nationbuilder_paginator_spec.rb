@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Paginator do
+describe NationBuilder::Paginator do
 
   let(:client) do
     NationBuilder::Client.new('organizeralexandreschmitt',
@@ -14,7 +14,7 @@ describe Paginator do
 
   describe '#pagination' do
     before do
-      @page1 = Paginator.new(client, response)
+      @page1 = NationBuilder::Paginator.new(client, response)
       @page2 = VCR.use_cassette('paginated_get_page2') { @page1.next }
     end
 

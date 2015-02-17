@@ -1,4 +1,4 @@
-class Paginator
+class NationBuilder::Paginator
   attr_reader :body
 
   def initialize(client, body)
@@ -15,7 +15,7 @@ class Paginator
       return nil unless send(:"#{page_type}?")
       path = send(:"#{page_type}?").split('/api/v1').last
       results = @client.raw_call(path, :get)
-      return Paginator.new(@client, results)
+      return self.class.new(@client, results)
     end
   end
 

@@ -80,12 +80,12 @@ A call can be paginated by creating a new instance of the `Paginator` class. Thi
 ```ruby
 response = client.call(:people, :index)
 
-paginated = Paginator.new(client, response)
+paginated = NationBuilder::Paginator.new(client, response)
 page1 = paginated
 page2 = page1.next
 page3 = page2.next
 ```
-Methods `#next` and `#prev` return the results of the next or previous page of results, nil if none. `#next?` and `#prev?` return the path to the next or prev page, or nil if none. The results of a page can be accessed through `.body` - in the above example, `page1.body` returns the same hash as `response`.
+Methods `#next` and `#prev` return the results of the next or previous page of results, nil if none. `#next?` and `#prev?` alert the caller to whether other pages of results exist. The JSON results of a page can be accessed by calling `#body` on a page: in the above example, `page1.body` returns the same hash as `response`.
 
 ## Documentation
 
