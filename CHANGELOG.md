@@ -1,4 +1,4 @@
-# 1.2.0 (unreleased)
+# 1.2.0
 - Native exception types
 - [#9] Exponential backoff when encountering rate limit
 
