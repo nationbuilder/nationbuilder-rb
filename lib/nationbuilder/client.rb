@@ -1,9 +1,10 @@
 class NationBuilder::Client
 
-  def initialize(nation_name, api_key, base_url = 'https://:nation_name.nationbuilder.com')
+  def initialize(nation_name, api_key, base_url: 'https://:nation_name.nationbuilder.com', fire_webhooks: nil)
     @nation_name = nation_name
     @api_key = api_key
     @base_url = base_url
+    @fire_webhooks = fire_webhooks
     @name_to_endpoint = {}
     parsed_endpoints.each do |endpoint|
       @name_to_endpoint[endpoint.name] = endpoint
@@ -43,6 +44,8 @@ class NationBuilder::Client
         access_token: @api_key
       }
     }
+
+    request_args[:query][:fire_webhooks] = @fire_webhooks unless @fire_webhooks.nil?
 
     if method == :get
       request_args[:query].merge!(body)
