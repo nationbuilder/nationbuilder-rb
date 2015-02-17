@@ -1,4 +1,4 @@
-# 1.2.0
+# 1.2.0 (unreleased)
 - Native exception types
 
 # 1.1.0
