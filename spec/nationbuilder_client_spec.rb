@@ -5,7 +5,7 @@ describe NationBuilder::Client do
   let(:client) do
     NationBuilder::Client.new('organizeralexandreschmitt',
                               '53920a524356034a065515a37650df2bd295971975d5742b9daa50eb8c7404d5',
-                              retries: 2)
+                              retries: 1)
   end
 
   describe '#endpoints' do

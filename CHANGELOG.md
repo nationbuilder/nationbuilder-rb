@@ -1,3 +1,7 @@
+# 1.2.2
+- The retries parameter on a client should correspond to the number of retries,
+  not total calls.
+
 # 1.2.1
 - Include Paginator class in NationBuilder module
 
