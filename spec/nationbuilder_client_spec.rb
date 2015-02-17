@@ -4,7 +4,8 @@ describe NationBuilder::Client do
 
   let(:client) do
     NationBuilder::Client.new('organizeralexandreschmitt',
-                              '53920a524356034a065515a37650df2bd295971975d5742b9daa50eb8c7404d5')
+                              '53920a524356034a065515a37650df2bd295971975d5742b9daa50eb8c7404d5',
+                              retries: 2)
   end
 
   describe '#endpoints' do
@@ -97,6 +98,32 @@ describe NationBuilder::Client do
       response = double(code: 500, body: '500ing')
       expect(client.classify_response_error(response).class).
         to eq(NationBuilder::ServerError)
+    end
+  end
+
+  describe '#perform_request_with_retries' do
+    before do
+      expect(HTTPClient).to receive(:send)
+    end
+
+    it 'should raise non-rate limiting execeptions' do
+      expect(client).to receive(:parse_response_body) { raise StandardError.new('boom') }
+      expect do
+        client.perform_request_with_retries(nil, nil, nil)
+      end.to raise_error
+    end
+
+    it 'should return a response if the rate limit is eventually dropped' do
+      expect(Kernel).to receive(:sleep).twice
+      allow(client).to receive(:parse_response_body) do
+        @count ||= 0
+        if @count != 2
+          raise NationBuilder::RateLimitedError.new
+        end
+      end
+      expect do
+        client.perform_request_with_retries(nil, nil, nil)
+      end.to_not raise_error
     end
   end
 end

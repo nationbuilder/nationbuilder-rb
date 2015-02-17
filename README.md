@@ -30,8 +30,12 @@ Then, create a client by specifying the name of your nation and
 your API token:
 
 ```ruby
-client = NationBuilder::Client.new('my_nation_name', 'my_api_token')
+client = NationBuilder::Client.new('my_nation_name', 'my_api_token', retries: 8)
 ```
+
+The `retries` parameter specifies the maximum number of retries to attempt
+when the client is rate limited. This uses an exponential backoff strategy.
+The default is `8`.
 
 ## Calling the API
 
@@ -81,7 +85,7 @@ page1 = paginated
 page2 = page1.next
 page3 = page2.next
 ```
-Methods `#next` and `#prev` return the results of the next or previous page of results, nil if none. `#next?` and `#prev?` return the path to the next or prev page, or nil if none. The results of a page can be accessed through `.body` - in the above example, `page1.body` returns the same hash as `response`. 
+Methods `#next` and `#prev` return the results of the next or previous page of results, nil if none. `#next?` and `#prev?` return the path to the next or prev page, or nil if none. The results of a page can be accessed through `.body` - in the above example, `page1.body` returns the same hash as `response`.
 
 ## Documentation
 

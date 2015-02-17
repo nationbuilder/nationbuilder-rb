@@ -1,10 +1,16 @@
 class NationBuilder::Client
 
-  def initialize(nation_name, api_key, base_url = 'https://:nation_name.nationbuilder.com')
+  def initialize(nation_name, api_key, opts = {})
     @nation_name = nation_name
     @api_key = api_key
-    @base_url = base_url
     @name_to_endpoint = {}
+    @base_url = opts[:base_url] || 'https://:nation_name.nationbuilder.com'
+    @retries = opts[:retries] || 8
+
+    if @retries < 1
+      raise 'A positive number of retries must be specified'
+    end
+
     parsed_endpoints.each do |endpoint|
       @name_to_endpoint[endpoint.name] = endpoint
     end
@@ -31,6 +37,8 @@ class NationBuilder::Client
     @base_url.gsub(':nation_name', @nation_name)
   end
 
+  RETRY_DELAY = 0.1 # seconds
+
   def raw_call(path, method, body = {}, args = {})
     url = NationBuilder::URL.new(base_url).generate_url(path, args)
 
@@ -51,8 +59,7 @@ class NationBuilder::Client
       request_args[:body] = JSON(body)
     end
 
-    set_response(HTTPClient.send(method, url, request_args))
-    return parse_response_body(response)
+    perform_request_with_retries(method, url, request_args)
   end
 
   def call(endpoint_name, method_name, args={})
@@ -64,10 +71,31 @@ class NationBuilder::Client
     return raw_call(method.uri, method.http_method, nonmethod_args, args)
   end
 
+  def perform_request_with_retries(method, url, request_args)
+    raw_response = HTTPClient.send(method, url, request_args)
+    parsed_response = nil
+
+    @retries.times do |i|
+      begin
+        parsed_response = parse_response_body(raw_response)
+      rescue NationBuilder::RateLimitedError
+        Kernel.sleep(RETRY_DELAY * 2**i)
+      rescue => e
+        raise e
+      else
+        break
+      end
+    end
+
+    set_response(raw_response)
+    parsed_response
+  end
+
   def set_response(value)
     Thread.current[:nationbuilder_rb_response] = value
   end
 
+  # This getter is used for fetching the raw response
   def response
     Thread.current[:nationbuilder_rb_response]
   end
