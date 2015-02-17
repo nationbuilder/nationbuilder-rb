@@ -10,7 +10,7 @@ describe NationBuilder::Client do
   describe '#endpoints' do
 
     it 'should contain all defined endpoints' do
-      client.endpoints.sort.should eq([
+      expect(client.endpoints.sort).to eq([
         :basic_pages,
         :blog_posts,
         :blogs,
@@ -38,7 +38,7 @@ describe NationBuilder::Client do
   describe '#base_url' do
 
     it 'should contain the nation slug' do
-      client.base_url.should eq('https://organizeralexandreschmitt.nationbuilder.com')
+      expect(client.base_url).to eq('https://organizeralexandreschmitt.nationbuilder.com')
     end
   end
 
@@ -48,7 +48,7 @@ describe NationBuilder::Client do
       VCR.use_cassette('parametered_get') do
         response = client.call(:basic_pages, :index, site_slug: 'organizeralexandreschmitt')
         response['results'].each do |result|
-          result['site_slug'].should eq('organizeralexandreschmitt')
+          expect(result['site_slug']).to eq('organizeralexandreschmitt')
         end
       end
     end
@@ -66,7 +66,7 @@ describe NationBuilder::Client do
         client.call(:people, :create, params)
       end
 
-      response['person']['first_name'].should eq('Bob')
+      expect(response['person']['first_name']).to eq('Bob')
     end
 
     it 'should handle a DELETE' do
@@ -78,7 +78,7 @@ describe NationBuilder::Client do
         client.call(:people, :destroy, params)
       end
 
-      response.should eq(nil)
+      expect(response).to eq(nil)
     end
   end
 
