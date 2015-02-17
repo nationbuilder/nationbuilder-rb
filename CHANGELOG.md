@@ -1,3 +1,6 @@
+# 1.2.1
+- Include Paginator class in NationBuilder module
+
 # 1.2.0
 - Native exception types
 - [#9] Exponential backoff when encountering rate limit
