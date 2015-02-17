@@ -72,14 +72,23 @@ class NationBuilder::Client
     Thread.current[:nationbuilder_rb_response]
   end
 
-  class ServerResponseError < StandardError; end
+  def classify_response_error(response)
+    case
+    when response.code == 429
+      return NationBuilder::RateLimitedError.new(response.body)
+    when response.code.to_s.start_with?('4')
+      return NationBuilder::ClientError.new(response.body)
+    when response.code.to_s.start_with?('5')
+      return NationBuilder::ServerError.new(response.body)
+    end
+  end
 
   def parse_response_body(response)
-    success = response.code.to_s.start_with?('2')
+    error = classify_response_error(response)
+    raise error if error
 
     if response.header['Content-Type'].first != 'application/json'
-      return {} if success
-      raise ServerResponseError.new("Non-JSON content-type for server response: #{response.body}")
+      return nil
     end
 
     body = response.body.strip

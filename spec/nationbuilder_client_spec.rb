@@ -78,7 +78,25 @@ describe NationBuilder::Client do
         client.call(:people, :destroy, params)
       end
 
-      response.should eq({})
+      response.should eq(nil)
+    end
+  end
+
+  describe '#classify_response_error' do
+    it 'should account for rate limits' do
+      response = double(code: 429, body: 'rate limiting')
+      expect(client.classify_response_error(response).class).
+        to eq(NationBuilder::RateLimitedError)
+    end
+    it 'should account for client errors' do
+      response = double(code: 404, body: '404ing')
+      expect(client.classify_response_error(response).class).
+        to eq(NationBuilder::ClientError)
+    end
+    it 'should account for client errors' do
+      response = double(code: 500, body: '500ing')
+      expect(client.classify_response_error(response).class).
+        to eq(NationBuilder::ServerError)
     end
   end
 end
