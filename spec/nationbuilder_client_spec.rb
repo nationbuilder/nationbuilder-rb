@@ -81,4 +81,27 @@ describe NationBuilder::Client do
       response.should eq({})
     end
   end
+
+  describe 'with fire_webhooks parameter passed to constructor' do
+
+    let(:client) do
+      NationBuilder::Client.new('organizeralexandreschmitt',
+                                '53920a524356034a065515a37650df2bd295971975d5742b9daa50eb8c7404d5',
+                                fire_webhooks: false)
+    end
+
+    it 'should pass it as a query parameter on API calls' do
+      params = {
+        person: {
+          email: 'bob@example.com',
+          last_name: 'Smith',
+          first_name: 'Bob'
+        }
+      }
+
+      VCR.use_cassette('parametered_post_with_fire_webhooks_false') do
+        client.call(:people, :create, params)
+      end
+    end
+  end
 end
