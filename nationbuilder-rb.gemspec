@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["David Huie"]
-  s.date = "2015-02-10"
+  s.date = "2015-02-17"
   s.description = "A Ruby client to the NationBuilder API"
   s.email = "david@nationbuilder.com"
   s.executables = ["nbdoc"]
@@ -37,6 +37,7 @@ Gem::Specification.new do |s|
     "lib/nationbuilder/api_spec.json",
     "lib/nationbuilder/client.rb",
     "lib/nationbuilder/endpoint.rb",
+    "lib/nationbuilder/errors.rb",
     "lib/nationbuilder/method.rb",
     "lib/nationbuilder/paginator.rb",
     "lib/nationbuilder/parameter.rb",
@@ -62,26 +63,26 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<httpclient>, ["~> 2.4.0"])
-      s.add_development_dependency(%q<jeweler>, ["~> 2.0.1"])
-      s.add_development_dependency(%q<rspec>, ["~> 2.8.0"])
-      s.add_development_dependency(%q<simplecov>, ["~> 0.8.2"])
-      s.add_development_dependency(%q<vcr>, ["~> 2.9.2"])
-      s.add_development_dependency(%q<webmock>, ["~> 1.18.0"])
+      s.add_development_dependency(%q<jeweler>, ["~> 2.0"])
+      s.add_development_dependency(%q<rspec>, ["~> 3.2"])
+      s.add_development_dependency(%q<simplecov>, ["~> 0.8"])
+      s.add_development_dependency(%q<vcr>, ["~> 2.9"])
+      s.add_development_dependency(%q<webmock>, ["~> 1.18"])
     else
       s.add_dependency(%q<httpclient>, ["~> 2.4.0"])
-      s.add_dependency(%q<jeweler>, ["~> 2.0.1"])
-      s.add_dependency(%q<rspec>, ["~> 2.8.0"])
-      s.add_dependency(%q<simplecov>, ["~> 0.8.2"])
-      s.add_dependency(%q<vcr>, ["~> 2.9.2"])
-      s.add_dependency(%q<webmock>, ["~> 1.18.0"])
+      s.add_dependency(%q<jeweler>, ["~> 2.0"])
+      s.add_dependency(%q<rspec>, ["~> 3.2"])
+      s.add_dependency(%q<simplecov>, ["~> 0.8"])
+      s.add_dependency(%q<vcr>, ["~> 2.9"])
+      s.add_dependency(%q<webmock>, ["~> 1.18"])
     end
   else
     s.add_dependency(%q<httpclient>, ["~> 2.4.0"])
-    s.add_dependency(%q<jeweler>, ["~> 2.0.1"])
-    s.add_dependency(%q<rspec>, ["~> 2.8.0"])
-    s.add_dependency(%q<simplecov>, ["~> 0.8.2"])
-    s.add_dependency(%q<vcr>, ["~> 2.9.2"])
-    s.add_dependency(%q<webmock>, ["~> 1.18.0"])
+    s.add_dependency(%q<jeweler>, ["~> 2.0"])
+    s.add_dependency(%q<rspec>, ["~> 3.2"])
+    s.add_dependency(%q<simplecov>, ["~> 0.8"])
+    s.add_dependency(%q<vcr>, ["~> 2.9"])
+    s.add_dependency(%q<webmock>, ["~> 1.18"])
   end
 end
 
