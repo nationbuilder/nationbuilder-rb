@@ -8,7 +8,7 @@ class NationBuilder::Client
     @retries = opts[:retries] || 8
 
     if @retries < 0
-      raise 'A positive number of retries must be specified'
+      raise 'Retries must be at least zero'
     end
 
     parsed_endpoints.each do |endpoint|
