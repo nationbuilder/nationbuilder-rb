@@ -1,3 +1,6 @@
+# 1.2.3
+- Return true for non-JSON responses
+
 # 1.2.2
 - The retries parameter on a client should correspond to the number of retries,
   not total calls.

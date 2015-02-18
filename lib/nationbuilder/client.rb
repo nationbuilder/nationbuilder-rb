@@ -103,11 +103,11 @@ class NationBuilder::Client
   def classify_response_error(response)
     case
     when response.code == 429
-      return NationBuilder::RateLimitedError.new(response.body)
+      NationBuilder::RateLimitedError.new(response.body)
     when response.code.to_s.start_with?('4')
-      return NationBuilder::ClientError.new(response.body)
+      NationBuilder::ClientError.new(response.body)
     when response.code.to_s.start_with?('5')
-      return NationBuilder::ServerError.new(response.body)
+      NationBuilder::ServerError.new(response.body)
     end
   end
 
@@ -116,7 +116,7 @@ class NationBuilder::Client
     raise error if error
 
     if response.header['Content-Type'].first != 'application/json'
-      return nil
+      return true
     end
 
     body = response.body.strip

@@ -79,7 +79,7 @@ describe NationBuilder::Client do
         client.call(:people, :destroy, params)
       end
 
-      expect(response).to eq(nil)
+      expect(response).to eq(true)
     end
   end
 
