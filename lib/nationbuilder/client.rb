@@ -56,7 +56,7 @@ class NationBuilder::Client
       request_args[:query].merge!(body)
     else
       body[:access_token] = @api_key
-      unless body[:fire_webhooks].nil?
+      if !body[:fire_webhooks].nil?
         request_args[:query][:fire_webhooks] = body[:fire_webhooks]
       end
       request_args[:body] = JSON(body)
