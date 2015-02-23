@@ -70,6 +70,21 @@ describe NationBuilder::Client do
       expect(response['person']['first_name']).to eq('Bob')
     end
 
+    it 'should pass fire_webhooks on POST' do
+      params = {
+        fire_webhooks: false,
+        person: {
+          email: 'bob@example.com',
+          last_name: 'Smith',
+          first_name: 'Bob'
+        }
+      }
+
+      VCR.use_cassette('parametered_post_with_fire_webhooks_false') do
+         client.call(:people, :create, params)
+      end
+    end
+
     it 'should handle a DELETE' do
       params = {
         id: 21234
