@@ -1,3 +1,6 @@
+# 1.3
+- [#10] Support fire_webhooks parameter in client
+
 # 1.2.3
 - Return true for non-JSON responses
 

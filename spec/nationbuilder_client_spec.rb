@@ -70,19 +70,41 @@ describe NationBuilder::Client do
       expect(response['person']['first_name']).to eq('Bob')
     end
 
-    it 'should pass fire_webhooks on POST' do
-      params = {
-        fire_webhooks: false,
-        person: {
-          email: 'bob@example.com',
-          last_name: 'Smith',
-          first_name: 'Bob'
-        }
-      }
+    context 'fire_webhooks' do
 
-      VCR.use_cassette('parametered_post_with_fire_webhooks_false') do
-         client.call(:people, :create, params)
+      it 'should disable webhooks' do
+        params = {
+          fire_webhooks: false,
+          person: {
+            email: 'bob@example.com',
+            last_name: 'Smith',
+            first_name: 'Bob'
+          }
+        }
+
+        expect(client).to receive(:perform_request_with_retries) do |_, _, request_args|
+          expect(request_args[:query][:fire_webhooks]).to be_falsey
+        end
+
+        client.call(:people, :create, params)
       end
+
+      it 'should not be included if not specified' do
+        params = {
+          person: {
+            email: 'bob@example.com',
+            last_name: 'Smith',
+            first_name: 'Bob'
+          }
+        }
+
+        expect(client).to receive(:perform_request_with_retries) do |_, _, request_args|
+          expect(request_args[:query].include?(:fire_webhooks)).to be_falsey
+        end
+
+        client.call(:people, :create, params)
+      end
+
     end
 
     it 'should handle a DELETE' do
