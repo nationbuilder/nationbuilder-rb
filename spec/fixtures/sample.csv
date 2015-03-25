@@ -1,0 +1,3 @@
+shapeshifter_row_id,first_name,last_name,address__address1,address__address2,address__city,address__state,address__zip,email1,address__country,address__street_number,address__street_prefix,address__street_name,address__street_type,address__street_suffix,address__street_number_integer,address__unit_number,address__unit_number_integer,address__identity_hash
+1,Johnny,Thomas Jr,429 Balfour Dr,,Windcrest,TX,78239,1thomas@prodigy.net,,429,,Balfour,Dr,,429,,,67603c8e65c075ab1979153778060ba739e92fe0
+2,Helen,Emery,1403 Huntington Dr,,Murfreesboro,TN,37130,2226helen.1403@juno.com,,1403,,Huntington,Dr,,1403,,,8534a74a8d993ed0666e5819d86ebb5199fe69c5
