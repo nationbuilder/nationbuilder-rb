@@ -15,7 +15,7 @@ $ gem install nationbuilder-rb
 Or, add this to your gemfile:
 
 ```ruby
-gem 'nationbuilder'
+gem 'nationbuilder-rb'
 ```
 
 ## Creating a client
