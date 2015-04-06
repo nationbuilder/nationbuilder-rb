@@ -4,7 +4,7 @@ require 'jeweler'
 
 Jeweler::Tasks.new do |gem|
   gem.name = 'nationbuilder-rb'
-  gem.homepage = 'http://github.com/3dna/nationbuilder-rb'
+  gem.homepage = 'http://github.com/nationbuilder/nationbuilder-rb'
   gem.license = 'MIT'
   gem.summary = 'A Ruby client to the NationBuilder API'
   gem.description = 'A Ruby client to the NationBuilder API'
