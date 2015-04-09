@@ -1,3 +1,8 @@
+# 1.3.2
+- When retrying requests, the request is actually resent instead
+  of just reparsing the response
+- [#12] Raise an error if the last API request retry is rate limited
+
 # 1.3
 - [#10] Support fire_webhooks parameter in client
 
