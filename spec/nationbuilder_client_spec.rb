@@ -139,11 +139,8 @@ describe NationBuilder::Client do
   end
 
   describe '#perform_request_with_retries' do
-    before do
-      expect(HTTPClient).to receive(:send)
-    end
-
     it 'should raise non-rate limiting execeptions' do
+      expect(HTTPClient).to receive(:send)
       expect(client).to receive(:parse_response_body) { raise StandardError.new('boom') }
       expect do
         client.perform_request_with_retries(nil, nil, nil)
@@ -151,6 +148,7 @@ describe NationBuilder::Client do
     end
 
     it 'should return a response if the rate limit is eventually dropped' do
+      expect(HTTPClient).to receive(:send).twice
       expect(Kernel).to receive(:sleep).twice
       allow(client).to receive(:parse_response_body) do
         @count ||= 0
