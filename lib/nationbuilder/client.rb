@@ -77,18 +77,26 @@ class NationBuilder::Client
   def perform_request_with_retries(method, url, request_args)
     raw_response = nil
     parsed_response = nil
+    exception_to_reraise = nil
 
     (@retries + 1).times do |i|
       begin
         raw_response = HTTPClient.send(method, url, request_args)
         parsed_response = parse_response_body(raw_response)
-      rescue NationBuilder::RateLimitedError
+      rescue NationBuilder::RateLimitedError => e
+        exception_to_reraise = e
         Kernel.sleep(RETRY_DELAY * 2**i)
       rescue => e
         raise e
       else
+        exception_to_reraise = nil
         break
       end
+    end
+
+    # If the retry cycle ended with an error, reraise it
+    if exception_to_reraise
+      raise exception_to_reraise
     end
 
     set_response(raw_response)

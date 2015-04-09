@@ -149,16 +149,36 @@ describe NationBuilder::Client do
 
     it 'should return a response if the rate limit is eventually dropped' do
       expect(HTTPClient).to receive(:send).twice
-      expect(Kernel).to receive(:sleep).twice
+      expect(Kernel).to receive(:sleep)
+
       allow(client).to receive(:parse_response_body) do
-        @count ||= 0
-        if @count != 2
+        unless @count
+          @count ||= 0
+        else
+          @count += 1
+        end
+
+        if @count < 1
           raise NationBuilder::RateLimitedError.new
         end
       end
+
       expect do
         client.perform_request_with_retries(nil, nil, nil)
       end.to_not raise_error
+    end
+
+    it 'on the last retry, it should reraise the rate limiting exception ' do
+      expect(HTTPClient).to receive(:send).twice
+      expect(Kernel).to receive(:sleep).twice
+
+      allow(client).to receive(:parse_response_body) do
+        raise NationBuilder::RateLimitedError.new
+      end
+
+      expect do
+        client.perform_request_with_retries(nil, nil, nil)
+      end.to raise_error(NationBuilder::RateLimitedError)
     end
   end
 end
