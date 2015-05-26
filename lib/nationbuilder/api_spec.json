@@ -2253,6 +2253,21 @@
           ]
         },
         {
+          "MethodName": "Add",
+          "Synopsis": "Updates a matched person (without overriding data) or creates a new one if the person doesn't exist",
+          "HTTPMethod": "PUT",
+          "URI": "/people/add",
+          "parameters": [
+            {
+              "Name": "body",
+              "Required": "Y",
+              "Default": "{}",
+              "Type": "json",
+              "Description": "JSON attributes for updating/matching the person"
+            }
+          ]
+        },
+        {
           "MethodName": "Destroy",
           "Synopsis": "Removes the person with the matching ID",
           "HTTPMethod": "DELETE",
