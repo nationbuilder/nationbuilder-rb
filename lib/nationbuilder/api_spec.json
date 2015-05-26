@@ -2254,7 +2254,7 @@
         },
         {
           "MethodName": "Add",
-          "Synopsis": "Updates a matched person (without overwriting data) or creates a new one if the person doesn't exist",
+          "Synopsis": "Updates a matched person (without overriding data) or creates a new one if the person doesn't exist",
           "HTTPMethod": "PUT",
           "URI": "/people/add",
           "parameters": [
