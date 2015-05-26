@@ -18,7 +18,7 @@ class NationBuilder::Client
 
   def parsed_endpoints
     NationBuilder::SpecParser
-      .parse(File.join(File.dirname(__FILE__), 'api_spec.json'))
+      .parse(File.join(File.dirname(__FILE__), '..', 'api_spec/spec.json'))
   end
 
   class InvalidEndpoint < ArgumentError; end
