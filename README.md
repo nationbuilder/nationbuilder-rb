@@ -122,3 +122,12 @@ Endpoint: basic_pages
 
 ...
 ```
+
+## Development
+
+To update the API specification that powers this client, first make
+the appropriate updates to the
+[api_spec](https://github.com/nationbuilder/api_spec) repository. Once
+the changes have been merged to api_spec's master branch, run the
+`update_subtree.sh` script in the root directory of this project to
+copy over the changes.
