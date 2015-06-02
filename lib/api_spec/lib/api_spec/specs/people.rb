@@ -53,21 +53,25 @@ class ApiSpec::Spec
       method.parameter("first_name") do |p|
         p.required = 'N'
         p.type = 'string'
+        p.description = 'deprecated'
       end
 
       method.parameter("last_name") do |p|
         p.required = 'N'
         p.type = 'string'
+        p.description = 'deprecated'
       end
 
       method.parameter("phone") do |p|
         p.required = 'N'
         p.type = 'string'
+        p.description = 'deprecated'
       end
 
       method.parameter("mobile") do |p|
         p.required = 'N'
         p.type = 'string'
+        p.description = 'deprecated'
       end
 
     end

@@ -1757,28 +1757,28 @@
               "Required": "N",
               "Default": null,
               "Type": "string",
-              "Description": null
+              "Description": "deprecated"
             },
             {
               "Name": "last_name",
               "Required": "N",
               "Default": null,
               "Type": "string",
-              "Description": null
+              "Description": "deprecated"
             },
             {
               "Name": "phone",
               "Required": "N",
               "Default": null,
               "Type": "string",
-              "Description": null
+              "Description": "deprecated"
             },
             {
               "Name": "mobile",
               "Required": "N",
               "Default": null,
               "Type": "string",
-              "Description": null
+              "Description": "deprecated"
             }
           ]
         },
