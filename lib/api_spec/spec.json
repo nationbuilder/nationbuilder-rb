@@ -2281,6 +2281,28 @@
               "Description": "The person's ID"
             }
           ]
+        },
+        {
+          "MethodName": "Private Note Create",
+          "Synopsis": "Creates a private note for the given person",
+          "HTTPMethod": "POST",
+          "URI": "/people/:id/notes",
+          "parameters": [
+            {
+              "Name": "id",
+              "Required": "Y",
+              "Default": null,
+              "Type": "int",
+              "Description": "the ID of the person"
+            },
+            {
+              "Name": "body",
+              "Required": "Y",
+              "Default": null,
+              "Type": "json",
+              "Description": "JSON representation of the note to create"
+            }
+          ]
         }
       ]
     },
@@ -2349,6 +2371,107 @@
               "Default": "10",
               "Type": "int",
               "Description": "maximum number of results to return"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Precincts",
+      "methods": [
+        {
+          "MethodName": "Index",
+          "Synopsis": "Returns a list of current precincts",
+          "HTTPMethod": "GET",
+          "URI": "/precincts",
+          "parameters": [
+            {
+              "Name": "__token",
+              "Required": "N",
+              "Default": null,
+              "Type": "string",
+              "Description": "pagination token"
+            },
+            {
+              "Name": "__nonce",
+              "Required": "N",
+              "Default": null,
+              "Type": "string",
+              "Description": "pagination nonce"
+            },
+            {
+              "Name": "limit",
+              "Required": "N",
+              "Default": "10",
+              "Type": "int",
+              "Description": "maximum number of results to return"
+            }
+          ]
+        },
+        {
+          "MethodName": "Show",
+          "Synopsis": "Returns a representation of the precinct",
+          "HTTPMethod": "GET",
+          "URI": "/precincts/:id",
+          "parameters": [
+            {
+              "Name": "id",
+              "Required": "Y",
+              "Default": "1",
+              "Type": "int",
+              "Description": "the precinct's id"
+            }
+          ]
+        },
+        {
+          "MethodName": "Create",
+          "Synopsis": "Creates a precinct with the provided data",
+          "HTTPMethod": "POST",
+          "URI": "/precincts",
+          "parameters": [
+            {
+              "Name": "body",
+              "Required": "Y",
+              "Default": "{}",
+              "Type": "json",
+              "Description": "JSON representation of the precinct to create"
+            }
+          ]
+        },
+        {
+          "MethodName": "Update",
+          "Synopsis": "Updates a precinct with the provided data",
+          "HTTPMethod": "PUT",
+          "URI": "/precincts/:id",
+          "parameters": [
+            {
+              "Name": "id",
+              "Required": "Y",
+              "Default": null,
+              "Type": "int",
+              "Description": "The precinct's ID"
+            },
+            {
+              "Name": "body",
+              "Required": "Y",
+              "Default": "{}",
+              "Type": "json",
+              "Description": "JSON attributes for updating the precinct"
+            }
+          ]
+        },
+        {
+          "MethodName": "Destroy",
+          "Synopsis": "Removes the precinct with the matching ID",
+          "HTTPMethod": "DELETE",
+          "URI": "/precincts/:id",
+          "parameters": [
+            {
+              "Name": "id",
+              "Required": "Y",
+              "Default": null,
+              "Type": "int",
+              "Description": "The precinct's ID"
             }
           ]
         }
