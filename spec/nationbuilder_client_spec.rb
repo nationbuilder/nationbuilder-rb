@@ -28,6 +28,7 @@ describe NationBuilder::Client do
         :page_attachments,
         :people,
         :people_tags,
+        :precincts,
         :sites,
         :survey_responses,
         :surveys,
