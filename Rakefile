@@ -8,8 +8,8 @@ Jeweler::Tasks.new do |gem|
   gem.license = 'MIT'
   gem.summary = 'A Ruby client to the NationBuilder API'
   gem.description = 'A Ruby client to the NationBuilder API'
-  gem.email = 'david@nationbuilder.com'
-  gem.authors = ['David Huie']
+  gem.email = 'schmitt@nationbuilder.com'
+  gem.authors = ['David Huie', 'Alexandre Schmitt']
 end
 
 Jeweler::RubygemsDotOrgTasks.new

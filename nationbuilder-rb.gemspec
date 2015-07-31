@@ -10,10 +10,10 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
-  s.authors = ["David Huie"]
+  s.authors = ["David Huie", "Alexandre Schmitt"]
   s.date = "2015-07-31"
   s.description = "A Ruby client to the NationBuilder API"
-  s.email = "david@nationbuilder.com"
+  s.email = "schmitt@nationbuilder.com"
   s.executables = ["nbdoc"]
   s.extra_rdoc_files = [
     "LICENSE.txt",
