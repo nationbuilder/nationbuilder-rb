@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["David Huie"]
-  s.date = "2015-05-25"
+  s.date = "2015-07-31"
   s.description = "A Ruby client to the NationBuilder API"
   s.email = "david@nationbuilder.com"
   s.executables = ["nbdoc"]
@@ -33,8 +33,37 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "bin/nbdoc",
+    "lib/api_spec/.ruby-gemset",
+    "lib/api_spec/.ruby-version",
+    "lib/api_spec/Gemfile",
+    "lib/api_spec/Gemfile.lock",
+    "lib/api_spec/LICENSE.txt",
+    "lib/api_spec/README.md",
+    "lib/api_spec/Rakefile",
+    "lib/api_spec/lib/api_spec.rb",
+    "lib/api_spec/lib/api_spec/generator.rb",
+    "lib/api_spec/lib/api_spec/specs/basic_pages.rb",
+    "lib/api_spec/lib/api_spec/specs/blog_posts.rb",
+    "lib/api_spec/lib/api_spec/specs/blogs.rb",
+    "lib/api_spec/lib/api_spec/specs/calendars.rb",
+    "lib/api_spec/lib/api_spec/specs/campaign_data.rb",
+    "lib/api_spec/lib/api_spec/specs/contacts.rb",
+    "lib/api_spec/lib/api_spec/specs/donations.rb",
+    "lib/api_spec/lib/api_spec/specs/events.rb",
+    "lib/api_spec/lib/api_spec/specs/exports.rb",
+    "lib/api_spec/lib/api_spec/specs/imports.rb",
+    "lib/api_spec/lib/api_spec/specs/lists.rb",
+    "lib/api_spec/lib/api_spec/specs/memberships.rb",
+    "lib/api_spec/lib/api_spec/specs/page_attachments.rb",
+    "lib/api_spec/lib/api_spec/specs/people.rb",
+    "lib/api_spec/lib/api_spec/specs/people_tags.rb",
+    "lib/api_spec/lib/api_spec/specs/precincts.rb",
+    "lib/api_spec/lib/api_spec/specs/sites.rb",
+    "lib/api_spec/lib/api_spec/specs/survey_responses.rb",
+    "lib/api_spec/lib/api_spec/specs/surveys.rb",
+    "lib/api_spec/lib/api_spec/specs/webhooks.rb",
+    "lib/api_spec/spec.json",
     "lib/nationbuilder.rb",
-    "lib/nationbuilder/api_spec.json",
     "lib/nationbuilder/client.rb",
     "lib/nationbuilder/endpoint.rb",
     "lib/nationbuilder/errors.rb",
@@ -52,11 +81,12 @@ Gem::Specification.new do |s|
     "spec/fixtures/parametered_post_with_fire_webhooks_false.yml",
     "spec/nationbuilder_client_spec.rb",
     "spec/nationbuilder_paginator_spec.rb",
-    "spec/spec_helper.rb"
+    "spec/spec_helper.rb",
+    "update_subtree.sh"
   ]
   s.homepage = "http://github.com/nationbuilder/nationbuilder-rb"
   s.licenses = ["MIT"]
-  s.rubygems_version = "2.2.1"
+  s.rubygems_version = "2.4.6"
   s.summary = "A Ruby client to the NationBuilder API"
 
   if s.respond_to? :specification_version then
