@@ -27,6 +27,12 @@ class ApiSpec::Spec
       end
     end
 
+    people.method('Count') do |method|
+      method.synopsis = "Returns a count of people in the nation"
+      method.http_method = "GET"
+      method.uri = "/people/count"
+    end
+
     people.method('Show') do |method|
       method.synopsis = "Returns a full representation of the person"
       method.http_method = "GET"
@@ -474,6 +480,24 @@ class ApiSpec::Spec
         p.required = 'Y'
         p.type = 'int'
         p.description = "The person's ID"
+      end
+    end
+
+    people.method('Private Note Create') do |method|
+      method.synopsis = "Creates a private note for the given person"
+      method.http_method = "POST"
+      method.uri = "/people/:id/notes"
+
+      method.parameter('id') do |p|
+        p.required = 'Y'
+        p.type = 'int'
+        p.description = "the ID of the person"
+      end
+
+      method.parameter('body') do |p|
+        p.required = 'Y'
+        p.type = 'json'
+        p.description = 'JSON representation of the note to create'
       end
     end
 
