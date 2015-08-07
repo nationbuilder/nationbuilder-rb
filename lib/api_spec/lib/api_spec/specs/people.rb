@@ -27,6 +27,12 @@ class ApiSpec::Spec
       end
     end
 
+    people.method('Count') do |method|
+      method.synopsis = "Returns a count of people in the nation"
+      method.http_method = "GET"
+      method.uri = "/people/count"
+    end
+
     people.method('Show') do |method|
       method.synopsis = "Returns a full representation of the person"
       method.http_method = "GET"
