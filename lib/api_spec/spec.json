@@ -1725,6 +1725,15 @@
           ]
         },
         {
+          "MethodName": "Count",
+          "Synopsis": "Returns a count of people in the nation",
+          "HTTPMethod": "GET",
+          "URI": "/people/count",
+          "parameters": [
+
+          ]
+        },
+        {
           "MethodName": "Show",
           "Synopsis": "Returns a full representation of the person",
           "HTTPMethod": "GET",
