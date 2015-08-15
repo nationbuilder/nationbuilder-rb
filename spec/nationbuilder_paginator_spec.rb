@@ -4,7 +4,7 @@ describe NationBuilder::Paginator do
 
   let(:client) do
     NationBuilder::Client.new('organizeralexandreschmitt',
-                              '53920a524356034a065515a37650df2bd295971975d5742b9daa50eb8c7404d5')
+                              '3695ca30a6e74401115ec2b68767b53112c32b5bedc3c1f34e72c9749419b2de')
   end
   let(:response) do
     VCR.use_cassette('parametered_get') do

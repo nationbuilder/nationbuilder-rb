@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://organizeralexandreschmitt.nationbuilder.com/api/v1/sites/organizeralexandreschmitt/pages/basic_pages?access_token=3695ca30a6e74401115ec2b68767b53112c32b5bedc3c1f34e72c9749419b2de&limit%5B%5D=11
+    uri: https://organizeralexandreschmitt.nationbuilder.com/api/v1/sites/organizeralexandreschmitt/pages/basic_pages?access_token=3695ca30a6e74401115ec2b68767b53112c32b5bedc3c1f34e72c9749419b2de&limit=5
     body:
       encoding: UTF-8
       string: ''
@@ -12,7 +12,7 @@ http_interactions:
       Accept:
       - application/json
       Date:
-      - Sat, 15 Aug 2015 05:50:10 GMT
+      - Sat, 15 Aug 2015 05:50:12 GMT
       Content-Type:
       - application/json
   response:
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Date:
-      - Sat, 15 Aug 2015 05:50:11 GMT
+      - Sat, 15 Aug 2015 05:50:13 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -31,12 +31,12 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d7e472827125db5a4cbbe470dae3637641439617810; expires=Sun, 14-Aug-16
-        05:50:10 GMT; path=/; domain=.nationbuilder.com; HttpOnly
+      - __cfduid=d50b7f3293c8c8651ade67bbb8d5ee3441439617812; expires=Sun, 14-Aug-16
+        05:50:12 GMT; path=/; domain=.nationbuilder.com; HttpOnly
       Cache-Control:
       - max-age=0, private, must-revalidate
       Etag:
-      - W/"454ccb4475a508ed513c75bf22a46527"
+      - W/"77d2a5c3f37f55abdb32ffc5099e60fc"
       Nation-Ratelimit-Limit:
       - "-1"
       Nation-Ratelimit-Remaining:
@@ -56,19 +56,19 @@ http_interactions:
       X-Ratelimit-Limit:
       - 10s
       X-Ratelimit-Remaining:
-      - '99'
+      - '97'
       X-Ratelimit-Reset:
       - '1439617820'
       X-Request-Id:
-      - aab1c46c861677ddde1e699124c75820
+      - 2996d2882ed85ff8fa5582fa270eda6d
       X-Runtime:
-      - '0.627388'
+      - '0.127733'
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Via:
       - 1.1 nationbuilder.com
       Cf-Ray:
-      - 21629ed4537b28ac-SJC
+      - 21629ee09ed7070d-SJC
     body:
       encoding: UTF-8
       string: '{"results":[{"slug":"liquid_howto_videos","path":"/liquid_howto_videos","status":"published","site_slug":"organizeralexandreschmitt","name":"Liquid
@@ -169,82 +169,7 @@ http_interactions:
         styling other than an indentation\u003C/p\u003E\r\n\r\n\u003Cp\u003Eembed.ly
         not functioning\u003C/p\u003E\r\n\r\n\u003Cp\u003Eunable to upload image/files
         from WYSIWYG editor (unsure if this is going to be added functionality or
-        not)\u003C/p\u003E"},{"slug":"press_releases","path":"/press_releases","status":"published","site_slug":"organizeralexandreschmitt","name":"Press
-        releases","headline":"Press releases","title":"Press releases - Matt''s General
-        Store","excerpt":null,"author_id":79278,"published_at":"2014-05-12T04:29:11Z","external_id":null,"tags":[],"id":19,"content":null},{"slug":"social_capital","path":"/social_capital","status":"published","site_slug":"organizeralexandreschmitt","name":"Social
-        Capital","headline":"Social Capital","title":"Social Capital - Matt''s General
-        Store","excerpt":null,"author_id":79278,"published_at":"2014-04-26T00:35:00Z","external_id":null,"tags":[],"id":17,"content":null},{"slug":"crowdhall","path":"/crowdhall","status":"archived","site_slug":"organizeralexandreschmitt","name":"CrowdHall","headline":"CrowdHall","title":"CrowdHall
-        - Matt''s General Store","excerpt":null,"author_id":79278,"published_at":null,"external_id":null,"tags":[],"id":16,"content":null},{"slug":"the_game","path":"/the_game","status":"expired","site_slug":"organizeralexandreschmitt","name":"The
-        Game","headline":"The Game","title":"The Game - Matt''s General Store","excerpt":null,"author_id":79278,"published_at":null,"external_id":null,"tags":[],"id":15,"content":null},{"slug":"members","path":"/members","status":"archived","site_slug":"organizeralexandreschmitt","name":"Members","headline":"Members","title":"Members
-        - Matt''s General Store","excerpt":"","author_id":79278,"published_at":null,"external_id":null,"tags":[],"id":13,"content":"\u003Cp\u003EBacon
-        ipsum dolor sit amet flank swine turducken ball tip short loin hamburger beef
-        ribs beef biltong boudin. Doner short loin venison frankfurter cow prosciutto
-        tri-tip pork belly boudin t-bone meatloaf tenderloin tail. Tail ribeye salami
-        pastrami landjaeger jowl tri-tip doner prosciutto kevin swine ball tip frankfurter.
-        Frankfurter beef ribs tenderloin ball tip porchetta sirloin. Shoulder capicola
-        porchetta frankfurter corned beef prosciutto tri-tip ribeye pork chop chuck.
-        Bresaola short ribs t-bone meatball beef, tail turkey bacon sausage filet
-        mignon doner. Flank tri-tip pastrami fatback landjaeger ball tip.\u003C/p\u003E\r\n\u003Cp\u003EPancetta
-        sausage brisket turducken frankfurter, pastrami tri-tip ribeye. Ham pastrami
-        bresaola ribeye, turkey porchetta corned beef swine jowl tongue meatball ball
-        tip. Pork loin short ribs shoulder flank strip steak tail tongue porchetta
-        hamburger ball tip pastrami venison beef ribs. Swine prosciutto pork chop
-        kevin fatback landjaeger. Bresaola filet mignon landjaeger meatball drumstick
-        ham hock rump. Ribeye pig chicken salami kevin.\u003C/p\u003E"},{"slug":"discounts_to_dividends","path":"/discounts_to_dividends","status":"published","site_slug":"organizeralexandreschmitt","name":"Discounts
-        to Dividends","headline":"Discounts to Dividends","title":"Discounts to Dividends
-        - Matt''s General Store","excerpt":"Learn more about what our member-owner
-        program is about, and how it can benefit you.","author_id":79278,"published_at":"2013-12-14T04:05:41Z","external_id":null,"tags":[],"id":9,"content":"\u003Cp
-        align=\"left\"\u003EPart of what separates consumer Co-ops from other businesses
-        is that Co-ops return their profits to owners in proportion to how much they
-        patronize the business. Most co-operatives throughout the world (including
-        REI, Organic Valley, and most natural foods co-ops) do this through a system
-        called Patronage Dividends. Since 1988, the Lexington Co-operative Market
-        has returned profits to our owners before we made them, in the form of discounts
-        at the registers. Patronage dividends provide the co-op with the opportunity
-        to offer a greater number of services to owners, our community and our future.\u003C/p\u003E\r\n\u003Ch3
-        align=\"left\"\u003Ehere\u2019s how dividends work:\u003C/h3\u003E\r\n\u003Cp
-        align=\"left\"\u003EThe Co-op provides its owners with a great grocery store.
-        Every owner purchase is recorded at the registers. When the Co-op is profitable,
-        the Board and management review plans and obligations, and decide on how much
-        of the profit to reinvest in the Co-op. The money that is not needed to reinvest
-        in the business is returned to the owners in the form of store credit or (if
-        requested) a check. Each owner\u2019s patronage dividend is based on the amount
-        of their purchases over the fiscal year (July 1- June 30.)\u003C/p\u003E\r\n\u003Cp
-        align=\"left\"\u003E\u003Cimg class=\"leftOffest\" style=\"display: block;
-        margin-left: auto; margin-right: auto;\" src=\"http://lexington.coop/media/patronage/diagram.jpg\"
-        alt=\"The Board decides which profits to reinvest in store and which to return
-        to owners.\" width=\"300\" height=\"371\"\u003E\u003C/p\u003E\r\n\u003Ch3
-        align=\"left\"\u003EDividends are exciting, sustainable and flexible. Discounts
-        are not.\u003C/h3\u003E\r\n\u003Cul\u003E\n\u003Cli\u003E\n\u003Cstrong\u003EExciting\u003C/strong\u003E:
-        Few if any owners of the Co-op express excitement at receiving their 2% discount.
-        At Co-ops that use Patronage Dividends, owners express excitement when they
-        get their dividend notice and see how they have helped to contribute to the
-        success of the business they own.\u003C/li\u003E\r\n\u003Cli\u003E\n\u003Cstrong\u003ESustainable\u003C/strong\u003E:
-        Discounts distribute profits to owners before we make them. The Co-op has
-        been profitable in just 5 of the 20 years since the Co-op has been giving
-        a basic member discount at the register. Dividends allow the Co-op to be profitable
-        and to reinvest those profits into services that meet owner\u2019s needs and
-        impact the world on their behalf.\u003C/li\u003E\r\n\u003Cli\u003E\n\u003Cstrong\u003EFlexible\u003C/strong\u003E.
-        The discount level does not change based on the performance of the Co-op or
-        the changing needs of the owners. With dividends, every year the board decides
-        whether to return profits to owners or to reinvest them in improving services.
-        \u003Cbr\u003E Dividends give the Co-op a tax advantage. \u003Cbr\u003E The
-        Co-op does not pay tax on the income that we declare as dividends. The Co-op
-        is required to distribute 20% of declared dividends to owners \u2013 roughly
-        the same amount that it would pay in corporate taxes. Therefore, it benefits
-        both the Co-op and owners when owners use their patronage dividend.\u003C/li\u003E\r\n\u003C/ul\u003E\u003Ch3
-        align=\"left\"\u003EDividends are more in keeping with the Co-operative Principles.\u003C/h3\u003E\r\n\u003Cp
-        align=\"left\"\u003EDividends allow for democratic allocation of surpluses
-        each year by the Board of Directors as outlined in Co-op Principle #3.\u003C/p\u003E\r\n\u003Ch3
-        align=\"left\"\u003EDividends reinforce the true relationship between owners
-        and the Co-op.\u003C/h3\u003E\r\n\u003Cp align=\"left\"\u003EDiscounts at
-        the register foster feelings of entitlement (as an owner, I deserve to pay
-        less) and frustration (why isn\u2019t the discount bigger?). When owners receive
-        their dividends, they see that when the Co-op succeeds, they benefit.\u003C/p\u003E\r\n\u003Ch3
-        align=\"left\"\u003EEveryone\u2019s Doing It.\u003C/h3\u003E\r\n\u003Cp align=\"left\"\u003EOver
-        the past 15 years, nearly all of the natural foods co-ops that used to give
-        discounts at the register have switched to a Patronage Dividend system for
-        the reasons outlined above.\u003C/p\u003E"}],"next":"/api/v1/sites/organizeralexandreschmitt/pages/basic_pages?__nonce=gJJGX4WwMASdUP8-Cl1rAQ\u0026__token=AAVop4vso3U6LosmTIOhhyu59LvCQxkkZ6tB3DlsbrZB\u0026limit=11","prev":"/api/v1/sites/organizeralexandreschmitt/pages/basic_pages?__nonce=93rIH1OOQCKtDs41OYt9cQ\u0026__token=AHBoeIoM1VOqbbq7Q6qkVxFTtEFQV1vK51TAVIGEdW8m\u0026limit=11"}'
+        not)\u003C/p\u003E"}],"next":"/api/v1/sites/organizeralexandreschmitt/pages/basic_pages?__nonce=l2GeLCAK7YVCnnpwNK0dtA\u0026__token=AGKwJbRW-o30x-de8QVUyI09HMeUFQdLPSl9ku_Z2WC1\u0026limit=5","prev":"/api/v1/sites/organizeralexandreschmitt/pages/basic_pages?__nonce=zYS9UDFCZhuWJVG5pnekxg\u0026__token=AH9IuSwoY781GOB-ijXPXUqtYL5eHuav1ufimS1T7wsp\u0026limit=5"}'
     http_version: 
-  recorded_at: Sat, 15 Aug 2015 05:50:11 GMT
+  recorded_at: Sat, 15 Aug 2015 05:50:13 GMT
 recorded_with: VCR 2.9.3
