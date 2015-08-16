@@ -11,11 +11,11 @@ class NationBuilder::Paginator
       @body[page_type.to_s]
     end
 
-    define_method(:"#{page_type}") do |args = {}|
+    define_method(:"#{page_type}") do |call_body = {}|
       return nil unless send(:"#{page_type}?")
       path = send(:"#{page_type}?").split('/api/v1').last
-      args[:limit] ||= CGI.parse(path)['limit']
-      results = @client.raw_call(path, :get, args)
+      call_body[:limit] ||= CGI.parse(path)['limit']
+      results = @client.raw_call(path, :get, call_body)
       return self.class.new(@client, results)
     end
   end
