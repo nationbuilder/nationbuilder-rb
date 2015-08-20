@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["David Huie", "Alexandre Schmitt"]
-  s.date = "2015-08-07"
+  s.date = "2015-08-20"
   s.description = "A Ruby client to the NationBuilder API"
   s.email = "schmitt@nationbuilder.com"
   s.executables = ["nbdoc"]
@@ -75,10 +75,10 @@ Gem::Specification.new do |s|
     "nationbuilder-rb.gemspec",
     "spec/fixtures/delete.yml",
     "spec/fixtures/paginated_get_page2.yml",
+    "spec/fixtures/paginated_get_page2_with_limit.yml",
     "spec/fixtures/paginated_get_page3.yml",
     "spec/fixtures/parametered_get.yml",
     "spec/fixtures/parametered_post.yml",
-    "spec/fixtures/parametered_post_with_fire_webhooks_false.yml",
     "spec/nationbuilder_client_spec.rb",
     "spec/nationbuilder_paginator_spec.rb",
     "spec/spec_helper.rb",
