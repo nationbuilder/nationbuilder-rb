@@ -1,3 +1,4 @@
+require 'cgi'
 require 'httpclient'
 require 'json'
 require 'set'

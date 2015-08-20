@@ -4,11 +4,11 @@ describe NationBuilder::Paginator do
 
   let(:client) do
     NationBuilder::Client.new('organizeralexandreschmitt',
-                              '53920a524356034a065515a37650df2bd295971975d5742b9daa50eb8c7404d5')
+                              '3695ca30a6e74401115ec2b68767b53112c32b5bedc3c1f34e72c9749419b2de')
   end
   let(:response) do
     VCR.use_cassette('parametered_get') do
-      client.call(:basic_pages, :index, site_slug: 'organizeralexandreschmitt')
+      client.call(:basic_pages, :index, site_slug: 'organizeralexandreschmitt', limit: 11)
     end
   end
 
@@ -39,6 +39,21 @@ describe NationBuilder::Paginator do
 
     it 'should return nil if no prev page' do
       expect(@page1.prev).to be_nil
+    end
+
+    it 'should accept limit params and return results accordingly' do
+      VCR.use_cassette('paginated_get_page2_with_limit') do
+        expect(@page1.body['results'].count).to eq(11)
+        page2 = @page1.next(limit: 5)
+        expect(page2.body['results'].count).to eq(5)
+      end
+    end
+
+    it 'defaults to original limit when none is given' do
+      VCR.use_cassette('paginated_get_page2') do
+        page2 = @page1.next
+        expect(page2.body['results'].count).to eq(11)
+      end
     end
   end
 end

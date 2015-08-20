@@ -1,3 +1,6 @@
+# 1.3.5
+- [#21] Added limit params to Paginator class
+
 # 1.3.2
 - When retrying requests, the request is actually resent instead
   of just reparsing the response

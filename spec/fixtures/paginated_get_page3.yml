@@ -2,17 +2,17 @@
 http_interactions:
 - request:
     method: get
-    uri: https://organizeralexandreschmitt.nationbuilder.com/api/v1/sites/organizeralexandreschmitt/pages/basic_pages?access_token=53920a524356034a065515a37650df2bd295971975d5742b9daa50eb8c7404d5
+    uri: https://organizeralexandreschmitt.nationbuilder.com/api/v1/sites/organizeralexandreschmitt/pages/basic_pages?access_token=3695ca30a6e74401115ec2b68767b53112c32b5bedc3c1f34e72c9749419b2de&limit%5B%5D=11
     body:
       encoding: UTF-8
       string: ''
     headers:
       User-Agent:
-      - HTTPClient/1.0 (2.4.0, ruby 2.1.0 (2013-12-25))
+      - HTTPClient/1.0 (2.4.0, ruby 2.1.6 (2015-04-13))
       Accept:
       - application/json
       Date:
-      - Thu, 05 Feb 2015 06:02:57 GMT
+      - Sat, 15 Aug 2015 05:50:11 GMT
       Content-Type:
       - application/json
   response:
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Date:
-      - Thu, 05 Feb 2015 06:02:57 GMT
+      - Sat, 15 Aug 2015 05:50:12 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -31,18 +31,18 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=da26cf3c1529bd3f9e2e664c61bf7f35d1423116177; expires=Fri, 05-Feb-16
-        06:02:57 GMT; path=/; domain=.nationbuilder.com; HttpOnly
+      - __cfduid=dc7309d023ff75e081f8e0f6bf419cfc51439617811; expires=Sun, 14-Aug-16
+        05:50:11 GMT; path=/; domain=.nationbuilder.com; HttpOnly
       Cache-Control:
       - max-age=0, private, must-revalidate
       Etag:
-      - W/"e7e2efba55931ddbc42f04314d4873b6"
+      - W/"59daf9a663e909272eaeba34a97b610c"
       Nation-Ratelimit-Limit:
-      - '125000'
+      - "-1"
       Nation-Ratelimit-Remaining:
-      - '124955'
+      - '0'
       Nation-Ratelimit-Reset:
-      - '1423180800'
+      - '1439683200'
       Status:
       - 200 OK
       Vary:
@@ -56,244 +56,183 @@ http_interactions:
       X-Ratelimit-Limit:
       - 10s
       X-Ratelimit-Remaining:
-      - '99'
+      - '98'
       X-Ratelimit-Reset:
-      - '1423116187'
+      - '1439617820'
       X-Request-Id:
-      - 905cb6f1f49a374f8302eb3bdfcb2c45
+      - ac340edbc42e82ef0bb56f3f4258c77c
       X-Runtime:
-      - '0.129212'
+      - '0.122343'
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Via:
       - 1.1 nationbuilder.com
       Cf-Ray:
-      - 1b3ce6ec17700369-LAX
+      - 21629edc1ee02828-SJC
     body:
       encoding: UTF-8
-      string: "{\"results\":[{\"slug\":\"discounts_to_dividends\",\"path\":\"/discounts_to_dividends\",\"status\":\"published\",\"site_slug\":\"organizeralexandreschmitt\",\"name\":\"Discounts
-        to Dividends\",\"headline\":\"Discounts to Dividends\",\"title\":\"Discounts
-        to Dividends - Matt's General Store\",\"excerpt\":\"Learn more about what
-        our member-owner program is about, and how it can benefit you.\",\"author_id\":79278,\"published_at\":\"2013-12-13T20:05:41-08:00\",\"external_id\":null,\"tags\":[],\"id\":9,\"content\":\"\\u003Cp
-        align=\\\"left\\\"\\u003EPart of what separates consumer Co-ops from other
-        businesses is that Co-ops return their profits to owners in proportion to
-        how much they patronize the business. Most co-operatives throughout the world
-        (including REI, Organic Valley, and most natural foods co-ops) do this through
-        a system called Patronage Dividends. Since 1988, the Lexington Co-operative
-        Market has returned profits to our owners before we made them, in the form
-        of discounts at the registers. Patronage dividends provide the co-op with
-        the opportunity to offer a greater number of services to owners, our community
-        and our future.\\u003C/p\\u003E\\r\\n\\u003Ch3 align=\\\"left\\\"\\u003Ehere\\u2019s
-        how dividends work:\\u003C/h3\\u003E\\r\\n\\u003Cp align=\\\"left\\\"\\u003EThe
-        Co-op provides its owners with a great grocery store. Every owner purchase
-        is recorded at the registers. When the Co-op is profitable, the Board and
-        management review plans and obligations, and decide on how much of the profit
-        to reinvest in the Co-op. The money that is not needed to reinvest in the
-        business is returned to the owners in the form of store credit or (if requested)
-        a check. Each owner\\u2019s patronage dividend is based on the amount of their
-        purchases over the fiscal year (July 1- June 30.)\\u003C/p\\u003E\\r\\n\\u003Cp
-        align=\\\"left\\\"\\u003E\\u003Cimg class=\\\"leftOffest\\\" style=\\\"display:
-        block; margin-left: auto; margin-right: auto;\\\" src=\\\"http://lexington.coop/media/patronage/diagram.jpg\\\"
-        alt=\\\"The Board decides which profits to reinvest in store and which to
-        return to owners.\\\" width=\\\"300\\\" height=\\\"371\\\"\\u003E\\u003C/p\\u003E\\r\\n\\u003Ch3
-        align=\\\"left\\\"\\u003EDividends are exciting, sustainable and flexible.
-        Discounts are not.\\u003C/h3\\u003E\\r\\n\\u003Cul\\u003E\\n\\u003Cli\\u003E\\n\\u003Cstrong\\u003EExciting\\u003C/strong\\u003E:
-        Few if any owners of the Co-op express excitement at receiving their 2% discount.
-        At Co-ops that use Patronage Dividends, owners express excitement when they
-        get their dividend notice and see how they have helped to contribute to the
-        success of the business they own.\\u003C/li\\u003E\\r\\n\\u003Cli\\u003E\\n\\u003Cstrong\\u003ESustainable\\u003C/strong\\u003E:
-        Discounts distribute profits to owners before we make them. The Co-op has
-        been profitable in just 5 of the 20 years since the Co-op has been giving
-        a basic member discount at the register. Dividends allow the Co-op to be profitable
-        and to reinvest those profits into services that meet owner\\u2019s needs
-        and impact the world on their behalf.\\u003C/li\\u003E\\r\\n\\u003Cli\\u003E\\n\\u003Cstrong\\u003EFlexible\\u003C/strong\\u003E.
-        The discount level does not change based on the performance of the Co-op or
-        the changing needs of the owners. With dividends, every year the board decides
-        whether to return profits to owners or to reinvest them in improving services.
-        \\u003Cbr\\u003E Dividends give the Co-op a tax advantage. \\u003Cbr\\u003E
-        The Co-op does not pay tax on the income that we declare as dividends. The
-        Co-op is required to distribute 20% of declared dividends to owners \\u2013
-        roughly the same amount that it would pay in corporate taxes. Therefore, it
-        benefits both the Co-op and owners when owners use their patronage dividend.\\u003C/li\\u003E\\r\\n\\u003C/ul\\u003E\\u003Ch3
-        align=\\\"left\\\"\\u003EDividends are more in keeping with the Co-operative
-        Principles.\\u003C/h3\\u003E\\r\\n\\u003Cp align=\\\"left\\\"\\u003EDividends
-        allow for democratic allocation of surpluses each year by the Board of Directors
-        as outlined in Co-op Principle #3.\\u003C/p\\u003E\\r\\n\\u003Ch3 align=\\\"left\\\"\\u003EDividends
-        reinforce the true relationship between owners and the Co-op.\\u003C/h3\\u003E\\r\\n\\u003Cp
-        align=\\\"left\\\"\\u003EDiscounts at the register foster feelings of entitlement
-        (as an owner, I deserve to pay less) and frustration (why isn\\u2019t the
-        discount bigger?). When owners receive their dividends, they see that when
-        the Co-op succeeds, they benefit.\\u003C/p\\u003E\\r\\n\\u003Ch3 align=\\\"left\\\"\\u003EEveryone\\u2019s
-        Doing It.\\u003C/h3\\u003E\\r\\n\\u003Cp align=\\\"left\\\"\\u003EOver the
-        past 15 years, nearly all of the natural foods co-ops that used to give discounts
-        at the register have switched to a Patronage Dividend system for the reasons
-        outlined above.\\u003C/p\\u003E\"},{\"slug\":\"get_involved\",\"path\":\"/get_involved\",\"status\":\"published\",\"site_slug\":\"organizeralexandreschmitt\",\"name\":\"Get
-        Involved\",\"headline\":\"Get Involved\",\"title\":\"Get Involved - Matt's
-        General Store\",\"excerpt\":\"\",\"author_id\":79278,\"published_at\":\"2013-12-13T19:57:00-08:00\",\"external_id\":null,\"tags\":[\"Get
-        Involved\",\"Member-Owner\",\"Volunteer\"],\"id\":8,\"content\":\"\\u003Cp\\u003EThere
-        are currently two ways to get involved and support Matt's General Store:\\u003C/p\\u003E\\r\\n\\u003Cp\\u003EBecoming
-        a \\u003Ca title=\\\"Member-Owner\\\" href=\\\"/member_owner\\\"\\u003EMember-Owner\\u003C/a\\u003E
-        is the primary way of how our organization operates. Matt's General Store
+      string: '{"results":[{"slug":"get_involved","path":"/get_involved","status":"published","site_slug":"organizeralexandreschmitt","name":"Get
+        Involved","headline":"Get Involved","title":"Get Involved - Matt''s General
+        Store","excerpt":"","author_id":79278,"published_at":"2013-12-14T03:57:00Z","external_id":null,"tags":["Get
+        Involved","Member-Owner","Volunteer"],"id":8,"content":"\u003Cp\u003EThere
+        are currently two ways to get involved and support Matt''s General Store:\u003C/p\u003E\r\n\u003Cp\u003EBecoming
+        a \u003Ca title=\"Member-Owner\" href=\"/member_owner\"\u003EMember-Owner\u003C/a\u003E
+        is the primary way of how our organization operates. Matt''s General Store
         is is a consumer co-operative. This means that it is owned and democratically
         controlled by the people who shop in the store. Member-Owners invest capital
         in the co-op that is used to purchase new equipment and operate the store
         on a daily basis. Member-owners also participate in decision making in the
-        co-op, electing a Board of Directors at the co-op\\u2019s annual meeting,
-        and voting on any amendments to the bylaws proposed by the Board. You can
-        sign up to be a Member-Owner online \\u003Ca title=\\\"Member-Owner\\\" href=\\\"/member_owner\\\"
-        target=\\\"_self\\\"\\u003Ehere\\u003C/a\\u003E.\\u003C/p\\u003E\\r\\n\\u003Cp\\u003E\\u003Ca
-        title=\\\"Volunteer\\\" href=\\\"http://organizeralexandreschmitt.nationbuilder.com/volunteer\\\"
-        target=\\\"_self\\\"\\u003EVolunteering\\u003C/a\\u003E is a great way to
-        learn more about what we do outside of the store. The \\u003Ca title=\\\"Mobile
-        Market\\\" href=\\\"http://organizeralexandreschmitt.nationbuilder.com/mobile_market\\\"
-        target=\\\"_self\\\"\\u003EMobile Market\\u003C/a\\u003E helps deliver fresh
-        food to low income neighborhoods in the area, and our volunteers make this
-        possible by helping pack boxes and set up booths. To get a better idea of
-        our urban farming practices and how we engage the community in sharing knowledge
-        and experience, please consider volunteering for our \\u003Ca title=\\\"Growing
-        Green\\\" href=\\\"http://organizeralexandreschmitt.nationbuilder.com/growing_green\\\"
-        target=\\\"_self\\\"\\u003EGrowing Green\\u003C/a\\u003E program.\\u003C/p\\u003E\\r\\n\\u003Cp\\u003EYou
-        can also help us spread the word about community cooperatives and Matt's General
-        Store \\u003Ca title=\\\"Spread the word!\\\" href=\\\"/spread_the_word\\\"\\u003Ehere\\u003C/a\\u003E!\\u003C/p\\u003E\"},{\"slug\":\"home\",\"path\":\"/\",\"status\":\"published\",\"site_slug\":\"organizeralexandreschmitt\",\"name\":\"Home\",\"headline\":\"Home\",\"title\":\"Home
-        - Matt's General Store\",\"excerpt\":\"\",\"author_id\":79278,\"published_at\":\"2013-12-13T19:38:00-08:00\",\"external_id\":null,\"tags\":[],\"id\":7,\"content\":\"\\u003Cp\\u003EMatt's
+        co-op, electing a Board of Directors at the co-op\u2019s annual meeting, and
+        voting on any amendments to the bylaws proposed by the Board. You can sign
+        up to be a Member-Owner online \u003Ca title=\"Member-Owner\" href=\"/member_owner\"
+        target=\"_self\"\u003Ehere\u003C/a\u003E.\u003C/p\u003E\r\n\u003Cp\u003E\u003Ca
+        title=\"Volunteer\" href=\"http://organizeralexandreschmitt.nationbuilder.com/volunteer\"
+        target=\"_self\"\u003EVolunteering\u003C/a\u003E is a great way to learn more
+        about what we do outside of the store. The \u003Ca title=\"Mobile Market\"
+        href=\"http://organizeralexandreschmitt.nationbuilder.com/mobile_market\"
+        target=\"_self\"\u003EMobile Market\u003C/a\u003E helps deliver fresh food
+        to low income neighborhoods in the area, and our volunteers make this possible
+        by helping pack boxes and set up booths. To get a better idea of our urban
+        farming practices and how we engage the community in sharing knowledge and
+        experience, please consider volunteering for our \u003Ca title=\"Growing Green\"
+        href=\"http://organizeralexandreschmitt.nationbuilder.com/growing_green\"
+        target=\"_self\"\u003EGrowing Green\u003C/a\u003E program.\u003C/p\u003E\r\n\u003Cp\u003EYou
+        can also help us spread the word about community cooperatives and Matt''s
+        General Store \u003Ca title=\"Spread the word!\" href=\"/spread_the_word\"\u003Ehere\u003C/a\u003E!\u003C/p\u003E"},{"slug":"home","path":"/","status":"published","site_slug":"organizeralexandreschmitt","name":"Home","headline":"Home","title":"Home
+        - Matt''s General Store","excerpt":"","author_id":79278,"published_at":"2013-12-14T03:38:00Z","external_id":null,"tags":[],"id":7,"content":"\u003Cp\u003EMatt''s
         General Store is a membership-based organization, open to the entire community.
-        We commit ourselves to serving both members and non-members by:\\u003C/p\\u003E\\r\\n\\u003Cul\\u003E\\n\\u003Cli\\u003EProviding
-        a natural foods grocery store in a friendly environment\\u003C/li\\u003E\\r\\n\\u003C/ul\\u003E\\u003Cul\\u003E\\n\\u003Cli\\u003EProviding
-        education about nutrition, consumer issues, and cooperative principles\\u003C/li\\u003E\\r\\n\\u003C/ul\\u003E\\u003Cul\\u003E\\n\\u003Cli\\u003ENurturing
-        the local economy and the environment\\u003C/li\\u003E\\r\\n\\u003C/ul\\u003E\\u003Cp\\u003EWe
+        We commit ourselves to serving both members and non-members by:\u003C/p\u003E\r\n\u003Cul\u003E\n\u003Cli\u003EProviding
+        a natural foods grocery store in a friendly environment\u003C/li\u003E\r\n\u003C/ul\u003E\u003Cul\u003E\n\u003Cli\u003EProviding
+        education about nutrition, consumer issues, and cooperative principles\u003C/li\u003E\r\n\u003C/ul\u003E\u003Cul\u003E\n\u003Cli\u003ENurturing
+        the local economy and the environment\u003C/li\u003E\r\n\u003C/ul\u003E\u003Cp\u003EWe
         are open daily from 8am to 9pm, right next to Bakers Dozen Bakery in Independence,
-        MO.\\u003C/p\\u003E\\r\\n\\u003Ctable align=\\\"center\\\" border=\\\"0\\\"\\u003E\\u003Ctbody\\u003E\\n\\u003Ctr\\u003E\\n\\u003Ctd\\u003E\\r\\n\\u003Cp\\u003EVolunteer
-        Opportunities\\u00a0\\u003C/p\\u003E\\r\\n\\u003C/td\\u003E\\r\\n\\u003Ctd\\u003E\\u00a0
-        \\u00a0 \\u00a0\\u003C/td\\u003E\\r\\n\\u003Ctd\\u003E\\r\\n\\u003Cp\\u003ECurrent
-        Promotions\\u003C/p\\u003E\\r\\n\\u003C/td\\u003E\\r\\n\\u003C/tr\\u003E\\n\\u003Ctr\\u003E\\n\\u003Ctd\\u003E\\r\\n\\u003Cul\\u003E\\n\\u003Cli\\u003E\\u003Ca
-        href=\\\"http://organizeralexandreschmitt.nationbuilder.com/growing_green\\\"\\u003EGrowing
-        Green Program\\u003C/a\\u003E\\u003C/li\\u003E\\r\\n\\u003Cli\\u003E\\u003Ca
-        href=\\\"http://organizeralexandreschmitt.nationbuilder.com/mobile_market\\\"\\u003EMobile
-        Market\\u003C/a\\u003E\\u003C/li\\u003E\\r\\n\\u003C/ul\\u003E\\n\\u003C/td\\u003E\\r\\n\\u003Ctd\\u003E\\u00a0\\u00a0\\u00a0\\u00a0\\u00a0\\u003C/td\\u003E\\r\\n\\u003Ctd\\u003E\\n\\u003Ca
-        href=\\\"http://organizeralexandreschmitt.nationbuilder.com/co_op_deals1\\\"\\u003ECo-op
-        deals\\u003C/a\\u003E! Valid from Dec. 4 - 17th\\u003C/td\\u003E\\r\\n\\u003C/tr\\u003E\\n\\u003C/tbody\\u003E\\u003C/table\\u003E\\u003Cblockquote\\u003E\\r\\n\\u003Cp
-        style=\\\"margin-left: 40px;\\\"\\u003E\\u003Ca href=\\\"http://www.virtualapple.org/oregontraildisk.html\\\"\\u003E\\u003Cbr\\u003EPlay
-        the game!\\u003C/a\\u003E\\u003C/p\\u003E\\r\\n\\u003C/blockquote\\u003E\"},{\"slug\":\"mobile_market\",\"path\":\"/mobile_market\",\"status\":\"published\",\"site_slug\":\"organizeralexandreschmitt\",\"name\":\"Mobile
-        Market\",\"headline\":\"Mobile Market\",\"title\":\"Mobile Market - Matt's
-        General Store\",\"excerpt\":\"\",\"author_id\":79278,\"published_at\":\"2013-12-14T05:33:00-08:00\",\"external_id\":null,\"tags\":[\"Volunteers\",\"Outreach\",\"Community\"],\"id\":6,\"content\":\"\\u003Cp\\u003EThe
-        \\u003Cem\\u003EMobile Market\\u003C/em\\u003E is a healthy and local food
-        distribution project of Matt's General Store and the Growing Green Program.\\u00a0
-        The Mobile Mar\\u003Ca href=\\\"http://mass-ave.org/wp-content/uploads/2012/02/mobilemarket1.jpg\\\"\\u003E\\u003Cimg
-        class=\\\"alignright size-medium wp-image-226\\\" style=\\\"float: right;
-        margin: 5px;\\\" title=\\\"mobilemarket\\\" src=\\\"4470347633_0965179f6e.jpg\\\"
-        alt=\\\"Truck\\\" width=\\\"271\\\" height=\\\"233\\\"\\u003E\\u003C/a\\u003Eket
-        brings organic, locally-grown, affordable produce to low-income neighborhoods
-        that have limited access to fresh food.\\u00a0The Mobile Market accepts EBT/Food
-        Stamp benefits.\\u003Cstrong\\u003E\\u003C/strong\\u003E\\u003C/p\\u003E\\r\\n\\u003Cp\\u003EFrom
-        June \\u2013 October the Mobile Market sells seasonal, local produce at different
-        community sites around the city.\\u003Ca href=\\\"http://mass-ave.org/wp-content/uploads/2012/02/mm09picsheehanhosp.jpg\\\"\\u003E\\u003Cimg
-        class=\\\"alignleft size-full wp-image-368\\\" style=\\\"float: left; margin:
-        5px;\\\" title=\\\"mm09picsheehanhosp\\\" src=\\\"5106007635_76178abb30.jpg\\\"
-        alt=\\\"Farmers Market\\\" width=\\\"277\\\" height=\\\"184\\\"\\u003E\\u003C/a\\u003E\\u003C/p\\u003E\\r\\n\\u003Cp\\u003EThe
+        MO.\u003C/p\u003E\r\n\u003Ctable align=\"center\" border=\"0\"\u003E\u003Ctbody\u003E\n\u003Ctr\u003E\n\u003Ctd\u003E\r\n\u003Cp\u003EVolunteer
+        Opportunities\u00a0\u003C/p\u003E\r\n\u003C/td\u003E\r\n\u003Ctd\u003E\u00a0
+        \u00a0 \u00a0\u003C/td\u003E\r\n\u003Ctd\u003E\r\n\u003Cp\u003ECurrent Promotions\u003C/p\u003E\r\n\u003C/td\u003E\r\n\u003C/tr\u003E\n\u003Ctr\u003E\n\u003Ctd\u003E\r\n\u003Cul\u003E\n\u003Cli\u003E\u003Ca
+        href=\"http://organizeralexandreschmitt.nationbuilder.com/growing_green\"\u003EGrowing
+        Green Program\u003C/a\u003E\u003C/li\u003E\r\n\u003Cli\u003E\u003Ca href=\"http://organizeralexandreschmitt.nationbuilder.com/mobile_market\"\u003EMobile
+        Market\u003C/a\u003E\u003C/li\u003E\r\n\u003C/ul\u003E\n\u003C/td\u003E\r\n\u003Ctd\u003E\u00a0\u00a0\u00a0\u00a0\u00a0\u003C/td\u003E\r\n\u003Ctd\u003E\n\u003Ca
+        href=\"http://organizeralexandreschmitt.nationbuilder.com/co_op_deals1\"\u003ECo-op
+        deals\u003C/a\u003E! Valid from Dec. 4 - 17th\u003C/td\u003E\r\n\u003C/tr\u003E\n\u003C/tbody\u003E\u003C/table\u003E\u003Cblockquote\u003E\r\n\u003Cp
+        style=\"margin-left: 40px;\"\u003E\u003Ca href=\"http://www.virtualapple.org/oregontraildisk.html\"\u003E\u003Cbr\u003EPlay
+        the game!\u003C/a\u003E\u003C/p\u003E\r\n\u003C/blockquote\u003E"},{"slug":"mobile_market","path":"/mobile_market","status":"published","site_slug":"organizeralexandreschmitt","name":"Mobile
+        Market","headline":"Mobile Market","title":"Mobile Market - Matt''s General
+        Store","excerpt":"","author_id":79278,"published_at":"2013-12-14T13:33:00Z","external_id":null,"tags":["Volunteers","Outreach","Community"],"id":6,"content":"\u003Cp\u003EThe
+        \u003Cem\u003EMobile Market\u003C/em\u003E is a healthy and local food distribution
+        project of Matt''s General Store and the Growing Green Program.\u00a0 The
+        Mobile Mar\u003Ca href=\"http://mass-ave.org/wp-content/uploads/2012/02/mobilemarket1.jpg\"\u003E\u003Cimg
+        class=\"alignright size-medium wp-image-226\" style=\"float: right; margin:
+        5px;\" title=\"mobilemarket\" src=\"4470347633_0965179f6e.jpg\" alt=\"Truck\"
+        width=\"271\" height=\"233\"\u003E\u003C/a\u003Eket brings organic, locally-grown,
+        affordable produce to low-income neighborhoods that have limited access to
+        fresh food.\u00a0The Mobile Market accepts EBT/Food Stamp benefits.\u003Cstrong\u003E\u003C/strong\u003E\u003C/p\u003E\r\n\u003Cp\u003EFrom
+        June \u2013 October the Mobile Market sells seasonal, local produce at different
+        community sites around the city.\u003Ca href=\"http://mass-ave.org/wp-content/uploads/2012/02/mm09picsheehanhosp.jpg\"\u003E\u003Cimg
+        class=\"alignleft size-full wp-image-368\" style=\"float: left; margin: 5px;\"
+        title=\"mm09picsheehanhosp\" src=\"5106007635_76178abb30.jpg\" alt=\"Farmers
+        Market\" width=\"277\" height=\"184\"\u003E\u003C/a\u003E\u003C/p\u003E\r\n\u003Cp\u003EThe
         purpose of the Mobile Market is to make fresh, high quality organic produce
         affordable and available to low incomes residents with limited access to healthy
-        food, grocery stores, and farmers markets.\\u003C/p\\u003E\\r\\n\\u003Cp\\u003E\\u00a0\\u003C/p\\u003E\\r\\n\\u003Cp\\u003ETowards
+        food, grocery stores, and farmers markets.\u003C/p\u003E\r\n\u003Cp\u003E\u00a0\u003C/p\u003E\r\n\u003Cp\u003ETowards
         making this produce affordable for low-income communities, we accept EBT and
         provide local food at discount prices. We recently received support from the
         State Development Corporation Low-Income Investment Fund as well as the Missouri
-        State Ag and Markets \\u003Cem\\u003EFresh Connect Farmers Market Program\\u003C/em\\u003E
-        to purchase a brand new Mobile Market vehicle in order to transport our \\u003Ca
-        href=\\\"http://mass-ave.org/wp-content/uploads/2012/02/mmpic3.jpg\\\"\\u003E\\u003Cimg
-        class=\\\"alignright size-medium wp-image-369\\\" style=\\\"float: right;
-        margin: 5px;\\\" title=\\\"mmpic3\\\" src=\\\"foodtable.jpg\\\" alt=\\\"Table
-        of veggies\\\" width=\\\"308\\\" height=\\\"205\\\"\\u003E\\u003C/a\\u003Eproduce
-        to select sites in Independence. For this upcoming growing season, we hope
-        to partner with six different community sites to host a farm stand at once
-        a week. In the past, these sites have included community organizations, housing
-        developments, and health centers.\\u003C/p\\u003E\\r\\n\\u003Cp\\u003E\\u00a0\\u003C/p\\u003E\\r\\n\\u003Cp\\u003E\\u00a0\\u003C/p\\u003E\\r\\n\\u003Cp\\u003E\\u003Cspan
-        style=\\\"color: #888888;\\\"\\u003E\\u003Cem\\u003E\\u003Cspan style=\\\"text-decoration:
-        underline;\\\"\\u003E\\u003Cstrong\\u003EMobile Market Schedule (June - October)\\u003Cbr\\u003E\\u003C/strong\\u003E\\u003C/span\\u003E\\u003C/em\\u003E\\u003C/span\\u003E\\u003C/p\\u003E\\r\\n\\u003Cp\\u003ECurrently
-        hibernating, \\u003Ca title=\\\"Signup\\\" href=\\\"http://organizeralexandreschmitt.nationbuilder.com/volunteer\\\"
-        target=\\\"_self\\\"\\u003Esign up\\u003C/a\\u003E to receive updates for
-        when we'll be back on the road!\\u003C/p\\u003E\"},{\"slug\":\"growing_green\",\"path\":\"/growing_green\",\"status\":\"published\",\"site_slug\":\"organizeralexandreschmitt\",\"name\":\"Growing
-        Green\",\"headline\":\"Growing Green\",\"title\":\"Growing Green - Matt's
-        General Store\",\"excerpt\":\"\",\"author_id\":79278,\"published_at\":\"2013-12-13T17:35:00-08:00\",\"external_id\":null,\"tags\":[\"Partners\",\"Volunteer\",\"Farming\",\"Community\"],\"id\":5,\"content\":\"\\u003Cdiv
-        class=\\\"entry-content\\\"\\u003E\\r\\n\\u003Cp\\u003E\\u003Cimg style=\\\"float:
-        left; margin: 5px;\\\" src=\\\"veggies12.jpg\\\" alt=\\\"Veggies\\\" width=\\\"279\\\"
-        height=\\\"420\\\"\\u003EOver the years, Matt's General Store has provided
-        employment and direct training to hundreds of low income youth in Independence
-        in the areas of organic urban agriculture , social enterprise development,
-        community education advocacy, food systems development.\\u003C/p\\u003E\\r\\n\\u003Cp\\u003E\\u003Cimg
-        style=\\\"float: right; margin: 5px;\\\" src=\\\"farm1.JPG\\\" alt=\\\"On
-        the farm\\\" width=\\\"279\\\" height=\\\"185\\\"\\u003EOur staff has also
-        provided training in these areas to visiting groups, local colleges and university
-        students, community groups, faith institutions and at national conferences.\\u00a0
-        Growing Green youth have, in turn, educated thousands of community residents,
-        school children, and policy makers about how localizing our food system will
-        benefit people, the planet and our local economy.\\u003C/p\\u003E\\r\\n\\u003Cp\\u003EThe
-        Growing Green program is a great way to get involved as a \\u003Ca title=\\\"Volunteer\\\"
-        href=\\\"http://organizeralexandreschmitt.nationbuilder.com/volunteer\\\"
-        target=\\\"_self\\\"\\u003Evolunteer.\\u003C/a\\u003E The program runs year-round,
-        and participants receive a share of the harvest for each season. This program
-        is what is helping transform vacant lots in the community, and also helps
-        keep costs down at the co-op by keeping things local!\\u003C/p\\u003E\\r\\n\\u003Cp\\u003E\\u003Cimg
-        style=\\\"float: right; margin: 5px;\\\" src=\\\"garden5.JPG\\\" alt=\\\"Garden\\\"
-        width=\\\"282\\\" height=\\\"187\\\"\\u003E\\u003C/p\\u003E\\r\\n\\u003C/div\\u003E\"},{\"slug\":\"community_education\",\"path\":\"/community_education\",\"status\":\"archived\",\"site_slug\":\"organizeralexandreschmitt\",\"name\":\"Community
-        Education\",\"headline\":\"Community Education\",\"title\":\"Community Education
-        - Matt's General Co-op\",\"excerpt\":null,\"author_id\":79278,\"published_at\":null,\"external_id\":null,\"tags\":[\"Outreach\",\"Education\",\"Partners\"],\"id\":4,\"content\":null},{\"slug\":\"youth_outreach\",\"path\":\"/youth_outreach\",\"status\":\"archived\",\"site_slug\":\"organizeralexandreschmitt\",\"name\":\"Youth
-        Outreach\",\"headline\":\"Youth Outreach\",\"title\":\"Youth Outreach - Matt's
-        General Co-op\",\"excerpt\":null,\"author_id\":79278,\"published_at\":null,\"external_id\":null,\"tags\":[\"Youth\",\"Partners\"],\"id\":3,\"content\":null},{\"slug\":\"programs\",\"path\":\"/programs\",\"status\":\"published\",\"site_slug\":\"organizeralexandreschmitt\",\"name\":\"Community
-        Programs\",\"headline\":\"Community Programs\",\"title\":\"Community Programs
-        - Matt's General Store\",\"excerpt\":\"\",\"author_id\":79278,\"published_at\":\"2013-12-13T17:20:00-08:00\",\"external_id\":null,\"tags\":[\"Partners\",\"Volunteer\",\"Community\"],\"id\":2,\"content\":\"\\u003Cp\\u003E\\u003Cimg
-        style=\\\"float: right; margin: 5px;\\\" src=\\\"5106012513_f1f3efa76a.jpg\\\"
-        alt=\\\"Mobile\\\" width=\\\"251\\\" height=\\\"167\\\"\\u003EMatt's General
-        Store currently offers two programs. From June to October each year, the \\u003Ca
-        title=\\\"Mobile Market\\\" href=\\\"/mobile_market\\\"\\u003EMobile Market\\u003C/a\\u003E
-        brings organic, locally-grown, affordable produce to low-income neighborhoods
-        that have limited access to fresh food. As a part of this outreach, the Mobile
-        Market accepts EBT/Food Stamp benefits in addition to credit cards.\\u003C/p\\u003E\\r\\n\\u003Cp\\u003E\\u003Ca
-        title=\\\"Growing Green\\\" href=\\\"/growing_green\\\" target=\\\"_self\\\"\\u003E\\u003Cimg
-        style=\\\"float: left; margin: 5px;\\\" src=\\\"garden3.JPG\\\" alt=\\\"Growing
-        Green\\\" width=\\\"250\\\" height=\\\"166\\\"\\u003EGrowing Green\\u003C/a\\u003E
-        is our year-round program to grow and harvest fruit and vegetables locally.
-        During the summer, we farm using urban farming techniques in reclaimed vacant
-        lots around our location. In the winter, we develop crops in greenhouses to
-        ensure a steady availability of produce. Our passionate volunteers help keep
-        this program going (and get some of the harvest on the side!), if you're interested,
-        please sign up \\u003Ca title=\\\"Volunteer\\\" href=\\\"http://organizeralexandreschmitt.nationbuilder.com/volunteer\\\"
-        target=\\\"_self\\\"\\u003Ehere\\u003C/a\\u003E.\\u003C/p\\u003E\"},{\"slug\":\"about\",\"path\":\"/about\",\"status\":\"published\",\"site_slug\":\"organizeralexandreschmitt\",\"name\":\"About\",\"headline\":\"\",\"title\":\"About
-        - Matt's General Store\",\"excerpt\":\"Learn more about Matt's General Store
-        and how we work as a cooperative\",\"author_id\":79278,\"published_at\":\"2013-07-08T11:07:00-07:00\",\"external_id\":null,\"tags\":[],\"id\":1,\"content\":\"\\u003Ch2
-        align=\\\"left\\\"\\u003EMission Statement\\u003C/h2\\u003E\\r\\n\\u003Cp\\u003EMatt's
+        State Ag and Markets \u003Cem\u003EFresh Connect Farmers Market Program\u003C/em\u003E
+        to purchase a brand new Mobile Market vehicle in order to transport our \u003Ca
+        href=\"http://mass-ave.org/wp-content/uploads/2012/02/mmpic3.jpg\"\u003E\u003Cimg
+        class=\"alignright size-medium wp-image-369\" style=\"float: right; margin:
+        5px;\" title=\"mmpic3\" src=\"foodtable.jpg\" alt=\"Table of veggies\" width=\"308\"
+        height=\"205\"\u003E\u003C/a\u003Eproduce to select sites in Independence.
+        For this upcoming growing season, we hope to partner with six different community
+        sites to host a farm stand at once a week. In the past, these sites have included
+        community organizations, housing developments, and health centers.\u003C/p\u003E\r\n\u003Cp\u003E\u00a0\u003C/p\u003E\r\n\u003Cp\u003E\u00a0\u003C/p\u003E\r\n\u003Cp\u003E\u003Cspan
+        style=\"color: #888888;\"\u003E\u003Cem\u003E\u003Cspan style=\"text-decoration:
+        underline;\"\u003E\u003Cstrong\u003EMobile Market Schedule (June - October)\u003Cbr\u003E\u003C/strong\u003E\u003C/span\u003E\u003C/em\u003E\u003C/span\u003E\u003C/p\u003E\r\n\u003Cp\u003ECurrently
+        hibernating, \u003Ca title=\"Signup\" href=\"http://organizeralexandreschmitt.nationbuilder.com/volunteer\"
+        target=\"_self\"\u003Esign up\u003C/a\u003E to receive updates for when we''ll
+        be back on the road!\u003C/p\u003E"},{"slug":"growing_green","path":"/growing_green","status":"published","site_slug":"organizeralexandreschmitt","name":"Growing
+        Green","headline":"Growing Green","title":"Growing Green - Matt''s General
+        Store","excerpt":"","author_id":79278,"published_at":"2013-12-14T01:35:00Z","external_id":null,"tags":["Partners","Volunteer","Farming","Community"],"id":5,"content":"\u003Cdiv
+        class=\"entry-content\"\u003E\r\n\u003Cp\u003E\u003Cimg style=\"float: left;
+        margin: 5px;\" src=\"veggies12.jpg\" alt=\"Veggies\" width=\"279\" height=\"420\"\u003EOver
+        the years, Matt''s General Store has provided employment and direct training
+        to hundreds of low income youth in Independence in the areas of organic urban
+        agriculture , social enterprise development, community education advocacy,
+        food systems development.\u003C/p\u003E\r\n\u003Cp\u003E\u003Cimg style=\"float:
+        right; margin: 5px;\" src=\"farm1.JPG\" alt=\"On the farm\" width=\"279\"
+        height=\"185\"\u003EOur staff has also provided training in these areas to
+        visiting groups, local colleges and university students, community groups,
+        faith institutions and at national conferences.\u00a0 Growing Green youth
+        have, in turn, educated thousands of community residents, school children,
+        and policy makers about how localizing our food system will benefit people,
+        the planet and our local economy.\u003C/p\u003E\r\n\u003Cp\u003EThe Growing
+        Green program is a great way to get involved as a \u003Ca title=\"Volunteer\"
+        href=\"http://organizeralexandreschmitt.nationbuilder.com/volunteer\" target=\"_self\"\u003Evolunteer.\u003C/a\u003E
+        The program runs year-round, and participants receive a share of the harvest
+        for each season. This program is what is helping transform vacant lots in
+        the community, and also helps keep costs down at the co-op by keeping things
+        local!\u003C/p\u003E\r\n\u003Cp\u003E\u003Cimg style=\"float: right; margin:
+        5px;\" src=\"garden5.JPG\" alt=\"Garden\" width=\"282\" height=\"187\"\u003E\u003C/p\u003E\r\n\u003C/div\u003E"},{"slug":"community_education","path":"/community_education","status":"archived","site_slug":"organizeralexandreschmitt","name":"Community
+        Education","headline":"Community Education","title":"Community Education -
+        Matt''s General Co-op","excerpt":null,"author_id":79278,"published_at":null,"external_id":null,"tags":["Outreach","Education","Partners"],"id":4,"content":null},{"slug":"youth_outreach","path":"/youth_outreach","status":"archived","site_slug":"organizeralexandreschmitt","name":"Youth
+        Outreach","headline":"Youth Outreach","title":"Youth Outreach - Matt''s General
+        Co-op","excerpt":null,"author_id":79278,"published_at":null,"external_id":null,"tags":["Partners","Youth"],"id":3,"content":null},{"slug":"programs","path":"/programs","status":"published","site_slug":"organizeralexandreschmitt","name":"Community
+        Programs","headline":"Community Programs","title":"Community Programs - Matt''s
+        General Store","excerpt":"","author_id":79278,"published_at":"2013-12-14T01:20:00Z","external_id":null,"tags":["Partners","Volunteer","Community"],"id":2,"content":"\u003Cp\u003E\u003Cimg
+        style=\"float: right; margin: 5px;\" src=\"5106012513_f1f3efa76a.jpg\" alt=\"Mobile\"
+        width=\"251\" height=\"167\"\u003EMatt''s General Store currently offers two
+        programs. From June to October each year, the \u003Ca title=\"Mobile Market\"
+        href=\"/mobile_market\"\u003EMobile Market\u003C/a\u003E brings organic, locally-grown,
+        affordable produce to low-income neighborhoods that have limited access to
+        fresh food. As a part of this outreach, the Mobile Market accepts EBT/Food
+        Stamp benefits in addition to credit cards.\u003C/p\u003E\r\n\u003Cp\u003E\u003Ca
+        title=\"Growing Green\" href=\"/growing_green\" target=\"_self\"\u003E\u003Cimg
+        style=\"float: left; margin: 5px;\" src=\"garden3.JPG\" alt=\"Growing Green\"
+        width=\"250\" height=\"166\"\u003EGrowing Green\u003C/a\u003E is our year-round
+        program to grow and harvest fruit and vegetables locally. During the summer,
+        we farm using urban farming techniques in reclaimed vacant lots around our
+        location. In the winter, we develop crops in greenhouses to ensure a steady
+        availability of produce. Our passionate volunteers help keep this program
+        going (and get some of the harvest on the side!), if you''re interested, please
+        sign up \u003Ca title=\"Volunteer\" href=\"http://organizeralexandreschmitt.nationbuilder.com/volunteer\"
+        target=\"_self\"\u003Ehere\u003C/a\u003E.\u003C/p\u003E"},{"slug":"about","path":"/about","status":"published","site_slug":"organizeralexandreschmitt","name":"About","headline":"","title":"About
+        - Matt''s General Store","excerpt":"Learn more about Matt''s General Store
+        and how we work as a cooperative","author_id":79278,"published_at":"2013-07-08T18:07:00Z","external_id":null,"tags":[],"id":1,"content":"\u003Ch2
+        align=\"left\"\u003EMission Statement\u003C/h2\u003E\r\n\u003Cp\u003EMatt''s
         General Store is a membership-based organization, open to the entire community.
-        We commit ourselves to serving both members and non-members by:\\u003C/p\\u003E\\r\\n\\u003Cul\\u003E\\n\\u003Cli\\u003EProviding
-        a natural foods grocery store in a friendly environment\\u003C/li\\u003E\\r\\n\\u003Cli\\u003EProviding
-        education about nutrition, consumer issues, and cooperative principles\\u003C/li\\u003E\\r\\n\\u003Cli\\u003ENurturing
-        the local economy and the environment\\u003C/li\\u003E\\r\\n\\u003C/ul\\u003E\\u003Ch2\\u003ECo-op
-        History\\u003C/h2\\u003E\\r\\n\\u003Cp\\u003EMatt's General Store is part
-        of the modern co-operative movement which began in Rochdale, England in 1844.
-        Today approximately 765 million individuals are members of co-ops. In the
-        US alone, the are over 47 thousand co-ops with over 100 million members. Members
-        of these co-ops pool resources to achieve a variety of shared goals. Working
+        We commit ourselves to serving both members and non-members by:\u003C/p\u003E\r\n\u003Cul\u003E\n\u003Cli\u003EProviding
+        a natural foods grocery store in a friendly environment\u003C/li\u003E\r\n\u003Cli\u003EProviding
+        education about nutrition, consumer issues, and cooperative principles\u003C/li\u003E\r\n\u003Cli\u003ENurturing
+        the local economy and the environment\u003C/li\u003E\r\n\u003C/ul\u003E\u003Ch2\u003ECo-op
+        History\u003C/h2\u003E\r\n\u003Cp\u003EMatt''s General Store is part of the
+        modern co-operative movement which began in Rochdale, England in 1844. Today
+        approximately 765 million individuals are members of co-ops. In the US alone,
+        the are over 47 thousand co-ops with over 100 million members. Members of
+        these co-ops pool resources to achieve a variety of shared goals. Working
         together they have organized childcare co-ops, credit unions, farmers co-operatives,
-        worker owned businesses, and more.\\u003C/p\\u003E\\r\\n\\u003Ch2 align=\\\"left\\\"\\u003EOur
-        Own History\\u003C/h2\\u003E\\r\\n\\u003Cp\\u003EMatt's General Store was
-        formed in 1971 by Don Rawitsch, Bill Heinemann, and Paul Dillenberger, and
-        first opened it's doors in 1974. Since then, it has evolved from an entirely
-        member run organization to a fully functioning store with paid staff. Members
-        of the Matt's General can take pride in a $20 Billion Natural Foods Industry
-        that they pioneered with their dedication, hard work, and cooperation!\\u003C/p\\u003E\\r\\n\\u003Ch2
-        align=\\\"left\\\"\\u003ETen Reasons to Shop at Matt's General Co-op\\u003C/h2\\u003E\\r\\n\\u003Col\\u003E\\n\\u003Cli\\u003EOur
+        worker owned businesses, and more.\u003C/p\u003E\r\n\u003Ch2 align=\"left\"\u003EOur
+        Own History\u003C/h2\u003E\r\n\u003Cp\u003EMatt''s General Store was formed
+        in 1971 by Don Rawitsch, Bill Heinemann, and Paul Dillenberger, and first
+        opened it''s doors in 1974. Since then, it has evolved from an entirely member
+        run organization to a fully functioning store with paid staff. Members of
+        the Matt''s General can take pride in a $20 Billion Natural Foods Industry
+        that they pioneered with their dedication, hard work, and cooperation!\u003C/p\u003E\r\n\u003Ch2
+        align=\"left\"\u003ETen Reasons to Shop at Matt''s General Co-op\u003C/h2\u003E\r\n\u003Col\u003E\n\u003Cli\u003EOur
         mission to serve the community by providing a natural foods grocery store
-        in a friendly environment.\\u003C/li\\u003E\\r\\n\\u003Cli\\u003EWe specialize
-        in high quality homegrown and organic produce\\u003C/li\\u003E\\r\\n\\u003Cli\\u003EFresh
-        baked bread made here in Matt's Kitchen and delivered from other local bakeries,
-        Bagel John's and Bakers Dozen Bakery.\\u003C/li\\u003E\\r\\n\\u003Cli\\u003EOrganic
-        and rBGH free milks, cheeses and yogurts.\\u003C/li\\u003E\\r\\n\\u003Cli\\u003EBulk
+        in a friendly environment.\u003C/li\u003E\r\n\u003Cli\u003EWe specialize in
+        high quality homegrown and organic produce\u003C/li\u003E\r\n\u003Cli\u003EFresh
+        baked bread made here in Matt''s Kitchen and delivered from other local bakeries,
+        Bagel John''s and Bakers Dozen Bakery.\u003C/li\u003E\r\n\u003Cli\u003EOrganic
+        and rBGH free milks, cheeses and yogurts.\u003C/li\u003E\r\n\u003Cli\u003EBulk
         products to help you live more simply. We have the widest variety of grains,
-        nuts, flours, granolas, herbs, teas and more. Buy as much as you need!\\u003C/li\\u003E\\r\\n\\u003Cli\\u003EAt
-        least 52\\u00a2 of every dollar you spend returns to the local economy.\\u003C/li\\u003E\\r\\n\\u003Cli\\u003EPrepared
-        foods are made fresh daily by our talented chefs in Matt\\u2019s Kitchen.
-        From scrumptious sandwiches to full meals in our grab 'n go case to our salad,
-        soup and hot bars, we have a fantastic variety to choose from daily.\\u003C/li\\u003E\\r\\n\\u003Cli\\u003EHand
-        made, chemical and cruelty-free soaps and beauty aids.\\u003C/li\\u003E\\r\\n\\u003Cli\\u003ESupport
-        a business that is owned by over 7000 people from our community.\\u003C/li\\u003E\\r\\n\\u003Cli\\u003EWe
-        run several programs to enrich and support the our community.\\u003C/li\\u003E\\r\\n\\u003C/ol\\u003E\\u003Cp\\u003E\\u00a0\\u003C/p\\u003E\"}],\"next\":null,\"prev\":\"/api/v1/sites/organizeralexandreschmitt/pages/basic_pages?__nonce=54v-E_wbvsPX0_QbtwmAfg\\u0026__token=ALAtoFItHGKK4BToqSrMN4nC1EIfOdcU_QZp2HK8AAY3\"}"
+        nuts, flours, granolas, herbs, teas and more. Buy as much as you need!\u003C/li\u003E\r\n\u003Cli\u003EAt
+        least 52\u00a2 of every dollar you spend returns to the local economy.\u003C/li\u003E\r\n\u003Cli\u003EPrepared
+        foods are made fresh daily by our talented chefs in Matt\u2019s Kitchen. From
+        scrumptious sandwiches to full meals in our grab ''n go case to our salad,
+        soup and hot bars, we have a fantastic variety to choose from daily.\u003C/li\u003E\r\n\u003Cli\u003EHand
+        made, chemical and cruelty-free soaps and beauty aids.\u003C/li\u003E\r\n\u003Cli\u003ESupport
+        a business that is owned by over 7000 people from our community.\u003C/li\u003E\r\n\u003Cli\u003EWe
+        run several programs to enrich and support the our community.\u003C/li\u003E\r\n\u003C/ol\u003E\u003Cp\u003E\u00a0\u003C/p\u003E"}],"next":null,"prev":"/api/v1/sites/organizeralexandreschmitt/pages/basic_pages?__nonce=6G9TdAbHgqx46PbDGhArww\u0026__token=AF8mYPVNV_vNQOj98n9vjK5PVolI5akyG9y72RVyRwss\u0026limit=11"}'
     http_version: 
-  recorded_at: Thu, 05 Feb 2015 06:02:57 GMT
-recorded_with: VCR 2.9.2
+  recorded_at: Sat, 15 Aug 2015 05:50:12 GMT
+recorded_with: VCR 2.9.3
