@@ -39,16 +39,15 @@ class NationBuilder::Client
 
   RETRY_DELAY = 0.1 # seconds
 
-  DEFAULT_HEADERS = {
-    'Accept' => 'application/json',
-    'Content-Type' => 'application/json'
-  }
-
   def raw_call(path, method, body = {}, args = {}, opts = {})
     url = NationBuilder::URL.new(base_url).generate_url(path, args)
 
     request_args = {
-      header: DEFAULT_HEADERS.merge('X-Request-ID' => opts[:uniqueness_token]),
+      header: {
+        'Accept' => 'application/json',
+        'Content-Type' => 'application/json',
+        'X-Request-ID' => opts[:uniqueness_token]
+      },
       query: {
         access_token: @api_key
       }
