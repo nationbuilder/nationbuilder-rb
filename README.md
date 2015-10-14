@@ -78,11 +78,23 @@ client.call(:people, :create, params)
 client.call(:people, :destroy, id: 15)
 ```
 
-### Using API Duplication Protection
-
+### Using API Duplication Protection (with MD5 hash of params)
 ```ruby
-require 'securerandom'
-client.call(:people, :destroy, {id: 15}, {uniqueness_token: SecureRandom.uuid})
+require 'digest'
+require 'json'
+
+params = {
+  person: {
+    email: "bob@example.com",
+    last_name: "Smith",
+    first_name: "Bob"
+  }
+}
+
+md5 = Digest::MD5.new
+md5 << JSON.generate(params)
+
+client.call(:people, :create, params, {uniqueness_token: md5.hexdigest})
 ```
 
 ## Pagination
