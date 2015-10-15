@@ -86,7 +86,7 @@ Gem::Specification.new do |s|
   ]
   s.homepage = "http://github.com/nationbuilder/nationbuilder-rb"
   s.licenses = ["MIT"]
-  s.rubygems_version = "2.4.8"
+  s.rubygems_version = "2.4.6"
   s.summary = "A Ruby client to the NationBuilder API"
 
   if s.respond_to? :specification_version then
