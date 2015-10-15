@@ -45,6 +45,11 @@ The primary method for calling the NationBuilder API in
 the name of the method, and an optional hash containing arguments
 for the method.
 
+## API Duplication Protection
+The NationBuilder API allow for the use of a uniqueness token to be
+sent along with a request. If a subsequent request with the same uniqueness
+token if received within 2 hours, it will be rejected with a 409 Conflict response.
+
 ## Examples
 
 ### Fetching a person
@@ -71,6 +76,25 @@ client.call(:people, :create, params)
 
 ```ruby
 client.call(:people, :destroy, id: 15)
+```
+
+### Using API Duplication Protection (with MD5 hash of params)
+```ruby
+require 'digest'
+require 'json'
+
+params = {
+  person: {
+    email: "bob@example.com",
+    last_name: "Smith",
+    first_name: "Bob"
+  }
+}
+
+md5 = Digest::MD5.new
+md5 << JSON.generate(params)
+
+client.call(:people, :create, params, {uniqueness_token: md5.hexdigest})
 ```
 
 ## Pagination

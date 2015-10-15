@@ -39,14 +39,16 @@ class NationBuilder::Client
 
   RETRY_DELAY = 0.1 # seconds
 
-  def raw_call(path, method, body = {}, args = {})
+  DEFAULT_HEADERS = {
+    'Accept' => 'application/json',
+    'Content-Type' => 'application/json'
+  }
+
+  def raw_call(path, method, body = {}, args = {}, opts = {})
     url = NationBuilder::URL.new(base_url).generate_url(path, args)
 
     request_args = {
-      header: {
-        'Accept' => 'application/json',
-        'Content-Type' => 'application/json'
-      },
+      header: headers(opts),
       query: {
         access_token: @api_key
       }
@@ -65,13 +67,13 @@ class NationBuilder::Client
     perform_request_with_retries(method, url, request_args)
   end
 
-  def call(endpoint_name, method_name, args={})
+  def call(endpoint_name, method_name, args = {}, opts = {})
     endpoint = self[endpoint_name]
     method = endpoint[method_name]
     nonmethod_args = method.nonmethod_args(args)
     method_args = method.method_args(args)
     method.validate_args(method_args)
-    return raw_call(method.uri, method.http_method, nonmethod_args, args)
+    raw_call(method.uri, method.http_method, nonmethod_args, args, opts)
   end
 
   def perform_request_with_retries(method, url, request_args)
@@ -173,4 +175,12 @@ class NationBuilder::Client
     end
   end
 
+  private
+
+  def headers(opts)
+    return DEFAULT_HEADERS
+      .merge!('X-Request-ID' => opts[:uniqueness_token]) unless
+        opts[:uniqueness_token].nil? || opts[:uniqueness_token].empty?
+    DEFAULT_HEADERS
+  end
 end
