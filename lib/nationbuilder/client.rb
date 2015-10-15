@@ -180,7 +180,7 @@ class NationBuilder::Client
   def headers(opts)
     return DEFAULT_HEADERS
       .merge!('X-Request-ID' => opts[:uniqueness_token]) unless
-        opts[:uniqueness_token].nil?
+        opts[:uniqueness_token].nil? || opts[:uniqueness_token].empty?
     DEFAULT_HEADERS
   end
 end

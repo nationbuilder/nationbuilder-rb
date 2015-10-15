@@ -86,6 +86,23 @@ describe NationBuilder::Client do
         client.call(:people, :create, params)
       end
 
+      it 'should not send X-Request-ID if blank string' do
+        params = {
+          fire_webhooks: false,
+          person: {
+            email: 'bob@example.com',
+            last_name: 'Smith',
+            first_name: 'Bob'
+          }
+        }
+
+        expect(client).to receive(:perform_request_with_retries) do |_, _, request_args|
+          expect(request_args[:header]).not_to include('X-Request-ID')
+        end
+
+        client.call(:people, :create, params, {uniqueness_token: ''})
+      end
+
       it 'should send X-Request-ID' do
         params = {
           fire_webhooks: false,
