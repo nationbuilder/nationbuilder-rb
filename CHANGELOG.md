@@ -1,3 +1,6 @@
+# 1.4.0
+- Add ability for Client to send X-Request-ID if passed via call options
+
 # 1.3.5
 - [#21] Added limit params to Paginator class
 
