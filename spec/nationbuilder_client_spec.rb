@@ -1,14 +1,16 @@
 require 'spec_helper'
-require 'securerandom'
 
 describe NationBuilder::Client do
+
   let(:client) do
     NationBuilder::Client.new('organizeralexandreschmitt',
                               '3695ca30a6e74401115ec2b68767b53112c32b5bedc3c1f34e72c9749419b2de',
-                              retries: 1)
+                              retries: 1
+                              )
   end
 
   describe '#endpoints' do
+
     it 'should contain all defined endpoints' do
       expect(client.endpoints.sort).to eq([
         :basic_pages,
@@ -37,12 +39,14 @@ describe NationBuilder::Client do
   end
 
   describe '#base_url' do
+
     it 'should contain the nation slug' do
       expect(client.base_url).to eq('https://organizeralexandreschmitt.nationbuilder.com')
     end
   end
 
   describe '#call' do
+
     it 'should handle a parametered GET' do
       VCR.use_cassette('parametered_get') do
         response = client.call(:basic_pages, :index, site_slug: 'organizeralexandreschmitt', limit: 11)
@@ -68,60 +72,8 @@ describe NationBuilder::Client do
       expect(response['person']['first_name']).to eq('Bob')
     end
 
-    context 'uniqueness token' do
-      it 'should not send X-Request-ID' do
-        params = {
-          fire_webhooks: false,
-          person: {
-            email: 'bob@example.com',
-            last_name: 'Smith',
-            first_name: 'Bob'
-          }
-        }
-
-        expect(client).to receive(:perform_request_with_retries) do |_, _, request_args|
-          expect(request_args[:header]).not_to include('X-Request-ID')
-        end
-
-        client.call(:people, :create, params)
-      end
-
-      it 'should not send X-Request-ID if blank string' do
-        params = {
-          fire_webhooks: false,
-          person: {
-            email: 'bob@example.com',
-            last_name: 'Smith',
-            first_name: 'Bob'
-          }
-        }
-
-        expect(client).to receive(:perform_request_with_retries) do |_, _, request_args|
-          expect(request_args[:header]).not_to include('X-Request-ID')
-        end
-
-        client.call(:people, :create, params, {uniqueness_token: ''})
-      end
-
-      it 'should send X-Request-ID' do
-        params = {
-          fire_webhooks: false,
-          person: {
-            email: 'bob@example.com',
-            last_name: 'Smith',
-            first_name: 'Bob'
-          }
-        }
-
-        expect(client).to receive(:perform_request_with_retries) do |_, _, request_args|
-          expect(request_args[:header]).to include('X-Request-ID')
-        end
-
-        client.call(:people, :create, params, uniqueness_token: SecureRandom.uuid)
-      end
-    end
-
     context 'fire_webhooks' do
+
       it 'should disable webhooks' do
         params = {
           fire_webhooks: false,
@@ -154,6 +106,7 @@ describe NationBuilder::Client do
 
         client.call(:people, :create, params)
       end
+
     end
 
     it 'should handle a DELETE' do
@@ -172,18 +125,18 @@ describe NationBuilder::Client do
   describe '#classify_response_error' do
     it 'should account for rate limits' do
       response = double(code: 429, body: 'rate limiting')
-      expect(client.classify_response_error(response).class)
-        .to eq(NationBuilder::RateLimitedError)
+      expect(client.classify_response_error(response).class).
+        to eq(NationBuilder::RateLimitedError)
     end
     it 'should account for client errors' do
       response = double(code: 404, body: '404ing')
-      expect(client.classify_response_error(response).class)
-        .to eq(NationBuilder::ClientError)
+      expect(client.classify_response_error(response).class).
+        to eq(NationBuilder::ClientError)
     end
     it 'should account for client errors' do
       response = double(code: 500, body: '500ing')
-      expect(client.classify_response_error(response).class)
-        .to eq(NationBuilder::ServerError)
+      expect(client.classify_response_error(response).class).
+        to eq(NationBuilder::ServerError)
     end
   end
 
