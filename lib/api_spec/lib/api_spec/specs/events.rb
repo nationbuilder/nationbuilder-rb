@@ -3,9 +3,9 @@ class ApiSpec::Spec
   endpoint 'Events' do |event|
 
     event.method('Index') do |method|
-      method.synopsis = "Returns a list of events"
-      method.http_method = "GET"
-      method.uri = "/sites/:site_slug/pages/events"
+      method.synopsis = 'Returns a list of events'
+      method.http_method = 'GET'
+      method.uri = '/sites/:site_slug/pages/events'
 
       method.parameter('site_slug') do |p|
         p.required = 'Y'
@@ -55,13 +55,12 @@ class ApiSpec::Spec
         p.type = 'int'
         p.description = 'the ID of the calendar from which events should be scoped'
       end
-
     end
 
     event.method('Show') do |method|
-      method.synopsis = "Returns an event"
-      method.http_method = "GET"
-      method.uri = "/sites/:site_slug/pages/events/:id"
+      method.synopsis = 'Returns an event'
+      method.http_method = 'GET'
+      method.uri = '/sites/:site_slug/pages/events/:id'
 
       method.parameter('site_slug') do |p|
         p.required = 'Y'
@@ -72,15 +71,14 @@ class ApiSpec::Spec
       method.parameter('id') do |p|
         p.required = 'Y'
         p.type = 'int'
-        p.description = 'the ID of the event'
+        p.description = "the event's ID"
       end
-
     end
 
     event.method('Create') do |method|
-      method.synopsis = "Creates a event with the provided data"
-      method.http_method = "POST"
-      method.uri = "/sites/:site_slug/pages/events"
+      method.synopsis = 'Creates a event with the provided data'
+      method.http_method = 'POST'
+      method.uri = '/sites/:site_slug/pages/events'
 
       method.parameter('site_slug') do |p|
         p.required = 'Y'
@@ -97,9 +95,9 @@ class ApiSpec::Spec
     end
 
     event.method('Update') do |method|
-      method.synopsis = "Updates a event with the provided data"
-      method.http_method = "PUT"
-      method.uri = "/sites/:site_slug/pages/events/:id"
+      method.synopsis = 'Updates a event with the provided data'
+      method.http_method = 'PUT'
+      method.uri = '/sites/:site_slug/pages/events/:id'
 
       method.parameter('site_slug') do |p|
         p.required = 'Y'
@@ -110,7 +108,7 @@ class ApiSpec::Spec
       method.parameter('id') do |p|
         p.required = 'Y'
         p.type = 'int'
-        p.description = "The event's ID"
+        p.description = "the event's ID"
       end
 
       method.parameter('body') do |p|
@@ -122,9 +120,9 @@ class ApiSpec::Spec
     end
 
     event.method('Destroy') do |method|
-      method.synopsis = "Removes the event with the matching ID"
-      method.http_method = "DELETE"
-      method.uri = "/sites/:site_slug/pages/events/:id"
+      method.synopsis = 'Removes the event with the matching ID'
+      method.http_method = 'DELETE'
+      method.uri = '/sites/:site_slug/pages/events/:id'
 
       method.parameter('site_slug') do |p|
         p.required = 'Y'
@@ -135,14 +133,14 @@ class ApiSpec::Spec
       method.parameter('id') do |p|
         p.required = 'Y'
         p.type = 'int'
-        p.description = "The event's ID"
+        p.description = "the event's ID"
       end
     end
 
     event.method('RSVPs') do |method|
-      method.synopsis = "Lists all RSVPs for an event"
-      method.http_method = "GET"
-      method.uri = "/sites/:site_slug/pages/events/:id/rsvps"
+      method.synopsis = 'Lists all RSVPs for an event'
+      method.http_method = 'GET'
+      method.uri = '/sites/:site_slug/pages/events/:id/rsvps'
 
       method.parameter('site_slug') do |p|
         p.required = 'Y'
@@ -153,7 +151,7 @@ class ApiSpec::Spec
       method.parameter('id') do |p|
         p.required = 'Y'
         p.type = 'int'
-        p.description = "The event's ID"
+        p.description = "the event's ID"
       end
 
       method.parameter('__token') do |p|
@@ -174,13 +172,12 @@ class ApiSpec::Spec
         p.type = 'int'
         p.description = 'maximum number of results to return'
       end
-
     end
 
     event.method('RSVP Create') do |method|
-      method.synopsis = "Creates an RSVP for an event"
-      method.http_method = "POST"
-      method.uri = "/sites/:site_slug/pages/events/:id/rsvps"
+      method.synopsis = 'Creates an RSVP for an event'
+      method.http_method = 'POST'
+      method.uri = '/sites/:site_slug/pages/events/:id/rsvps'
 
       method.parameter('site_slug') do |p|
         p.required = 'Y'
@@ -191,7 +188,7 @@ class ApiSpec::Spec
       method.parameter('id') do |p|
         p.required = 'Y'
         p.type = 'int'
-        p.description = "The event's ID"
+        p.description = "the event's ID"
       end
 
       method.parameter('body') do |p|
@@ -199,13 +196,12 @@ class ApiSpec::Spec
         p.type = 'json'
         p.description = 'A JSON representation of the new post'
       end
-
     end
 
     event.method('RSVP Update') do |method|
-      method.synopsis = "Updates an existing RSVP"
-      method.http_method = "PUT"
-      method.uri = "/sites/:site_slug/pages/events/:event_id/rsvps/:rsvp_id"
+      method.synopsis = 'Updates an existing RSVP'
+      method.http_method = 'PUT'
+      method.uri = '/sites/:site_slug/pages/events/:event_id/rsvps/:rsvp_id'
 
       method.parameter('site_slug') do |p|
         p.required = 'Y'
@@ -216,13 +212,13 @@ class ApiSpec::Spec
       method.parameter('event_id') do |p|
         p.required = 'Y'
         p.type = 'int'
-        p.description = "The event's ID"
+        p.description = "the event's ID"
       end
 
       method.parameter('rsvp_id') do |p|
         p.required = 'Y'
         p.type = 'int'
-        p.description = "The RSVP's ID"
+        p.description = "the RSVP's ID"
       end
 
       method.parameter('body') do |p|
@@ -230,9 +226,6 @@ class ApiSpec::Spec
         p.type = 'json'
         p.description = 'JSON attributes for updating the RSVP'
       end
-
     end
-
   end
-
 end

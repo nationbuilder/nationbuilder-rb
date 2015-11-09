@@ -3,9 +3,9 @@ class ApiSpec::Spec
   endpoint 'Sites' do |tags|
 
     tags.method('Index') do |method|
-      method.synopsis = "Returns a list of all sites"
-      method.http_method = "GET"
-      method.uri = "/sites"
+      method.synopsis = 'Returns a list of all sites'
+      method.http_method = 'GET'
+      method.uri = '/sites'
 
       method.parameter('__token') do |p|
         p.required = 'N'
@@ -26,7 +26,5 @@ class ApiSpec::Spec
         p.description = 'maximum number of results to return'
       end
     end
-
   end
-
 end

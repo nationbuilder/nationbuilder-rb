@@ -3,10 +3,9 @@ class ApiSpec::Spec
   endpoint 'Calendars' do |bp|
 
     bp.method('Index') do |m|
-
-      m.synopsis = "Shows a list of calendars"
-      m.http_method = "GET"
-      m.uri = "/sites/:site_slug/pages/calendars"
+      m.synopsis = 'Shows a list of calendars'
+      m.http_method = 'GET'
+      m.uri = '/sites/:site_slug/pages/calendars'
 
       m.parameter('site_slug') do |p|
         p.required = 'Y'
@@ -32,14 +31,12 @@ class ApiSpec::Spec
         p.type = 'int'
         p.description = 'maximum number of results to return'
       end
-
     end
 
     bp.method('Show') do |m|
-
-      m.synopsis = "Show the details of a calendar"
-      m.http_method = "GET"
-      m.uri = "/sites/:site_slug/pages/calendars/:id"
+      m.synopsis = 'Show the details of a calendar'
+      m.http_method = 'GET'
+      m.uri = '/sites/:site_slug/pages/calendars/:id'
 
       m.parameter('site_slug') do |p|
         p.required = 'Y'
@@ -52,14 +49,12 @@ class ApiSpec::Spec
         p.type = 'int'
         p.description = 'the ID of the calendar'
       end
-
     end
 
     bp.method('Create') do |m|
-
-      m.synopsis = "Creates a new calendar"
-      m.http_method = "POST"
-      m.uri = "/sites/:site_slug/pages/calendars"
+      m.synopsis = 'Creates a new calendar'
+      m.http_method = 'POST'
+      m.uri = '/sites/:site_slug/pages/calendars'
 
       m.parameter('site_slug') do |p|
         p.required = 'Y'
@@ -73,14 +68,12 @@ class ApiSpec::Spec
         p.type = 'json'
         p.description = 'a JSON representation of the new calendar'
       end
-
     end
 
     bp.method('Update') do |m|
-
-      m.synopsis = "Updates the attributes of a calendar"
-      m.http_method = "PUT"
-      m.uri = "/sites/:site_slug/pages/calendars/:id"
+      m.synopsis = 'Updates the attributes of a calendar'
+      m.http_method = 'PUT'
+      m.uri = '/sites/:site_slug/pages/calendars/:id'
 
       m.parameter('site_slug') do |p|
         p.required = 'Y'
@@ -100,14 +93,12 @@ class ApiSpec::Spec
         p.type = 'json'
         p.description = 'JSON containing updates'
       end
-
     end
 
     bp.method('Destroy') do |m|
-
-      m.synopsis = "Removes a calendar"
-      m.http_method = "DELETE"
-      m.uri = "/sites/:site_slug/pages/calendars/:id"
+      m.synopsis = 'Removes a calendar'
+      m.http_method = 'DELETE'
+      m.uri = '/sites/:site_slug/pages/calendars/:id'
 
       m.parameter('site_slug') do |p|
         p.required = 'Y'
@@ -120,9 +111,6 @@ class ApiSpec::Spec
         p.type = 'int'
         p.description = 'the ID of the calendar'
       end
-
     end
-
   end
-
 end
