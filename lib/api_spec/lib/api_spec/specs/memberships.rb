@@ -1,7 +1,7 @@
 class ApiSpec::Spec
 
   endpoint 'Memberships' do |memberships|
-
+    
     memberships.method('Index') do |method|
       method.synopsis = 'Lists all memberships for a person'
       method.http_method = 'GET'
@@ -10,7 +10,7 @@ class ApiSpec::Spec
       method.parameter('person_id') do |p|
         p.required = 'Y'
         p.type = 'int'
-        p.description = 'The person\'s ID'
+        p.description = "the person's ID"
       end
 
       method.parameter('__token') do |p|
@@ -41,7 +41,7 @@ class ApiSpec::Spec
       method.parameter('person_id') do |p|
         p.required = 'Y'
         p.type = 'int'
-        p.description = 'The person\'s ID'
+        p.description = "the person's ID"
       end
 
       method.parameter('body') do |p|
@@ -60,7 +60,7 @@ class ApiSpec::Spec
       method.parameter('person_id') do |p|
         p.required = 'Y'
         p.type = 'int'
-        p.description = 'The person\'s ID'
+        p.description = "the person's ID"
       end
 
       method.parameter('body') do |p|
@@ -79,16 +79,14 @@ class ApiSpec::Spec
       method.parameter('person_id') do |p|
         p.required = 'Y'
         p.type = 'int'
-        p.description = 'The person\'s ID'
+        p.description = "the person's ID"
       end
 
       method.parameter('name') do |p|
         p.required = 'Y'
         p.type = 'string'
-        p.description = 'The name of the membership'
+        p.description = 'the name of the membership'
       end
     end
-
   end
-
 end

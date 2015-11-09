@@ -3,9 +3,9 @@ class ApiSpec::Spec
   endpoint 'Donations' do |donation|
 
     donation.method('Index') do |method|
-      method.synopsis = "Returns a list of donations"
-      method.http_method = "GET"
-      method.uri = "/donations"
+      method.synopsis = 'Returns a list of donations'
+      method.http_method = 'GET'
+      method.uri = '/donations'
 
       method.parameter('__token') do |p|
         p.required = 'N'
@@ -28,27 +28,27 @@ class ApiSpec::Spec
     end
 
     donation.method('Create') do |method|
-      method.synopsis = "Creates a donation with the provided data"
-      method.http_method = "POST"
-      method.uri = "/donations"
+      method.synopsis = 'Creates a donation with the provided data'
+      method.http_method = 'POST'
+      method.uri = '/donations'
 
       method.parameter('body') do |p|
         p.required = 'Y'
         p.default = '{}'
         p.type = 'json'
-        p.description = 'JSON representation of a donation'
+        p.description = 'a JSON representation of a donation'
       end
     end
 
     donation.method('Update') do |method|
-      method.synopsis = "Updates a donation with the provided data"
-      method.http_method = "PUT"
-      method.uri = "/donations/:id"
+      method.synopsis = 'Updates a donation with the provided data'
+      method.http_method = 'PUT'
+      method.uri = '/donations/:id'
 
       method.parameter('id') do |p|
         p.required = 'Y'
         p.type = 'int'
-        p.description = "The donation's ID"
+        p.description = "the donation's ID"
       end
 
       method.parameter('body') do |p|
@@ -60,17 +60,15 @@ class ApiSpec::Spec
     end
 
     donation.method('Destroy') do |method|
-      method.synopsis = "Removes the donation with the matching ID"
-      method.http_method = "DELETE"
-      method.uri = "/donations/:id"
+      method.synopsis = 'Removes the donation with the matching ID'
+      method.http_method = 'DELETE'
+      method.uri = '/donations/:id'
 
       method.parameter('id') do |p|
         p.required = 'Y'
         p.type = 'int'
-        p.description = "The donation's ID"
+        p.description = "the donation's ID"
       end
     end
-
   end
-
 end
