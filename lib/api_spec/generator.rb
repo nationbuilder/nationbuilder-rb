@@ -40,7 +40,6 @@ module ApiSpec
         send(nested_name) << obj
       end if base.nested_adder_name
     end
-
   end
 
   class Parameter < APIObject
@@ -54,16 +53,15 @@ module ApiSpec
     }
 
     init(self)
-
   end
 
   class Method < APIObject
 
     JSON_NAMES = {
-      name: "MethodName",
-      synopsis: "Synopsis",
-      http_method: "HTTPMethod",
-      uri: "URI"
+      name: 'MethodName',
+      synopsis: 'Synopsis',
+      http_method: 'HTTPMethod',
+      uri: 'URI'
     }
 
     self.nested_name = :parameters
@@ -71,13 +69,12 @@ module ApiSpec
     self.nested_class = Parameter
 
     init(self)
-
   end
 
   class Endpoint < APIObject
 
     JSON_NAMES = {
-      name: "name",
+      name: 'name'
     }
 
     self.nested_name = :methods
@@ -85,11 +82,9 @@ module ApiSpec
     self.nested_class = ApiSpec::Method
 
     init(self)
-
   end
 
   class Spec < APIObject
-
     class << self
       attr_accessor :endpoints
     end
@@ -97,7 +92,7 @@ module ApiSpec
     self.endpoints = []
 
     def self.to_hash
-      { 'endpoints' => endpoints.map { |endpoint| endpoint.to_hash } }
+      { 'endpoints' => endpoints.map(&:to_hash) }
     end
 
     def self.write_spec(path)

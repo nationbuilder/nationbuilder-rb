@@ -3,9 +3,9 @@ class ApiSpec::Spec
   endpoint 'People' do |people|
 
     people.method('Index') do |method|
-      method.synopsis = "Returns a list of people"
-      method.http_method = "GET"
-      method.uri = "/people"
+      method.synopsis = 'Returns a list of people'
+      method.http_method = 'GET'
+      method.uri = '/people'
 
       method.parameter('__token') do |p|
         p.required = 'N'
@@ -28,106 +28,105 @@ class ApiSpec::Spec
     end
 
     people.method('Count') do |method|
-      method.synopsis = "Returns a count of people in the nation"
-      method.http_method = "GET"
-      method.uri = "/people/count"
+      method.synopsis = 'Returns a count of people in the nation'
+      method.http_method = 'GET'
+      method.uri = '/people/count'
     end
 
     people.method('Show') do |method|
-      method.synopsis = "Returns a full representation of the person"
-      method.http_method = "GET"
-      method.uri = "/people/:id"
+      method.synopsis = 'Returns a full representation of the person'
+      method.http_method = 'GET'
+      method.uri = '/people/:id'
 
       method.parameter('id') do |p|
         p.required = 'Y'
         p.default = '1'
         p.type = 'int'
-        p.description = 'the person\'s id'
+        p.description = "the person's id"
       end
     end
 
     people.method('Match') do |method|
-      method.synopsis = "Finds people that match certain attributes exactly"
-      method.http_method = "GET"
-      method.uri = "/people/match"
+      method.synopsis = 'Finds people that match certain attributes exactly'
+      method.http_method = 'GET'
+      method.uri = '/people/match'
 
-      method.parameter("email") do |p|
+      method.parameter('email') do |p|
         p.required = 'N'
         p.type = 'string'
       end
 
-      method.parameter("first_name") do |p|
-        p.required = 'N'
-        p.type = 'string'
-        p.description = 'deprecated'
-      end
-
-      method.parameter("last_name") do |p|
+      method.parameter('first_name') do |p|
         p.required = 'N'
         p.type = 'string'
         p.description = 'deprecated'
       end
 
-      method.parameter("phone") do |p|
+      method.parameter('last_name') do |p|
         p.required = 'N'
         p.type = 'string'
         p.description = 'deprecated'
       end
 
-      method.parameter("mobile") do |p|
+      method.parameter('phone') do |p|
         p.required = 'N'
         p.type = 'string'
         p.description = 'deprecated'
       end
 
+      method.parameter('mobile') do |p|
+        p.required = 'N'
+        p.type = 'string'
+        p.description = 'deprecated'
+      end
     end
 
     people.method('Search') do |method|
-      method.synopsis = "Search for people using non-unique traits"
-      method.http_method = "GET"
-      method.uri = "/people/search"
+      method.synopsis = 'Search for people using non-unique traits'
+      method.http_method = 'GET'
+      method.uri = '/people/search'
 
-      method.parameter("first_name") do |p|
+      method.parameter('first_name') do |p|
         p.required = 'N'
         p.type = 'string'
       end
 
-      method.parameter("last_name") do |p|
+      method.parameter('last_name') do |p|
         p.required = 'N'
         p.type = 'string'
       end
 
-      method.parameter("city") do |p|
+      method.parameter('city') do |p|
         p.required = 'N'
         p.type = 'string'
       end
 
-      method.parameter("state") do |p|
+      method.parameter('state') do |p|
         p.required = 'N'
         p.type = 'string'
       end
 
-      method.parameter("sex") do |p|
+      method.parameter('sex') do |p|
         p.required = 'N'
         p.type = 'string'
       end
 
-      method.parameter("birthdate") do |p|
+      method.parameter('birthdate') do |p|
         p.required = 'N'
         p.type = 'string'
       end
 
-      method.parameter("updated_since") do |p|
+      method.parameter('updated_since') do |p|
         p.required = 'N'
         p.type = 'string'
       end
 
-      method.parameter("with_mobile") do |p|
+      method.parameter('with_mobile') do |p|
         p.required = 'N'
         p.type = 'string'
       end
 
-      method.parameter("custom_values") do |p|
+      method.parameter('custom_values') do |p|
         p.required = 'N'
         p.type = 'string'
       end
@@ -223,15 +222,15 @@ class ApiSpec::Spec
     end
 
     people.method('Nearby') do |method|
-      method.synopsis = "Searches for people near a location defined by latitude and longitude"
-      method.http_method = "GET"
-      method.uri = "/people/nearby"
+      method.synopsis = 'Searches for people near a location defined by latitude and longitude'
+      method.http_method = 'GET'
+      method.uri = '/people/nearby'
 
       method.parameter('location') do |p|
         p.required = 'Y'
         p.default = '34.049031,-118.251399'
         p.type = 'string'
-        p.description = 'origin of search in the format "latitude,longitude"'
+        p.description = "origin of search in the format 'latitude,longitude'"
       end
 
       method.parameter('distance') do |p|
@@ -263,43 +262,43 @@ class ApiSpec::Spec
 
     people.method('Me') do |method|
       method.synopsis = "Returns the access token's resource owner's representation"
-      method.http_method = "GET"
-      method.uri = "/people/me"
+      method.http_method = 'GET'
+      method.uri = '/people/me'
     end
 
     people.method('Register') do |method|
-      method.synopsis = "Starts user registration person for the given person"
-      method.http_method = "GET"
-      method.uri = "/people/:id/register"
+      method.synopsis = 'Starts user registration person for the given person'
+      method.http_method = 'GET'
+      method.uri = '/people/:id/register'
 
       method.parameter('id') do |p|
         p.required = 'Y'
         p.type = 'int'
-        p.description = "The person's ID"
+        p.description = "the person's id"
       end
     end
 
     people.method('Taggings') do |method|
-      method.synopsis = "Returns all taggings for a given person"
-      method.http_method = "GET"
-      method.uri = "/people/:id/taggings"
+      method.synopsis = 'Returns all taggings for a given person'
+      method.http_method = 'GET'
+      method.uri = '/people/:id/taggings'
 
       method.parameter('id') do |p|
         p.required = 'Y'
         p.type = 'int'
-        p.description = 'the ID of the person'
+        p.description = "the person's id"
       end
     end
 
     people.method('Tag Person') do |method|
-      method.synopsis = "Tags a person"
-      method.http_method = "PUT"
-      method.uri = "/people/:id/taggings"
+      method.synopsis = 'Tags a person'
+      method.http_method = 'PUT'
+      method.uri = '/people/:id/taggings'
 
       method.parameter('id') do |p|
         p.required = 'Y'
         p.type = 'int'
-        p.description = 'the ID of the person'
+        p.description = "the person's id"
       end
 
       method.parameter('body') do |p|
@@ -310,14 +309,14 @@ class ApiSpec::Spec
     end
 
     people.method('Tag Removal') do |method|
-      method.synopsis = "Removes a tag from a person"
-      method.http_method = "DELETE"
-      method.uri = "/people/:id/taggings/:tag"
+      method.synopsis = 'Removes a tag from a person'
+      method.http_method = 'DELETE'
+      method.uri = '/people/:id/taggings/:tag'
 
       method.parameter('id') do |p|
         p.required = 'Y'
         p.type = 'int'
-        p.description = 'the ID of the person'
+        p.description = "the person's ID"
       end
 
       method.parameter('tag') do |p|
@@ -325,18 +324,17 @@ class ApiSpec::Spec
         p.type = 'string'
         p.description = 'the name of the tag'
       end
-
     end
 
     people.method('Bulk Tag Removal') do |method|
-      method.synopsis = "Removes tags from a person"
-      method.http_method = "DELETE"
-      method.uri = "/people/:id/taggings"
+      method.synopsis = 'Removes tags from a person'
+      method.http_method = 'DELETE'
+      method.uri = '/people/:id/taggings'
 
       method.parameter('id') do |p|
         p.required = 'Y'
         p.type = 'int'
-        p.description = 'the ID of the person'
+        p.description = "the person's ID"
       end
 
       method.parameter('body') do |p|
@@ -348,13 +346,13 @@ class ApiSpec::Spec
 
     people.method('Political Capital') do |method|
       method.synopsis = "Returns a paginated list of a person's capitals"
-      method.http_method = "GET"
-      method.uri = "/people/:id/capitals"
+      method.http_method = 'GET'
+      method.uri = '/people/:id/capitals'
 
       method.parameter('id') do |p|
         p.required = 'Y'
         p.type = 'int'
-        p.description = "the ID of the person"
+        p.description = "the person's ID"
       end
 
       method.parameter('__token') do |p|
@@ -378,14 +376,14 @@ class ApiSpec::Spec
     end
 
     people.method('Political Capital Create') do |method|
-      method.synopsis = "Creates capital for the given person"
-      method.http_method = "POST"
-      method.uri = "/people/:id/capitals"
+      method.synopsis = 'Creates capital for the given person'
+      method.http_method = 'POST'
+      method.uri = '/people/:id/capitals'
 
       method.parameter('id') do |p|
         p.required = 'Y'
         p.type = 'int'
-        p.description = "the ID of the person"
+        p.description = "the person's ID"
       end
 
       method.parameter('body') do |p|
@@ -396,14 +394,14 @@ class ApiSpec::Spec
     end
 
     people.method('Political Capital Destroy') do |method|
-      method.synopsis = "Destroys capital for a person"
-      method.http_method = "DELETE"
-      method.uri = "/people/:person_id/capitals/:capital_id"
+      method.synopsis = 'Destroys capital for a person'
+      method.http_method = 'DELETE'
+      method.uri = '/people/:person_id/capitals/:capital_id'
 
       method.parameter('person_id') do |p|
         p.required = 'Y'
         p.type = 'int'
-        p.description = 'the ID of the person'
+        p.description = "the person's ID"
       end
 
       method.parameter('capital_id') do |p|
@@ -414,27 +412,27 @@ class ApiSpec::Spec
     end
 
     people.method('Create') do |method|
-      method.synopsis = "Creates a person with the provided data"
-      method.http_method = "POST"
-      method.uri = "/people"
+      method.synopsis = 'Creates a person with the provided data'
+      method.http_method = 'POST'
+      method.uri = '/people'
 
       method.parameter('body') do |p|
         p.required = 'Y'
         p.default = '{}'
         p.type = 'json'
-        p.description = 'JSON representation of the person to create'
+        p.description = 'a JSON representation of the person to create'
       end
     end
 
     people.method('Update') do |method|
-      method.synopsis = "Updates a person with the provided data"
-      method.http_method = "PUT"
-      method.uri = "/people/:id"
+      method.synopsis = 'Updates a person with the provided data'
+      method.http_method = 'PUT'
+      method.uri = '/people/:id'
 
       method.parameter('id') do |p|
         p.required = 'Y'
         p.type = 'int'
-        p.description = "The person's ID"
+        p.description = "the person's ID"
       end
 
       method.parameter('body') do |p|
@@ -447,8 +445,8 @@ class ApiSpec::Spec
 
     people.method('Push') do |method|
       method.synopsis = "Updates a matched person or creates a new one if the person doesn't exist"
-      method.http_method = "PUT"
-      method.uri = "/people/push"
+      method.http_method = 'PUT'
+      method.uri = '/people/push'
 
       method.parameter('body') do |p|
         p.required = 'Y'
@@ -460,8 +458,8 @@ class ApiSpec::Spec
 
     people.method('Add') do |method|
       method.synopsis = "Updates a matched person (without overriding data) or creates a new one if the person doesn't exist"
-      method.http_method = "PUT"
-      method.uri = "/people/add"
+      method.http_method = 'PUT'
+      method.uri = '/people/add'
 
       method.parameter('body') do |p|
         p.required = 'Y'
@@ -472,35 +470,33 @@ class ApiSpec::Spec
     end
 
     people.method('Destroy') do |method|
-      method.synopsis = "Removes the person with the matching ID"
-      method.http_method = "DELETE"
-      method.uri = "/people/:id"
+      method.synopsis = 'Removes the person with the matching ID'
+      method.http_method = 'DELETE'
+      method.uri = '/people/:id'
 
       method.parameter('id') do |p|
         p.required = 'Y'
         p.type = 'int'
-        p.description = "The person's ID"
+        p.description = "the person's ID"
       end
     end
 
     people.method('Private Note Create') do |method|
-      method.synopsis = "Creates a private note for the given person"
-      method.http_method = "POST"
-      method.uri = "/people/:id/notes"
+      method.synopsis = 'Creates a private note for the given person'
+      method.http_method = 'POST'
+      method.uri = '/people/:id/notes'
 
       method.parameter('id') do |p|
         p.required = 'Y'
         p.type = 'int'
-        p.description = "the ID of the person"
+        p.description = "the person's ID"
       end
 
       method.parameter('body') do |p|
         p.required = 'Y'
         p.type = 'json'
-        p.description = 'JSON representation of the note to create'
+        p.description = 'a JSON representation of the note to create'
       end
     end
-
   end
-
 end

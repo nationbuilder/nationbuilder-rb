@@ -119,7 +119,7 @@
       "methods": [
         {
           "MethodName": "Index",
-          "Synopsis": "Shows a list of blog's posts",
+          "Synopsis": "Shows a list of posts for a blog",
           "HTTPMethod": "GET",
           "URI": "/sites/:site_slug/pages/blogs/:id/posts",
           "parameters": [
@@ -781,7 +781,7 @@
               "Required": "Y",
               "Default": "{}",
               "Type": "json",
-              "Description": "JSON representation of a donation"
+              "Description": "a JSON representation of a donation"
             }
           ]
         },
@@ -796,7 +796,7 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "The donation's ID"
+              "Description": "the donation's ID"
             },
             {
               "Name": "body",
@@ -818,7 +818,7 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "The donation's ID"
+              "Description": "the donation's ID"
             }
           ]
         }
@@ -909,7 +909,7 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "the ID of the event"
+              "Description": "the event's ID"
             }
           ]
         },
@@ -953,7 +953,7 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "The event's ID"
+              "Description": "the event's ID"
             },
             {
               "Name": "body",
@@ -982,7 +982,7 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "The event's ID"
+              "Description": "the event's ID"
             }
           ]
         },
@@ -1004,7 +1004,7 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "The event's ID"
+              "Description": "the event's ID"
             },
             {
               "Name": "__token",
@@ -1047,7 +1047,7 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "The event's ID"
+              "Description": "the event's ID"
             },
             {
               "Name": "body",
@@ -1076,14 +1076,14 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "The event's ID"
+              "Description": "the event's ID"
             },
             {
               "Name": "rsvp_id",
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "The RSVP's ID"
+              "Description": "the RSVP's ID"
             },
             {
               "Name": "body",
@@ -1150,11 +1150,18 @@
       "name": "Exports",
       "methods": [
         {
-          "MethodName": "Create List",
-          "Synopsis": "Creates a list export with the provided data",
+          "MethodName": "Export List",
+          "Synopsis": "Starts an export of a list",
           "HTTPMethod": "POST",
-          "URI": "/list/:list_id/exports",
+          "URI": "/lists/:list_id/exports",
           "parameters": [
+            {
+              "Name": "list_id",
+              "Required": "Y",
+              "Default": null,
+              "Type": "int",
+              "Description": "ID of the list to export"
+            },
             {
               "Name": "body",
               "Required": "Y",
@@ -1239,7 +1246,7 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "The list's ID"
+              "Description": "the list's ID"
             },
             {
               "Name": "__token",
@@ -1275,7 +1282,7 @@
               "Required": "Y",
               "Default": "{}",
               "Type": "json",
-              "Description": "JSON representation of the list to create"
+              "Description": "a JSON representation of the list to create"
             }
           ]
         },
@@ -1290,7 +1297,7 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "The list's ID"
+              "Description": "the list's ID"
             },
             {
               "Name": "body",
@@ -1312,7 +1319,7 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "The list's ID"
+              "Description": "the list's ID"
             }
           ]
         },
@@ -1327,7 +1334,7 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "The ID of the list"
+              "Description": "the list's ID"
             },
             {
               "Name": "body",
@@ -1349,7 +1356,7 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "The ID of the list"
+              "Description": "the list's ID"
             },
             {
               "Name": "body",
@@ -1371,14 +1378,14 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "The ID of the list"
+              "Description": "the list's ID"
             },
             {
               "Name": "person_id",
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "The ID of the person to add to the list"
+              "Description": "the ID of the person to add to the list"
             }
           ]
         },
@@ -1393,14 +1400,14 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "The ID of the list"
+              "Description": "the list's ID"
             },
             {
               "Name": "person_id",
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "The ID of the person to drop from the list"
+              "Description": "the ID of the person to drop from the list"
             }
           ]
         },
@@ -1415,14 +1422,14 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "The ID of the list"
+              "Description": "the list's ID"
             },
             {
               "Name": "tag",
               "Required": "Y",
               "Default": null,
               "Type": "string",
-              "Description": "The name of the tag to use"
+              "Description": "the name of the tag to use"
             }
           ]
         },
@@ -1437,14 +1444,14 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "The ID of the list"
+              "Description": "the list's ID"
             },
             {
               "Name": "tag",
               "Required": "Y",
               "Default": null,
               "Type": "string",
-              "Description": "The name of the tag to use"
+              "Description": "the name of the tag to use"
             }
           ]
         }
@@ -1464,7 +1471,7 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "The person's ID"
+              "Description": "the person's ID"
             },
             {
               "Name": "__token",
@@ -1500,7 +1507,7 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "The person's ID"
+              "Description": "the person's ID"
             },
             {
               "Name": "body",
@@ -1522,7 +1529,7 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "The person's ID"
+              "Description": "the person's ID"
             },
             {
               "Name": "body",
@@ -1544,14 +1551,14 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "The person's ID"
+              "Description": "the person's ID"
             },
             {
               "Name": "name",
               "Required": "Y",
               "Default": null,
               "Type": "string",
-              "Description": "The name of the membership"
+              "Description": "the name of the membership"
             }
           ]
         }
@@ -1571,14 +1578,14 @@
               "Required": "Y",
               "Default": null,
               "Type": "string",
-              "Description": "The slug of the site the page lives on"
+              "Description": "the slug of the site the page lives on"
             },
             {
               "Name": "page_slug",
               "Required": "Y",
               "Default": "1",
               "Type": "string",
-              "Description": "The page's slug"
+              "Description": "the page's slug"
             },
             {
               "Name": "__token",
@@ -1614,21 +1621,21 @@
               "Required": "Y",
               "Default": null,
               "Type": "string",
-              "Description": "The slug of the site the page lives on"
+              "Description": "the slug of the site the page lives on"
             },
             {
               "Name": "page_slug",
               "Required": "Y",
               "Default": "1",
               "Type": "string",
-              "Description": "The page's slug"
+              "Description": "the page's slug"
             },
             {
               "Name": "id",
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "The ID of the page attachment"
+              "Description": "the ID of the page attachment"
             }
           ]
         },
@@ -1643,21 +1650,21 @@
               "Required": "Y",
               "Default": null,
               "Type": "string",
-              "Description": "The slug of the site the page lives on"
+              "Description": "the slug of the site the page lives on"
             },
             {
               "Name": "page_slug",
               "Required": "Y",
               "Default": "1",
               "Type": "string",
-              "Description": "The page's slug"
+              "Description": "the page's slug"
             },
             {
               "Name": "body",
               "Required": "Y",
               "Default": "{}",
               "Type": "json",
-              "Description": "A JSON representation of the attachment"
+              "Description": "a JSON representation of the attachment"
             }
           ]
         },
@@ -1672,21 +1679,21 @@
               "Required": "Y",
               "Default": null,
               "Type": "string",
-              "Description": "The slug of the site the page lives on"
+              "Description": "the slug of the site the page lives on"
             },
             {
               "Name": "page_slug",
               "Required": "Y",
               "Default": "1",
               "Type": "string",
-              "Description": "The page's slug"
+              "Description": "the page's slug"
             },
             {
               "Name": "id",
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "The ID of the page attachment"
+              "Description": "the ID of the page attachment"
             }
           ]
         }
@@ -1992,7 +1999,7 @@
               "Required": "Y",
               "Default": "34.049031,-118.251399",
               "Type": "string",
-              "Description": "origin of search in the format \"latitude,longitude\""
+              "Description": "origin of search in the format 'latitude,longitude'"
             },
             {
               "Name": "distance",
@@ -2044,7 +2051,7 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "The person's ID"
+              "Description": "the person's id"
             }
           ]
         },
@@ -2059,7 +2066,7 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "the ID of the person"
+              "Description": "the person's id"
             }
           ]
         },
@@ -2074,7 +2081,7 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "the ID of the person"
+              "Description": "the person's id"
             },
             {
               "Name": "body",
@@ -2096,7 +2103,7 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "the ID of the person"
+              "Description": "the person's ID"
             },
             {
               "Name": "tag",
@@ -2118,7 +2125,7 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "the ID of the person"
+              "Description": "the person's ID"
             },
             {
               "Name": "body",
@@ -2140,7 +2147,7 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "the ID of the person"
+              "Description": "the person's ID"
             },
             {
               "Name": "__token",
@@ -2176,7 +2183,7 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "the ID of the person"
+              "Description": "the person's ID"
             },
             {
               "Name": "body",
@@ -2198,7 +2205,7 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "the ID of the person"
+              "Description": "the person's ID"
             },
             {
               "Name": "capital_id",
@@ -2220,7 +2227,7 @@
               "Required": "Y",
               "Default": "{}",
               "Type": "json",
-              "Description": "JSON representation of the person to create"
+              "Description": "a JSON representation of the person to create"
             }
           ]
         },
@@ -2235,7 +2242,7 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "The person's ID"
+              "Description": "the person's ID"
             },
             {
               "Name": "body",
@@ -2287,7 +2294,7 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "The person's ID"
+              "Description": "the person's ID"
             }
           ]
         },
@@ -2302,14 +2309,14 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "the ID of the person"
+              "Description": "the person's ID"
             },
             {
               "Name": "body",
               "Required": "Y",
               "Default": null,
               "Type": "json",
-              "Description": "JSON representation of the note to create"
+              "Description": "a JSON representation of the note to create"
             }
           ]
         }
@@ -2428,7 +2435,7 @@
               "Required": "Y",
               "Default": "1",
               "Type": "int",
-              "Description": "the precinct's id"
+              "Description": "the precinct's ID"
             }
           ]
         },
@@ -2443,7 +2450,7 @@
               "Required": "Y",
               "Default": "{}",
               "Type": "json",
-              "Description": "JSON representation of the precinct to create"
+              "Description": "a JSON representation of the precinct to create"
             }
           ]
         },
@@ -2458,7 +2465,7 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "The precinct's ID"
+              "Description": "the precinct's ID"
             },
             {
               "Name": "body",
@@ -2480,7 +2487,7 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "The precinct's ID"
+              "Description": "the precinct's ID"
             }
           ]
         }
@@ -2548,7 +2555,7 @@
               "Required": "N",
               "Default": null,
               "Type": "int",
-              "Description": "the id for a parent survey"
+              "Description": "the ID for a parent survey"
             },
             {
               "Name": "__token",
@@ -2647,7 +2654,7 @@
               "Required": "Y",
               "Default": null,
               "Type": "json",
-              "Description": "a JSON representation of the new survey"
+              "Description": "A JSON representation of the new survey"
             }
           ]
         },

@@ -3,10 +3,9 @@ class ApiSpec::Spec
   endpoint 'Blogs' do |bp|
 
     bp.method('Index') do |m|
-
-      m.synopsis = "Shows a list of all blogs"
-      m.http_method = "GET"
-      m.uri = "/sites/:site_slug/pages/blogs"
+      m.synopsis = 'Shows a list of all blogs'
+      m.http_method = 'GET'
+      m.uri = '/sites/:site_slug/pages/blogs'
 
       m.parameter('site_slug') do |p|
         p.required = 'Y'
@@ -32,14 +31,12 @@ class ApiSpec::Spec
         p.type = 'int'
         p.description = 'maximum number of results to return'
       end
-
     end
 
     bp.method('Show') do |m|
-
-      m.synopsis = "Show the details of a blog"
-      m.http_method = "GET"
-      m.uri = "/sites/:site_slug/pages/blogs/:id"
+      m.synopsis = 'Show the details of a blog'
+      m.http_method = 'GET'
+      m.uri = '/sites/:site_slug/pages/blogs/:id'
 
       m.parameter('site_slug') do |p|
         p.required = 'Y'
@@ -52,14 +49,12 @@ class ApiSpec::Spec
         p.type = 'int'
         p.description = 'the ID of the blog'
       end
-
     end
 
     bp.method('Create') do |m|
-
-      m.synopsis = "Creates a new blog"
-      m.http_method = "POST"
-      m.uri = "/sites/:site_slug/pages/blogs"
+      m.synopsis = 'Creates a new blog'
+      m.http_method = 'POST'
+      m.uri = '/sites/:site_slug/pages/blogs'
 
       m.parameter('site_slug') do |p|
         p.required = 'Y'
@@ -73,14 +68,12 @@ class ApiSpec::Spec
         p.type = 'json'
         p.description = 'a JSON representation of the new blog'
       end
-
     end
 
     bp.method('Update') do |m|
-
-      m.synopsis = "Updates the attributes of a blog"
-      m.http_method = "PUT"
-      m.uri = "/sites/:site_slug/pages/blogs/:id"
+      m.synopsis = 'Updates the attributes of a blog'
+      m.http_method = 'PUT'
+      m.uri = '/sites/:site_slug/pages/blogs/:id'
 
       m.parameter('site_slug') do |p|
         p.required = 'Y'
@@ -100,14 +93,12 @@ class ApiSpec::Spec
         p.type = 'json'
         p.description = 'JSON containing updates'
       end
-
     end
 
     bp.method('Destroy') do |m|
-
-      m.synopsis = "Removes a blog"
-      m.http_method = "DELETE"
-      m.uri = "/sites/:site_slug/pages/blogs/:id"
+      m.synopsis = 'Removes a blog'
+      m.http_method = 'DELETE'
+      m.uri = '/sites/:site_slug/pages/blogs/:id'
 
       m.parameter('site_slug') do |p|
         p.required = 'Y'
@@ -120,9 +111,6 @@ class ApiSpec::Spec
         p.type = 'int'
         p.description = 'the ID of the blog'
       end
-
     end
-
   end
-
 end
