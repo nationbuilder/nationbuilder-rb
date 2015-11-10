@@ -79,7 +79,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  httpclient (~> 2.7.0.1)
+  httpclient (~> 2.7)
   jeweler (~> 2.0)
   rspec (~> 3.2)
   simplecov (~> 0.8)

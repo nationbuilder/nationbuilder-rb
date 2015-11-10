@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'httpclient', '~> 2.7.0.1'
+gem 'httpclient', '~> 2.7'
 
 group :development do
   gem 'jeweler', '~> 2.0'
