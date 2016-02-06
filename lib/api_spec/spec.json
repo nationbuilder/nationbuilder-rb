@@ -185,7 +185,36 @@
               "Required": "N",
               "Default": "1",
               "Type": "int",
-              "Description": "the external id of the post"
+              "Description": "the external id of the blog post"
+            }
+          ]
+        },
+        {
+          "MethodName": "Show",
+          "Synopsis": "Show the details of a blog post",
+          "HTTPMethod": "GET",
+          "URI": "/sites/:site_slug/pages/blogs/:blog_id/posts/:blog_post_id",
+          "parameters": [
+            {
+              "Name": "site_slug",
+              "Required": "Y",
+              "Default": null,
+              "Type": "string",
+              "Description": "the site holding the blog"
+            },
+            {
+              "Name": "blog_id",
+              "Required": "Y",
+              "Default": null,
+              "Type": "int",
+              "Description": "the ID of the blog"
+            },
+            {
+              "Name": "blog_post_id",
+              "Required": "Y",
+              "Default": null,
+              "Type": "int",
+              "Description": "the ID of the blog post"
             }
           ]
         },
@@ -243,7 +272,7 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "the ID of the blog"
+              "Description": "the ID of the blog post"
             },
             {
               "Name": "body",
@@ -279,7 +308,7 @@
               "Required": "Y",
               "Default": null,
               "Type": "int",
-              "Description": "the ID of the blog"
+              "Description": "the ID of the blog post"
             }
           ]
         }
