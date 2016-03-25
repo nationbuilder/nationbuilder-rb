@@ -131,9 +131,7 @@ class NationBuilder::Client
       return true
     end
 
-    body = response.body.strip
-    return {} if body.length == 0
-    return JSON.parse(body)
+    parsed_body(response.body).merge('status_code' => response.code)
   end
 
   def print_all_descriptions
@@ -170,6 +168,16 @@ class NationBuilder::Client
       if required_params.any?
         puts "  Required parameters: #{required_params.join(', ')}"
       end
+    end
+  end
+
+  private
+
+  def parsed_body(body)
+    if body.length == 0
+      {}
+    else
+      JSON.parse(body)
     end
   end
 
