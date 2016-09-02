@@ -1729,6 +1729,40 @@
       ]
     },
     {
+      "name": "Paths",
+      "methods": [
+        {
+          "MethodName": "Index",
+          "Synopsis": "Returns a list of paths and path steps",
+          "HTTPMethod": "GET",
+          "URI": "/paths",
+          "parameters": [
+            {
+              "Name": "__token",
+              "Required": "N",
+              "Default": null,
+              "Type": "string",
+              "Description": "pagination token"
+            },
+            {
+              "Name": "__nonce",
+              "Required": "N",
+              "Default": null,
+              "Type": "string",
+              "Description": "pagination nonce"
+            },
+            {
+              "Name": "limit",
+              "Required": "N",
+              "Default": "10",
+              "Type": "int",
+              "Description": "maximum number of results to return"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "People",
       "methods": [
         {
