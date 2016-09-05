@@ -1,6 +1,6 @@
 # nationbuilder-rb
 
-[![Build Status](https://travis-ci.org/nationbuilder/nationbuilder-rb.svg?branch=master)](https://travis-ci.org/nationbuilder/nationbuilder-rb)
+[![Build Status](https://travis-ci.org/nationbuilder/nationbuilder-rb.svg?branch=master)](https://travis-ci.org/nationbuilder/nationbuilder-rb) [![Gem Version](https://badge.fury.io/rb/nationbuilder-rb.svg)](https://badge.fury.io/rb/nationbuilder-rb)
 
 A Ruby client for the NationBuilder API.
 
