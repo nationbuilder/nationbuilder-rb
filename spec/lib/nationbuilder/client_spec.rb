@@ -27,6 +27,7 @@ describe NationBuilder::Client do
         :lists,
         :memberships,
         :page_attachments,
+        :paths,
         :people,
         :people_tags,
         :precincts,
