@@ -123,6 +123,14 @@ Endpoint: basic_pages
 ...
 ```
 
+## Debugging
+
+The `NationBuilder::Client` object exposes the HTTPClient instance used to make the calls, so you can do any debugging or mocking against that:
+
+```Ruby
+client = NationBuilder::Client.new(nation_builder_slug, nation_builder_auth_token, retries: 8)
+client.http_client.debug_dev = STDOUT
+```
 ## Development
 
 To update the API specification that powers this client, first make

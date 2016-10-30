@@ -16,6 +16,10 @@ class NationBuilder::Client
     end
   end
 
+  def http_client
+    @http_client ||= HTTPClient.new
+  end
+
   def parsed_endpoints
     NationBuilder::SpecParser
       .parse(File.join(File.dirname(__FILE__), '..', 'api_spec/spec.json'))
@@ -81,7 +85,7 @@ class NationBuilder::Client
 
     (@retries + 1).times do |i|
       begin
-        raw_response = HTTPClient.send(method, url, request_args)
+        raw_response = http_client.send(method, url, request_args)
         parsed_response = parse_response_body(raw_response)
       rescue NationBuilder::RateLimitedError => e
         exception_to_reraise = e
