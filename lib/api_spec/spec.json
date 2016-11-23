@@ -1641,7 +1641,7 @@
         },
         {
           "MethodName": "Show",
-          "Synopsis": "Creates a new file attachment for a page",
+          "Synopsis": "Returns the details of the file attachment for a page",
           "HTTPMethod": "GET",
           "URI": "/sites/:site_slug/pages/:page_slug/attachments/:id",
           "parameters": [
