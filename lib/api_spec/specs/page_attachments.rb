@@ -41,7 +41,7 @@ class ApiSpec::Spec
     end
 
     pa.method('Show') do |method|
-      method.synopsis = 'Creates a new file attachment for a page'
+      method.synopsis = 'Returns the details of the file attachment for a page'
       method.http_method = 'GET'
       method.uri = '/sites/:site_slug/pages/:page_slug/attachments/:id'
 
