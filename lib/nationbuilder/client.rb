@@ -127,7 +127,8 @@ class NationBuilder::Client
     error = classify_response_error(response)
     raise error if error
 
-    if response.header['Content-Type'].first != 'application/json'
+    content_type = response.header['Content-Type'].first
+    unless content_type && content_type.include?('application/json')
       return true
     end
 
