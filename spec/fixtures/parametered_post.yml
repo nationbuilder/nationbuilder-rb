@@ -25,7 +25,7 @@ http_interactions:
       Date:
       - Sat, 15 Aug 2015 04:45:32 GMT
       Content-Type:
-      - application/json
+      - application/json; charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
