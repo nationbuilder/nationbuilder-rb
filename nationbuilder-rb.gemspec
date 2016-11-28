@@ -6,12 +6,12 @@
 
 Gem::Specification.new do |s|
   s.name = "nationbuilder-rb"
-  s.version = "1.4.2"
+  s.version = "1.4.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["David Huie", "Alexandre Schmitt"]
-  s.date = "2016-09-05"
+  s.date = "2016-11-28"
   s.description = "A Ruby client to the NationBuilder API"
   s.email = "schmitt@nationbuilder.com"
   s.executables = ["nbdoc"]
@@ -117,4 +117,3 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<webmock>, ["~> 1.18"])
   end
 end
-
