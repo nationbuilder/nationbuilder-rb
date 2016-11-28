@@ -1,3 +1,6 @@
+# 1.4.3
+- [#34] Fix `Content-Type` header check
+
 # 1.3.5
 - [#21] Added limit params to Paginator class
 
