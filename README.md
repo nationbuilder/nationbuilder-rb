@@ -123,14 +123,15 @@ Endpoint: basic_pages
 ...
 ```
 
-## Debugging
+## Modifying the underlying HTTPClient
 
-The `NationBuilder::Client` object exposes the HTTPClient instance used to make the calls, so you can do any debugging or mocking against that:
+The `NationBuilder::Client` object can use a provided [HTTPClient](http://www.rubydoc.info/gems/httpclient/frames) object if you need some customizations, such as to enable logging, change TLS settings, or add a proxy. For example to force a proxy for all traffic:
 
 ```Ruby
-client = NationBuilder::Client.new(nation_builder_slug, nation_builder_auth_token, retries: 8)
-client.http_client.debug_dev = STDOUT
+httpclient = HTTPClient.new('http://myproxy:8080')
+client = NationBuilder::Client.new(nation_builder_slug, nation_builder_auth_token, retries: 8, http_client: httpclient)
 ```
+
 ## Development
 
 To update the API specification that powers this client, first make

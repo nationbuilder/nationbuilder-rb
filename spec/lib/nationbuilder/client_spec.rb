@@ -2,23 +2,29 @@ require 'spec_helper'
 
 describe NationBuilder::Client do
 
-  subject do
+  let(:client) do
     NationBuilder::Client.new('organizeralexandreschmitt',
                               '03c22256c06ed11f6bee83673addf26e02a86caa1a5127f4e0815be7223fe4a3',
                               retries: 1
                               )
   end
 
-  let(:http_client) { HTTPClient.new }
+  describe '#initialize' do
+    describe 'with a provided httpclient' do
+      let(:httpclient) { double('HTTPClient') }
 
-  before do
-    allow(subject).to receive(:http_client).and_return(http_client)
+      subject { described_class.new('slug', 'token', http_client: httpclient) }
+
+      it 'uses the provided client instead of a new one' do
+        expect(subject.instance_variable_get(:@http_client)).to be(httpclient)
+      end
+    end
   end
 
   describe '#endpoints' do
 
     it 'should contain all defined endpoints' do
-      expect(subject.endpoints.sort).to eq([
+      expect(client.endpoints.sort).to eq([
         :basic_pages,
         :blog_posts,
         :blogs,
@@ -48,7 +54,7 @@ describe NationBuilder::Client do
   describe '#base_url' do
 
     it 'should contain the nation slug' do
-      expect(subject.base_url).to eq('https://organizeralexandreschmitt.nationbuilder.com')
+      expect(client.base_url).to eq('https://organizeralexandreschmitt.nationbuilder.com')
     end
   end
 
@@ -56,7 +62,7 @@ describe NationBuilder::Client do
 
     it 'should handle a parametered GET' do
       VCR.use_cassette('parametered_get') do
-        response = subject.call(:basic_pages, :index, site_slug: 'organizeralexandreschmitt', limit: 11)
+        response = client.call(:basic_pages, :index, site_slug: 'organizeralexandreschmitt', limit: 11)
         expect(response['status_code']).to eq(200)
         response['results'].each do |result|
           expect(result['site_slug']).to eq('organizeralexandreschmitt')
@@ -74,7 +80,7 @@ describe NationBuilder::Client do
       }
 
       response = VCR.use_cassette('parametered_post') do
-        subject.call(:people, :create, params)
+        client.call(:people, :create, params)
       end
 
       expect(response['status_code']).to eq(201)
@@ -93,11 +99,11 @@ describe NationBuilder::Client do
           }
         }
 
-        expect(subject).to receive(:perform_request_with_retries) do |_, _, request_args|
+        expect(client).to receive(:perform_request_with_retries) do |_, _, request_args|
           expect(request_args[:query][:fire_webhooks]).to be_falsey
         end
 
-        subject.call(:people, :create, params)
+        client.call(:people, :create, params)
       end
 
       it 'should not be included if not specified' do
@@ -109,11 +115,11 @@ describe NationBuilder::Client do
           }
         }
 
-        expect(subject).to receive(:perform_request_with_retries) do |_, _, request_args|
+        expect(client).to receive(:perform_request_with_retries) do |_, _, request_args|
           expect(request_args[:query].include?(:fire_webhooks)).to be_falsey
         end
 
-        subject.call(:people, :create, params)
+        client.call(:people, :create, params)
       end
 
     end
@@ -124,7 +130,7 @@ describe NationBuilder::Client do
       }
 
       response = VCR.use_cassette('delete') do
-        subject.call(:people, :destroy, params)
+        client.call(:people, :destroy, params)
       end
 
       expect(response).to eq(true)
@@ -134,35 +140,41 @@ describe NationBuilder::Client do
   describe '#classify_response_error' do
     it 'should account for rate limits' do
       response = double(code: 429, body: 'rate limiting')
-      expect(subject.classify_response_error(response).class).
+      expect(client.classify_response_error(response).class).
         to eq(NationBuilder::RateLimitedError)
     end
     it 'should account for client errors' do
       response = double(code: 404, body: '404ing')
-      expect(subject.classify_response_error(response).class).
+      expect(client.classify_response_error(response).class).
         to eq(NationBuilder::ClientError)
     end
     it 'should account for client errors' do
       response = double(code: 500, body: '500ing')
-      expect(subject.classify_response_error(response).class).
+      expect(client.classify_response_error(response).class).
         to eq(NationBuilder::ServerError)
     end
   end
 
   describe '#perform_request_with_retries' do
-    it 'should re-raise non-rate limiting execeptions' do
-      expect(http_client).to receive(:send)
-      expect(subject).to receive(:parse_response_body) { raise StandardError.new('boom') }
+    let(:httpclient) { double('HTTPClient') }
+
+    before do
+      allow(HTTPClient).to receive(:new).and_return(httpclient)
+    end
+
+    it 'should reraise non-rate limiting execeptions' do
+      expect(httpclient).to receive(:send)
+      expect(client).to receive(:parse_response_body) { raise StandardError.new('boom') }
       expect do
-        subject.perform_request_with_retries(nil, nil, nil)
+        client.perform_request_with_retries(nil, nil, nil)
       end.to raise_error(StandardError)
     end
 
     it 'should return a response if the rate limit is eventually dropped' do
-      expect(http_client).to receive(:send).twice
+      expect(httpclient).to receive(:send).twice
       expect(Kernel).to receive(:sleep)
 
-      allow(subject).to receive(:parse_response_body) do
+      allow(client).to receive(:parse_response_body) do
         unless @count
           @count ||= 0
         else
@@ -175,34 +187,21 @@ describe NationBuilder::Client do
       end
 
       expect do
-        subject.perform_request_with_retries(nil, nil, nil)
+        client.perform_request_with_retries(nil, nil, nil)
       end.to_not raise_error
     end
 
     it 'on the last retry, it should reraise the rate limiting exception ' do
-      expect(http_client).to receive(:send).twice
+      expect(httpclient).to receive(:send).twice
       expect(Kernel).to receive(:sleep).twice
 
-      allow(subject).to receive(:parse_response_body) do
+      allow(client).to receive(:parse_response_body) do
         raise NationBuilder::RateLimitedError.new
       end
 
       expect do
-        subject.perform_request_with_retries(nil, nil, nil)
+        client.perform_request_with_retries(nil, nil, nil)
       end.to raise_error(NationBuilder::RateLimitedError)
-    end
-  end
-
-  describe '#http_client' do
-    it 'exposes an HTTPClient instance' do
-      expect(subject.http_client).to be_an_instance_of HTTPClient
-    end
-
-    it 'memoizes the HTTPClient' do
-      h1 = subject.http_client
-      h2 = subject.http_client
-
-      expect(h1).to eq(h2)
     end
   end
 end

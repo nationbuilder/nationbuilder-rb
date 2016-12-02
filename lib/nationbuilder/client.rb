@@ -6,6 +6,7 @@ class NationBuilder::Client
     @name_to_endpoint = {}
     @base_url = opts[:base_url] || 'https://:nation_name.nationbuilder.com'
     @retries = opts[:retries] || 8
+    @http_client = opts[:http_client] || HTTPClient.new
 
     if @retries < 0
       raise 'Retries must be at least zero'
@@ -14,10 +15,6 @@ class NationBuilder::Client
     parsed_endpoints.each do |endpoint|
       @name_to_endpoint[endpoint.name] = endpoint
     end
-  end
-
-  def http_client
-    @http_client ||= HTTPClient.new
   end
 
   def parsed_endpoints
@@ -85,7 +82,7 @@ class NationBuilder::Client
 
     (@retries + 1).times do |i|
       begin
-        raw_response = http_client.send(method, url, request_args)
+        raw_response = @http_client.send(method, url, request_args)
         parsed_response = parse_response_body(raw_response)
       rescue NationBuilder::RateLimitedError => e
         exception_to_reraise = e
