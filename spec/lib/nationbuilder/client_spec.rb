@@ -9,6 +9,18 @@ describe NationBuilder::Client do
                               )
   end
 
+  describe '#initialize' do
+    describe 'with a provided httpclient' do
+      let(:httpclient) { double('HTTPClient') }
+
+      subject { described_class.new('slug', 'token', http_client: httpclient) }
+
+      it 'uses the provided client instead of a new one' do
+        expect(subject.instance_variable_get(:@http_client)).to be(httpclient)
+      end
+    end
+  end
+
   describe '#endpoints' do
 
     it 'should contain all defined endpoints' do
@@ -144,16 +156,22 @@ describe NationBuilder::Client do
   end
 
   describe '#perform_request_with_retries' do
-    it 'should raise non-rate limiting execeptions' do
-      expect(HTTPClient).to receive(:send)
+    let(:httpclient) { double('HTTPClient') }
+
+    before do
+      allow(HTTPClient).to receive(:new).and_return(httpclient)
+    end
+
+    it 'should reraise non-rate limiting execeptions' do
+      expect(httpclient).to receive(:send)
       expect(client).to receive(:parse_response_body) { raise StandardError.new('boom') }
       expect do
         client.perform_request_with_retries(nil, nil, nil)
-      end.to raise_error
+      end.to raise_error(StandardError)
     end
 
     it 'should return a response if the rate limit is eventually dropped' do
-      expect(HTTPClient).to receive(:send).twice
+      expect(httpclient).to receive(:send).twice
       expect(Kernel).to receive(:sleep)
 
       allow(client).to receive(:parse_response_body) do
@@ -174,7 +192,7 @@ describe NationBuilder::Client do
     end
 
     it 'on the last retry, it should reraise the rate limiting exception ' do
-      expect(HTTPClient).to receive(:send).twice
+      expect(httpclient).to receive(:send).twice
       expect(Kernel).to receive(:sleep).twice
 
       allow(client).to receive(:parse_response_body) do
