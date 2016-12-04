@@ -1,6 +1,8 @@
+require './lib/nationbuilder/version'
+
 Gem::Specification.new do |s|
   s.name = "nationbuilder-rb"
-  s.version = "1.4.3"
+  s.version = NationBuilder::VERSION
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
@@ -67,6 +69,7 @@ Gem::Specification.new do |s|
     "lib/nationbuilder/parameter.rb",
     "lib/nationbuilder/spec_parser.rb",
     "lib/nationbuilder/url.rb",
+    "lib/nationbuilder/version.rb",
     "nationbuilder-rb.gemspec",
     "spec/fixtures/delete.yml",
     "spec/fixtures/paginated_get_page2.yml",
