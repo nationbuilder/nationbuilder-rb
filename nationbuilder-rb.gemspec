@@ -27,7 +27,6 @@ Gem::Specification.new do |s|
     "LICENSE.txt",
     "README.md",
     "Rakefile",
-    "VERSION",
     "bin/nbdoc",
     "lib/api_spec/.ruby-gemset",
     "lib/api_spec/.ruby-version",
