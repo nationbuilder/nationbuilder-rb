@@ -1,3 +1,6 @@
+# 1.5.0
+- [#31] Allow for a user provided HTTPClient 
+
 # 1.4.3
 - [#34] Fix `Content-Type` header check
 

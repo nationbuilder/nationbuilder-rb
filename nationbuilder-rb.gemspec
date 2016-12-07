@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["David Huie", "Alexandre Schmitt"]
-  s.date = "2016-11-28"
+  s.date = "2016-12-06"
   s.description = "A Ruby client to the NationBuilder API"
   s.email = "schmitt@nationbuilder.com"
   s.executables = ["nbdoc"]
