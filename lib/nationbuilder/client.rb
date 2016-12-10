@@ -84,7 +84,7 @@ class NationBuilder::Client
       begin
         raw_response = @http_client.send(method, url, request_args)
         parsed_response = parse_response_body(raw_response)
-      rescue NationBuilder::RateLimitedError => e
+      rescue HTTPClient::TimeoutError, NationBuilder::RateLimitedError => e
         exception_to_reraise = e
         Kernel.sleep(RETRY_DELAY * 2**i)
       rescue => e
