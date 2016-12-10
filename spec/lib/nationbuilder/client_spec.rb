@@ -162,7 +162,7 @@ describe NationBuilder::Client do
       allow(HTTPClient).to receive(:new).and_return(httpclient)
     end
 
-    it 'should reraise non-rate limiting execeptions' do
+    it 'should reraise exceptions it does not handle' do
       expect(httpclient).to receive(:send)
       expect(client).to receive(:parse_response_body) { raise StandardError.new('boom') }
       expect do
@@ -170,21 +170,22 @@ describe NationBuilder::Client do
       end.to raise_error(StandardError)
     end
 
+    it 'should retry if it gets a connection timeout from Nation Builder' do
+      expect(Kernel).to receive(:sleep)
+      expect(client).to receive(:parse_response_body).once
+      expect(httpclient).to receive(:send).once.and_raise(HTTPClient::ConnectTimeoutError)
+      expect(httpclient).to receive(:send).once
+
+      expect do
+        client.perform_request_with_retries(nil, nil, nil)
+      end.to_not raise_error
+    end
+
     it 'should return a response if the rate limit is eventually dropped' do
       expect(httpclient).to receive(:send).twice
       expect(Kernel).to receive(:sleep)
-
-      allow(client).to receive(:parse_response_body) do
-        unless @count
-          @count ||= 0
-        else
-          @count += 1
-        end
-
-        if @count < 1
-          raise NationBuilder::RateLimitedError.new
-        end
-      end
+      expect(client).to receive(:parse_response_body).once.and_raise(NationBuilder::RateLimitedError)
+      expect(client).to receive(:parse_response_body).once
 
       expect do
         client.perform_request_with_retries(nil, nil, nil)
