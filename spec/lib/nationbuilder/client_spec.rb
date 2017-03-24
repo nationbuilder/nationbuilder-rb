@@ -87,6 +87,17 @@ describe NationBuilder::Client do
       expect(response['person']['first_name']).to eq('Bob')
     end
 
+    context 'errored request' do
+      it 'sets the response on the client' do
+        VCR.use_cassette('errored_get') do
+          expect do
+            client.call(:people, :show, id: 0)
+          end.to raise_error(NationBuilder::ClientError)
+          expect(client.response.status).to eq(404)
+        end
+      end
+    end
+
     context 'fire_webhooks' do
 
       it 'should disable webhooks' do

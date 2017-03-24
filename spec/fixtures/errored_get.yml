@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://organizeralexandreschmitt.nationbuilder.com/api/v1/people/0?access_token=03c22256c06ed11f6bee83673addf26e02a86caa1a5127f4e0815be7223fe4a3
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.7.0.1, ruby 2.4.0 (2016-12-24))
+      Accept:
+      - application/json
+      Date:
+      - Fri, 24 Mar 2017 18:38:21 GMT
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Apache/2.4.7 (Ubuntu)
+      Content-Type:
+      - application/json; charset=utf-8
+      Nation-Ratelimit-Limit:
+      - '999999'
+      Nation-Ratelimit-Remaining:
+      - '999999'
+      Nation-Ratelimit-Reset:
+      - '1490400000'
+      Status:
+      - 404 Not Found
+      X-Frame-Options:
+      - ALLOWALL
+      X-Powered-By:
+      - Phusion Passenger Enterprise 5.0.28
+      X-Pulse-Approved:
+      - 'true'
+      X-Rack-Cache:
+      - miss
+      X-Ratelimit-Limit:
+      - 10s
+      X-Ratelimit-Remaining:
+      - '99'
+      X-Ratelimit-Reset:
+      - '1490380712'
+      X-Request-Id:
+      - 9f507eed-89c0-4d40-9e91-25726a5aa197
+      X-Runtime:
+      - '0.082110'
+      Content-Length:
+      - '49'
+      Expires:
+      - Fri, 24 Mar 2017 18:38:22 GMT
+      Cache-Control:
+      - max-age=0, no-cache, no-store
+      Pragma:
+      - no-cache
+      Date:
+      - Fri, 24 Mar 2017 18:38:22 GMT
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - _cookies_enabled=1490380702; path=/
+    body:
+      encoding: UTF-8
+      string: '{"code":"not_found","message":"Record not found"}'
+    http_version:
+  recorded_at: Fri, 24 Mar 2017 18:38:22 GMT
+recorded_with: VCR 2.9.3

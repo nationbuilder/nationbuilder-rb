@@ -92,6 +92,8 @@ class NationBuilder::Client
       else
         exception_to_reraise = nil
         break
+      ensure
+        set_response(raw_response)
       end
     end
 
@@ -100,7 +102,6 @@ class NationBuilder::Client
       raise exception_to_reraise
     end
 
-    set_response(raw_response)
     parsed_response
   end
 
