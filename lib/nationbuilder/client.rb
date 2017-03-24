@@ -76,14 +76,13 @@ class NationBuilder::Client
   end
 
   def perform_request_with_retries(method, url, request_args)
-    raw_response = nil
     parsed_response = nil
     exception_to_reraise = nil
 
     (@retries + 1).times do |i|
       begin
-        raw_response = @http_client.send(method, url, request_args)
-        parsed_response = parse_response_body(raw_response)
+        set_response(@http_client.send(method, url, request_args))
+        parsed_response = parse_response_body(response)
       rescue NationBuilder::RateLimitedError => e
         exception_to_reraise = e
         Kernel.sleep(RETRY_DELAY * 2**i)
@@ -96,11 +95,8 @@ class NationBuilder::Client
     end
 
     # If the retry cycle ended with an error, reraise it
-    if exception_to_reraise
-      raise exception_to_reraise
-    end
+    raise exception_to_reraise if exception_to_reraise
 
-    set_response(raw_response)
     parsed_response
   end
 
@@ -133,7 +129,7 @@ class NationBuilder::Client
       return true
     end
 
-    parsed_body(response.body).merge('status_code' => response.code)
+    parsed_body(response.body)
   end
 
   def print_all_descriptions
