@@ -63,7 +63,7 @@ describe NationBuilder::Client do
     it 'should handle a parametered GET' do
       VCR.use_cassette('parametered_get') do
         response = client.call(:basic_pages, :index, site_slug: 'organizeralexandreschmitt', limit: 11)
-        expect(response['status_code']).to eq(200)
+        expect(client.response.status).to eq(200)
         response['results'].each do |result|
           expect(result['site_slug']).to eq('organizeralexandreschmitt')
         end
@@ -83,7 +83,7 @@ describe NationBuilder::Client do
         client.call(:people, :create, params)
       end
 
-      expect(response['status_code']).to eq(201)
+      expect(client.response.status).to eq(201)
       expect(response['person']['first_name']).to eq('Bob')
     end
 

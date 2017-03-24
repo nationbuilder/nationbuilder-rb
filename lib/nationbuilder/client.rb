@@ -133,7 +133,7 @@ class NationBuilder::Client
       return true
     end
 
-    parsed_body(response.body).merge('status_code' => response.code)
+    parsed_body(response.body)
   end
 
   def print_all_descriptions
