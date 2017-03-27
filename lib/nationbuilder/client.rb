@@ -112,11 +112,11 @@ class NationBuilder::Client
   def classify_response_error(response)
     case
     when response.code == 429
-      NationBuilder::RateLimitedError.new(response.body)
+      NationBuilder::RateLimitedError.new(response)
     when response.code.to_s.start_with?('4')
-      NationBuilder::ClientError.new(response.body)
+      NationBuilder::ClientError.new(response)
     when response.code.to_s.start_with?('5')
-      NationBuilder::ServerError.new(response.body)
+      NationBuilder::ServerError.new(response)
     end
   end
 
