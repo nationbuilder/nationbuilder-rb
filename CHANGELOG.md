@@ -1,5 +1,9 @@
+# 1.6.0
+- [#40] Remove appending `status_code` to the parsed response and ensure
+  the `response` for the last request is always accessible via the client
+
 # 1.5.0
-- [#31] Allow for a user provided HTTPClient 
+- [#31] Allow for a user provided HTTPClient
 
 # 1.4.3
 - [#34] Fix `Content-Type` header check
