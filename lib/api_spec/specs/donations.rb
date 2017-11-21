@@ -27,6 +27,46 @@ class ApiSpec::Spec
       end
     end
 
+    donation.method('Search') do |method|
+      method.synopsis = 'Search for donations with provided attributes'
+      method.http_method = 'GET'
+      method.uri = '/donations/search'
+
+      method.parameter('created_since') do |p|
+        p.required = 'N'
+        p.type = 'string'
+      end
+
+      method.parameter('succeeded_since') do |p|
+        p.required = 'N'
+        p.type = 'string'
+      end
+
+      method.parameter('failed_since') do |p|
+        p.required = 'N'
+        p.type = 'string'
+      end
+
+      method.parameter('__token') do |p|
+        p.required = 'N'
+        p.type = 'string'
+        p.description = 'pagination token'
+      end
+
+      method.parameter('__nonce') do |p|
+        p.required = 'N'
+        p.type = 'string'
+        p.description = 'pagination nonce'
+      end
+
+      method.parameter('limit') do |p|
+        p.required = 'N'
+        p.default = '10'
+        p.type = 'int'
+        p.description = 'maximum number of results to return'
+      end
+    end
+
     donation.method('Create') do |method|
       method.synopsis = 'Creates a donation with the provided data'
       method.http_method = 'POST'

@@ -800,6 +800,56 @@
           ]
         },
         {
+          "MethodName": "Search",
+          "Synopsis": "Search for donations with provided attributes",
+          "HTTPMethod": "GET",
+          "URI": "/donations/search",
+          "parameters": [
+            {
+              "Name": "created_since",
+              "Required": "N",
+              "Default": null,
+              "Type": "string",
+              "Description": null
+            },
+            {
+              "Name": "succeeded_since",
+              "Required": "N",
+              "Default": null,
+              "Type": "string",
+              "Description": null
+            },
+            {
+              "Name": "failed_since",
+              "Required": "N",
+              "Default": null,
+              "Type": "string",
+              "Description": null
+            },
+            {
+              "Name": "__token",
+              "Required": "N",
+              "Default": null,
+              "Type": "string",
+              "Description": "pagination token"
+            },
+            {
+              "Name": "__nonce",
+              "Required": "N",
+              "Default": null,
+              "Type": "string",
+              "Description": "pagination nonce"
+            },
+            {
+              "Name": "limit",
+              "Required": "N",
+              "Default": "10",
+              "Type": "int",
+              "Description": "maximum number of results to return"
+            }
+          ]
+        },
+        {
           "MethodName": "Create",
           "Synopsis": "Creates a donation with the provided data",
           "HTTPMethod": "POST",
