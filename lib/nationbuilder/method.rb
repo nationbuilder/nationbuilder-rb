@@ -41,8 +41,8 @@ class NationBuilder::Method
     a = {}
     args.each do |k, v|
       if k == :custom_values
-        v.each do |custom_v, custom_k|
-          a[:"custom_values[#{custom_v.to_s}]"] = custom_k
+        v.each do |custom_k, custom_v|
+          a[:"custom_values[#{custom_k.to_s}]"] = custom_v
         end
       else
         a[k] = v unless parameters.include?(k)
