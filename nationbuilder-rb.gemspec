@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.authors = ["David Huie", "Alexandre Schmitt"]
   s.date = "2017-11-22"
   s.description = "A Ruby client to the NationBuilder API"
-  s.email = "schmitt@nationbuilder.com"
+  s.email = "api@nationbuilder.com"
   s.executables = ["nbdoc"]
   s.extra_rdoc_files = [
     "LICENSE.txt",
