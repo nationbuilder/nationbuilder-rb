@@ -7,7 +7,7 @@ describe NationBuilder::Paginator do
                               '03c22256c06ed11f6bee83673addf26e02a86caa1a5127f4e0815be7223fe4a3')
   end
   let(:response) do
-    VCR.use_cassette('parametered_get') do
+    VCR.use_cassette('paginated_get') do
       client.call(:basic_pages, :index, site_slug: 'organizeralexandreschmitt', limit: 11)
     end
   end
