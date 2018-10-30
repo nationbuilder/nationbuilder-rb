@@ -45,18 +45,16 @@ class NationBuilder::Client
 
     request_args = {
       header: {
-        'Accept' => 'application/json',
-        'Content-Type' => 'application/json'
+        'Accept'        => 'application/json',
+        'Content-Type'  => 'application/json',
+        'Authorization' => "Bearer #{@api_key}"
       },
-      query: {
-        access_token: @api_key
-      }
+      query: {}
     }
 
     if method == :get
       request_args[:query].merge!(NationBuilder::Utils::QueryParams.encode(body))
     else
-      body[:access_token] = @api_key
       if !body[:fire_webhooks].nil?
         request_args[:query][:fire_webhooks] = body[:fire_webhooks]
       end
