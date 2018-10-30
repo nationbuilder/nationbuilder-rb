@@ -7,6 +7,7 @@ require 'uri'
 module NationBuilder; end
 
 require 'nationbuilder/version'
+require 'nationbuilder/utils'
 require 'nationbuilder/client'
 require 'nationbuilder/endpoint'
 require 'nationbuilder/method'

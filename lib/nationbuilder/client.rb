@@ -54,7 +54,7 @@ class NationBuilder::Client
     }
 
     if method == :get
-      request_args[:query].merge!(body)
+      request_args[:query].merge!(NationBuilder::Utils::QueryParams.encode(body))
     else
       body[:access_token] = @api_key
       if !body[:fire_webhooks].nil?

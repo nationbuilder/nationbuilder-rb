@@ -1,0 +1,93 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://organizeralexandreschmitt.nationbuilder.com/api/v1/sites/organizeralexandreschmitt/pages/basic_pages?access_token=03c22256c06ed11f6bee83673addf26e02a86caa1a5127f4e0815be7223fe4a3&limit=11
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.7.0.1, ruby 2.5.1 (2018-03-29))
+      Accept:
+      - application/json
+      Date:
+      - Mon, 29 Oct 2018 20:22:11 GMT
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"c4a76aff76deb723dd693efc38070f0b-gzip"
+      Nation-Ratelimit-Limit:
+      - '999999'
+      Nation-Ratelimit-Remaining:
+      - '999999'
+      Nation-Ratelimit-Reset:
+      - '1540857600'
+      Server:
+      - Apache/2.4.7 (Ubuntu)
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - ALLOWALL
+      X-Middleware-Start:
+      - t=1540844531694805
+      X-Powered-By:
+      - Phusion Passenger Enterprise 5.0.28
+      X-Pulse-Approved:
+      - 'true'
+      X-Rack-Cache:
+      - miss
+      X-Ratelimit-Limit:
+      - 10s
+      X-Ratelimit-Remaining:
+      - '99'
+      X-Ratelimit-Reset:
+      - '1540844541'
+      X-Request-Id:
+      - c8499932-9d8c-4226-8072-ffc476c40bee
+      X-Runtime:
+      - '0.126811'
+      X-Served-By:
+      - api10
+      Content-Length:
+      - '3187'
+      Expires:
+      - Mon, 29 Oct 2018 20:22:11 GMT
+      Cache-Control:
+      - max-age=0, no-cache, no-store
+      Pragma:
+      - no-cache
+      Date:
+      - Mon, 29 Oct 2018 20:22:11 GMT
+      Connection:
+      - keep-alive
+      Use-Proxy:
+      - 'True'
+    body:
+      encoding: UTF-8
+      string: '{"results":[{"slug":"basic_23","path":"/basic_23","status":"unlisted","site_slug":"organizeralexandreschmitt","name":"Basic
+        23","headline":"Basic 23","title":"Basic 23 - Test site","excerpt":null,"author_id":1,"published_at":null,"external_id":null,"tags":[],"id":121,"content":null},{"slug":"basic_22","path":"/basic_22","status":"unlisted","site_slug":"organizeralexandreschmitt","name":"Basic
+        22","headline":"Basic 22","title":"Basic 22 - Test site","excerpt":null,"author_id":1,"published_at":null,"external_id":null,"tags":[],"id":120,"content":null},{"slug":"basic_21","path":"/basic_21","status":"unlisted","site_slug":"organizeralexandreschmitt","name":"Basic
+        21","headline":"Basic 21","title":"Basic 21 - Test site","excerpt":null,"author_id":1,"published_at":null,"external_id":null,"tags":[],"id":119,"content":null},{"slug":"basic_20","path":"/basic_20","status":"unlisted","site_slug":"organizeralexandreschmitt","name":"Basic
+        20","headline":"Basic 20","title":"Basic 20 - Test site","excerpt":null,"author_id":1,"published_at":null,"external_id":null,"tags":[],"id":118,"content":null},{"slug":"basic_19","path":"/basic_19","status":"unlisted","site_slug":"organizeralexandreschmitt","name":"Basic
+        19","headline":"Basic 19","title":"Basic 19 - Test site","excerpt":null,"author_id":1,"published_at":null,"external_id":null,"tags":[],"id":117,"content":null},{"slug":"basic_18","path":"/basic_18","status":"unlisted","site_slug":"organizeralexandreschmitt","name":"Basic
+        18","headline":"Basic 18","title":"Basic 18 - Test site","excerpt":null,"author_id":1,"published_at":null,"external_id":null,"tags":[],"id":116,"content":null},{"slug":"basic_17","path":"/basic_17","status":"unlisted","site_slug":"organizeralexandreschmitt","name":"Basic
+        17","headline":"Basic 17","title":"Basic 17 - Test site","excerpt":null,"author_id":1,"published_at":null,"external_id":null,"tags":[],"id":115,"content":null},{"slug":"basic_16","path":"/basic_16","status":"unlisted","site_slug":"organizeralexandreschmitt","name":"Basic
+        16","headline":"Basic 16","title":"Basic 16 - Test site","excerpt":null,"author_id":1,"published_at":null,"external_id":null,"tags":[],"id":114,"content":null},{"slug":"basic_15","path":"/basic_15","status":"unlisted","site_slug":"organizeralexandreschmitt","name":"Basic
+        15","headline":"Basic 15","title":"Basic 15 - Test site","excerpt":null,"author_id":1,"published_at":null,"external_id":null,"tags":[],"id":113,"content":null},{"slug":"basic_14","path":"/basic_14","status":"unlisted","site_slug":"organizeralexandreschmitt","name":"Basic
+        14","headline":"Basic 14","title":"Basic 14 - Test site","excerpt":null,"author_id":1,"published_at":null,"external_id":null,"tags":[],"id":112,"content":null},{"slug":"basic_13","path":"/basic_13","status":"unlisted","site_slug":"organizeralexandreschmitt","name":"Basic
+        13","headline":"Basic 13","title":"Basic 13 - Test site","excerpt":null,"author_id":1,"published_at":null,"external_id":null,"tags":[],"id":111,"content":null}],"next":"/api/v1/sites/organizeralexandreschmitt/pages/basic_pages?__nonce=5eanepvJ8zJ9uDq_l3Qw5g\u0026__token=APSDi6opdU3_R5Mx-Pt1r74sisBBZSGis7hF0Ky3u5ZB\u0026limit=11","prev":null}'
+    http_version:
+  recorded_at: Mon, 29 Oct 2018 20:22:11 GMT
+recorded_with: VCR 2.9.3
