@@ -3,7 +3,7 @@ require 'spec_helper'
 describe NationBuilder::Client do
 
   let(:client) do
-    NationBuilder::Client.new('organizeralexandreschmitt',
+    NationBuilder::Client.new('testnation',
                               '03c22256c06ed11f6bee83673addf26e02a86caa1a5127f4e0815be7223fe4a3',
                               retries: 1
                               )
@@ -54,7 +54,7 @@ describe NationBuilder::Client do
   describe '#base_url' do
 
     it 'should contain the nation slug' do
-      expect(client.base_url).to eq('https://organizeralexandreschmitt.nationbuilder.com')
+      expect(client.base_url).to eq('https://testnation.nationbuilder.com')
     end
   end
 

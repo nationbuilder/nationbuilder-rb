@@ -2,36 +2,38 @@
 http_interactions:
 - request:
     method: get
-    uri: https://organizeralexandreschmitt.nationbuilder.com/api/v1/sites/organizeralexandreschmitt/pages/basic_pages?access_token=03c22256c06ed11f6bee83673addf26e02a86caa1a5127f4e0815be7223fe4a3&limit%5B%5D=11
+    uri: https://testnation.nationbuilder.com/api/v1/sites/testsite/pages/basic_pages?limit=11
     body:
       encoding: UTF-8
       string: ''
     headers:
       User-Agent:
-      - HTTPClient/1.0 (2.7.0.1, ruby 2.1.6 (2015-04-13))
+      - HTTPClient/1.0 (2.7.0.1, ruby 2.5.1 (2018-03-29))
       Accept:
       - application/json
       Date:
-      - Wed, 23 Nov 2016 19:17:09 GMT
+      - Tue, 30 Oct 2018 20:31:20 GMT
       Content-Type:
       - application/json
+      Authorization:
+      - Bearer 03c22256c06ed11f6bee83673addf26e02a86caa1a5127f4e0815be7223fe4a3
   response:
     status:
       code: 200
       message: OK
     headers:
-      Server:
-      - Apache/2.4.7 (Ubuntu)
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"d54fc875e173fde01924a654d3170d42-gzip"
+      - W/"f0c238b14c726803333f30faa1c36eb1-gzip"
       Nation-Ratelimit-Limit:
       - '999999'
       Nation-Ratelimit-Remaining:
       - '999999'
       Nation-Ratelimit-Reset:
-      - '1479945600'
+      - '1540944000'
+      Server:
+      - Apache/2.4.7 (Ubuntu)
       Status:
       - 200 OK
       Vary:
@@ -39,7 +41,9 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
-      - SAMEORIGIN
+      - ALLOWALL
+      X-Middleware-Start:
+      - t=1540931480515057
       X-Powered-By:
       - Phusion Passenger Enterprise 5.0.28
       X-Pulse-Approved:
@@ -49,39 +53,39 @@ http_interactions:
       X-Ratelimit-Limit:
       - 10s
       X-Ratelimit-Remaining:
-      - '98'
+      - '99'
       X-Ratelimit-Reset:
-      - '1479928639'
+      - '1540931490'
       X-Request-Id:
-      - cda7fcad-9a45-4fb4-ac1b-b95ff95419a5
+      - 0c5333c7-7383-4216-9f7a-e9263a8e6f96
       X-Runtime:
-      - '0.068206'
-      X-Xss-Protection:
-      - 1; mode=block
+      - '0.094467'
+      X-Served-By:
+      - api11
       Content-Length:
       - '1158'
       Expires:
-      - Wed, 23 Nov 2016 19:17:09 GMT
+      - Tue, 30 Oct 2018 20:31:20 GMT
       Cache-Control:
       - max-age=0, no-cache, no-store
       Pragma:
       - no-cache
       Date:
-      - Wed, 23 Nov 2016 19:17:09 GMT
+      - Tue, 30 Oct 2018 20:31:20 GMT
       Connection:
       - keep-alive
-      Set-Cookie:
-      - _cookies_enabled=1479928629; path=/
+      Use-Proxy:
+      - 'True'
     body:
       encoding: UTF-8
-      string: '{"results":[{"slug":"basic_1","path":"/basic_1","status":"unlisted","site_slug":"organizeralexandreschmitt","name":"Basic
-        1","headline":"Basic 1","title":"Basic 1 - Test site","excerpt":null,"author_id":1,"published_at":null,"external_id":null,"tags":[],"id":99,"content":null},{"slug":"about","path":"/","status":"published","site_slug":"organizeralexandreschmitt","name":"About","headline":"About
+      string: '{"results":[{"slug":"basic_1","path":"/basic_1","status":"unlisted","site_slug":"testsite","name":"Basic
+        1","headline":"Basic 1","title":"Basic 1 - Test site","excerpt":null,"author_id":1,"published_at":null,"external_id":null,"tags":[],"id":99,"content":null},{"slug":"about","path":"/","status":"published","site_slug":"testsite","name":"About","headline":"About
         your nation","title":"About - Test site","excerpt":"","author_id":1,"published_at":"2013-07-08T18:07:00Z","external_id":null,"tags":[],"id":98,"content":"\u003cp\u003eThis
         is where you tell everyone about your nation. Explain who you are and what
         you would like people to do. \u003c/p\u003e\r\n\u003cp\u003e \u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003eTo
         change this content, click \"Edit this page\" in the Supporter Nav on the
         right,\u003cbr\u003eor from your Control Panel navigate to Websites \u0026gt;
-        [about] \u0026gt; Content.\u003c/strong\u003e\u003c/p\u003e"}],"next":null,"prev":"/api/v1/sites/organizeralexandreschmitt/pages/basic_pages?__nonce=Wm_pYQzOnIFKyM2TN1e2bw\u0026__token=AJ376yMPDjR_cerB0Cn9KDbA63_-o4A6j3CvvQDJKM1u\u0026limit=11"}'
-    http_version: 
-  recorded_at: Wed, 23 Nov 2016 19:17:09 GMT
+        [about] \u0026gt; Content.\u003c/strong\u003e\u003c/p\u003e"}],"next":null,"prev":"/api/v1/sites/testsite/pages/basic_pages?__nonce=3FjC9RMiBJ1JLokUYO_nMA\u0026__token=AMkccEmidlam_gzpi8opc2vIIpfOPX5oChdaSJcBFnE0\u0026limit=11"}'
+    http_version:
+  recorded_at: Tue, 30 Oct 2018 20:31:20 GMT
 recorded_with: VCR 2.9.3

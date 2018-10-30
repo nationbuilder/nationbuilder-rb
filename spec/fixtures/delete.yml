@@ -2,38 +2,42 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://organizeralexandreschmitt.nationbuilder.com/api/v1/people/278881?access_token=03c22256c06ed11f6bee83673addf26e02a86caa1a5127f4e0815be7223fe4a3
+    uri: https://testnation.nationbuilder.com/api/v1/people/278881
     body:
       encoding: UTF-8
-      string: '{"access_token":"03c22256c06ed11f6bee83673addf26e02a86caa1a5127f4e0815be7223fe4a3"}'
+      string: "{}"
     headers:
       User-Agent:
-      - HTTPClient/1.0 (2.7.0.1, ruby 2.1.6 (2015-04-13))
+      - HTTPClient/1.0 (2.7.0.1, ruby 2.5.1 (2018-03-29))
       Accept:
       - application/json
       Date:
-      - Wed, 23 Nov 2016 19:16:47 GMT
+      - Tue, 30 Oct 2018 20:21:54 GMT
       Content-Type:
       - application/json
+      Authorization:
+      - Bearer 03c22256c06ed11f6bee83673addf26e02a86caa1a5127f4e0815be7223fe4a3
   response:
     status:
       code: 204
       message: No Content
     headers:
-      Server:
-      - Apache/2.4.7 (Ubuntu)
       Nation-Ratelimit-Limit:
       - '999999'
       Nation-Ratelimit-Remaining:
       - '999999'
       Nation-Ratelimit-Reset:
-      - '1479945600'
+      - '1540944000'
+      Server:
+      - Apache/2.4.7 (Ubuntu)
       Status:
       - 204 No Content
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
-      - SAMEORIGIN
+      - ALLOWALL
+      X-Middleware-Start:
+      - t=1540930915181995
       X-Powered-By:
       - Phusion Passenger Enterprise 5.0.28
       X-Pulse-Approved:
@@ -45,30 +49,28 @@ http_interactions:
       X-Ratelimit-Remaining:
       - '99'
       X-Ratelimit-Reset:
-      - '1479928618'
+      - '1540930925'
       X-Request-Id:
-      - 48920c47-e280-436b-9a98-36fa47402ce9
+      - eabac74f-2db5-4709-978c-bbf60720df1e
       X-Runtime:
-      - '1.202383'
-      X-Xss-Protection:
-      - 1; mode=block
-      Content-Length:
-      - '0'
+      - '1.301545'
+      X-Served-By:
+      - api11
       Expires:
-      - Wed, 23 Nov 2016 19:16:49 GMT
+      - Tue, 30 Oct 2018 20:21:56 GMT
       Cache-Control:
       - max-age=0, no-cache, no-store
       Pragma:
       - no-cache
       Date:
-      - Wed, 23 Nov 2016 19:16:49 GMT
+      - Tue, 30 Oct 2018 20:21:56 GMT
       Connection:
       - keep-alive
-      Set-Cookie:
-      - _cookies_enabled=1479928609; path=/
+      Use-Proxy:
+      - 'True'
     body:
       encoding: UTF-8
       string: ''
-    http_version: 
-  recorded_at: Wed, 23 Nov 2016 19:16:49 GMT
+    http_version:
+  recorded_at: Tue, 30 Oct 2018 20:21:56 GMT
 recorded_with: VCR 2.9.3

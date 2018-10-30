@@ -2,36 +2,38 @@
 http_interactions:
 - request:
     method: get
-    uri: https://organizeralexandreschmitt.nationbuilder.com/api/v1/sites/organizeralexandreschmitt/pages/basic_pages?access_token=03c22256c06ed11f6bee83673addf26e02a86caa1a5127f4e0815be7223fe4a3&limit=5
+    uri: https://testnation.nationbuilder.com/api/v1/sites/testsite/pages/basic_pages?limit=5
     body:
       encoding: UTF-8
       string: ''
     headers:
       User-Agent:
-      - HTTPClient/1.0 (2.7.0.1, ruby 2.1.6 (2015-04-13))
+      - HTTPClient/1.0 (2.7.0.1, ruby 2.5.1 (2018-03-29))
       Accept:
       - application/json
       Date:
-      - Wed, 23 Nov 2016 19:17:09 GMT
+      - Tue, 30 Oct 2018 20:31:20 GMT
       Content-Type:
       - application/json
+      Authorization:
+      - Bearer 03c22256c06ed11f6bee83673addf26e02a86caa1a5127f4e0815be7223fe4a3
   response:
     status:
       code: 200
       message: OK
     headers:
-      Server:
-      - Apache/2.4.7 (Ubuntu)
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"ae6cfb238c7ae115c9bb94a5f8fa4d88-gzip"
+      - W/"242c92633784576593dad1a16b0aa5b6-gzip"
       Nation-Ratelimit-Limit:
       - '999999'
       Nation-Ratelimit-Remaining:
       - '999999'
       Nation-Ratelimit-Reset:
-      - '1479945600'
+      - '1540944000'
+      Server:
+      - Apache/2.4.7 (Ubuntu)
       Status:
       - 200 OK
       Vary:
@@ -39,7 +41,9 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
-      - SAMEORIGIN
+      - ALLOWALL
+      X-Middleware-Start:
+      - t=1540931481020421
       X-Powered-By:
       - Phusion Passenger Enterprise 5.0.28
       X-Pulse-Approved:
@@ -49,37 +53,37 @@ http_interactions:
       X-Ratelimit-Limit:
       - 10s
       X-Ratelimit-Remaining:
-      - '97'
+      - '98'
       X-Ratelimit-Reset:
-      - '1479928639'
+      - '1540931486'
       X-Request-Id:
-      - e81a78f8-69b4-413d-ae80-e2321c796f02
+      - bf206535-96f2-42c3-a9a4-76f3d763ee5e
       X-Runtime:
-      - '0.081547'
-      X-Xss-Protection:
-      - 1; mode=block
+      - '0.122913'
+      X-Served-By:
+      - api11
       Content-Length:
       - '1701'
       Expires:
-      - Wed, 23 Nov 2016 19:17:10 GMT
+      - Tue, 30 Oct 2018 20:31:21 GMT
       Cache-Control:
       - max-age=0, no-cache, no-store
       Pragma:
       - no-cache
       Date:
-      - Wed, 23 Nov 2016 19:17:10 GMT
+      - Tue, 30 Oct 2018 20:31:21 GMT
       Connection:
       - keep-alive
-      Set-Cookie:
-      - _cookies_enabled=1479928630; path=/
+      Use-Proxy:
+      - 'True'
     body:
       encoding: UTF-8
-      string: '{"results":[{"slug":"basic_12","path":"/basic_12","status":"unlisted","site_slug":"organizeralexandreschmitt","name":"Basic
-        12","headline":"Basic 12","title":"Basic 12 - Test site","excerpt":null,"author_id":1,"published_at":null,"external_id":null,"tags":[],"id":110,"content":null},{"slug":"basic_11","path":"/basic_11","status":"unlisted","site_slug":"organizeralexandreschmitt","name":"Basic
-        11","headline":"Basic 11","title":"Basic 11 - Test site","excerpt":null,"author_id":1,"published_at":null,"external_id":null,"tags":[],"id":109,"content":null},{"slug":"basic_10","path":"/basic_10","status":"unlisted","site_slug":"organizeralexandreschmitt","name":"Basic
-        10","headline":"Basic 10","title":"Basic 10 - Test site","excerpt":null,"author_id":1,"published_at":null,"external_id":null,"tags":[],"id":108,"content":null},{"slug":"basic_9","path":"/basic_9","status":"unlisted","site_slug":"organizeralexandreschmitt","name":"Basic
-        9","headline":"Basic 9","title":"Basic 9 - Test site","excerpt":null,"author_id":1,"published_at":null,"external_id":null,"tags":[],"id":107,"content":null},{"slug":"basic_8","path":"/basic_8","status":"unlisted","site_slug":"organizeralexandreschmitt","name":"Basic
-        8","headline":"Basic 8","title":"Basic 8 - Test site","excerpt":null,"author_id":1,"published_at":null,"external_id":null,"tags":[],"id":106,"content":null}],"next":"/api/v1/sites/organizeralexandreschmitt/pages/basic_pages?__nonce=hjckzj_F5iPf5lfrG8BYKw\u0026__token=AOtncKrhUkSJTuXnTXsNM7ShamHbixIDNcnJ3zMVk3ob\u0026limit=5","prev":"/api/v1/sites/organizeralexandreschmitt/pages/basic_pages?__nonce=MEaAhepTzsP3N1rirzlulA\u0026__token=AKRG10xG60JZdtnI5KaWzKd97xwkLMUGuCdULGAYZHo1\u0026limit=5"}'
-    http_version: 
-  recorded_at: Wed, 23 Nov 2016 19:17:10 GMT
+      string: '{"results":[{"slug":"basic_12","path":"/basic_12","status":"unlisted","site_slug":"testsite","name":"Basic
+        12","headline":"Basic 12","title":"Basic 12 - Test site","excerpt":null,"author_id":1,"published_at":null,"external_id":null,"tags":[],"id":110,"content":null},{"slug":"basic_11","path":"/basic_11","status":"unlisted","site_slug":"testsite","name":"Basic
+        11","headline":"Basic 11","title":"Basic 11 - Test site","excerpt":null,"author_id":1,"published_at":null,"external_id":null,"tags":[],"id":109,"content":null},{"slug":"basic_10","path":"/basic_10","status":"unlisted","site_slug":"testsite","name":"Basic
+        10","headline":"Basic 10","title":"Basic 10 - Test site","excerpt":null,"author_id":1,"published_at":null,"external_id":null,"tags":[],"id":108,"content":null},{"slug":"basic_9","path":"/basic_9","status":"unlisted","site_slug":"testsite","name":"Basic
+        9","headline":"Basic 9","title":"Basic 9 - Test site","excerpt":null,"author_id":1,"published_at":null,"external_id":null,"tags":[],"id":107,"content":null},{"slug":"basic_8","path":"/basic_8","status":"unlisted","site_slug":"testsite","name":"Basic
+        8","headline":"Basic 8","title":"Basic 8 - Test site","excerpt":null,"author_id":1,"published_at":null,"external_id":null,"tags":[],"id":106,"content":null}],"next":"/api/v1/sites/testsite/pages/basic_pages?__nonce=tnHZBeItEJEadJKW-lerRg\u0026__token=APRyDDzee5rn5zmkdWQbp-CoMuliTas2BjygYwo8Gq3P\u0026limit=5","prev":"/api/v1/sites/testsite/pages/basic_pages?__nonce=CVvuPUtTqo8pMqQ1ffIGPA\u0026__token=AHedyRZyfUUbVEY79DfNVxp7Fd3oD3DiZ-Dr4LUqfAM8\u0026limit=5"}'
+    http_version:
+  recorded_at: Tue, 30 Oct 2018 20:31:21 GMT
 recorded_with: VCR 2.9.3
