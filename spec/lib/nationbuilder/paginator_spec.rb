@@ -3,12 +3,12 @@ require 'spec_helper'
 describe NationBuilder::Paginator do
 
   let(:client) do
-    NationBuilder::Client.new('organizeralexandreschmitt',
+    NationBuilder::Client.new('testnation',
                               '03c22256c06ed11f6bee83673addf26e02a86caa1a5127f4e0815be7223fe4a3')
   end
   let(:response) do
     VCR.use_cassette('paginated_get') do
-      client.call(:basic_pages, :index, site_slug: 'organizeralexandreschmitt', limit: 11)
+      client.call(:basic_pages, :index, site_slug: 'testsite', limit: 11)
     end
   end
 
