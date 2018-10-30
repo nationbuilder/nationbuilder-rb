@@ -68,9 +68,12 @@ Gem::Specification.new do |s|
     "lib/nationbuilder/parameter.rb",
     "lib/nationbuilder/spec_parser.rb",
     "lib/nationbuilder/url.rb",
+    "lib/nationbuilder/utils.rb",
     "lib/nationbuilder/version.rb",
     "nationbuilder-rb.gemspec",
     "spec/fixtures/delete.yml",
+    "spec/fixtures/errored_get.yml",
+    "spec/fixtures/paginated_get.yml",
     "spec/fixtures/paginated_get_page2.yml",
     "spec/fixtures/paginated_get_page2_with_limit.yml",
     "spec/fixtures/paginated_get_page3.yml",
@@ -78,6 +81,7 @@ Gem::Specification.new do |s|
     "spec/fixtures/parametered_post.yml",
     "spec/lib/nationbuilder/client_spec.rb",
     "spec/lib/nationbuilder/paginator_spec.rb",
+    "spec/lib/nationbuilder/utils_spec.rb",
     "spec/spec_helper.rb",
     "update_subtree.sh"
   ]

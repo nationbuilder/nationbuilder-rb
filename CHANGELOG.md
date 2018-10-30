@@ -1,3 +1,7 @@
+# Unreleased
+- [#46] Pass access token via header instead of query params
+- [#45] Fix query params for searching custom fields on people#search
+
 # 1.6.0
 - [#40] Remove appending `status_code` to the parsed response and ensure
   the `response` for the last request is always accessible via the client
