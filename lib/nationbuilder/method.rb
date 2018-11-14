@@ -30,19 +30,15 @@ class NationBuilder::Method
   end
 
   def method_args(args)
-    a = {}
-    args.each do |k, v|
-        a[k] = v if parameters.include?(k)
+    args.each_with_object({}) do |(k, v), a|
+      a[k] = v if parameters.include?(k)
     end
-    a
   end
 
   def nonmethod_args(args)
-    a = {}
-    args.each do |k, v|
-        a[k] = v unless parameters.include?(k)
+    args.each_with_object({}) do |(k, v), a|
+      a[k] = v unless parameters.include?(k)
     end
-    a
   end
 
 end

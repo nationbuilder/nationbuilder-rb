@@ -2,9 +2,8 @@ class NationBuilder::SpecParser
 
   def self.parse(spec_path)
     spec = JSON.parse(File.read(spec_path))
-    endpoints = []
 
-    spec['endpoints'].each do |endpoint|
+    spec['endpoints'].each_with_object([]) do |endpoint, endpoints|
       nb_endpoint = NationBuilder::Endpoint.new(endpoint['name'])
       endpoints << nb_endpoint
       endpoint['methods'].each do |method|
@@ -22,7 +21,6 @@ class NationBuilder::SpecParser
       end
     end
 
-    endpoints
   end
 
 end
