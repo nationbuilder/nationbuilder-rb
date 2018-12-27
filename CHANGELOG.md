@@ -1,4 +1,4 @@
-# Unreleased
+# 1.6.2
 - [#46] Pass access token via header instead of query params
 - [#45] Fix query params for searching custom fields on people#search
 
